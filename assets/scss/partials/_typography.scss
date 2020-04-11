@@ -1,9 +1,6 @@
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
+body, button,
+input, select,
+optgroup, textarea {
 	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
@@ -11,12 +8,7 @@ textarea {
 	line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
@@ -24,10 +16,7 @@ p {
 	margin-bottom: 1.5em;
 }
 
-dfn,
-cite,
-em,
-i {
+dfn, cite, em, i {
 	font-style: italic;
 }
 
@@ -51,10 +40,7 @@ pre {
 	padding: 1.6em;
 }
 
-code,
-kbd,
-tt,
-var {
+code, kbd, tt, var {
 	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -66,8 +52,7 @@ acronym {
 	cursor: help;
 }
 
-mark,
-ins {
+mark, ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
