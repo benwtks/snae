@@ -284,9 +284,8 @@ template {
 body, button,
 input, select,
 optgroup, textarea {
-  color: #404040;
+  color: #2B2B2B;
   font-family: sans-serif;
-  font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -315,11 +314,6 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1.6em; }
-
-code, kbd, tt, var {
-  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem; }
 
 abbr,
 acronym {
