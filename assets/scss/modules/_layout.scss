@@ -1,4 +1,7 @@
-$list-bottom-spacing: 1.5em;
+$standard-bottom-spacing: 1.5em;
+
+$list-bottom-spacing: $standard-bottom-spacing;
 $list-left-spacing: 3em;
 
 $input-spacing: 3px;
+
