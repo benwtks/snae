@@ -27,26 +27,30 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<div class="social">
-			</div>
-			<div class="logo">
-				<?php the_custom_logo(); ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			</div>
-			<div class="nav-icons">
+			<div class="content-wrapper">
+				<div class="social">
+				</div>
+				<div class="logo">
+					<?php the_custom_logo(); ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				</div>
+				<div class="nav-icons">
+				</div>
 			</div>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'snae' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+			<div class="content-wrapper">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'snae' ); ?></button>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+				?>
+			</div?
 		</nav>
 	</header>
 
