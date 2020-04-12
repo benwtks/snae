@@ -25,9 +25,9 @@
 				snae_posted_on();
 				snae_posted_by();
 				?>
-			</div><!-- .entry-meta -->
+			</div>
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<?php snae_post_thumbnail(); ?>
 
@@ -55,9 +55,10 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+	</div>t s
+
 
 	<footer class="entry-footer">
 		<?php snae_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>
 </article><!-- #post-<?php the_ID(); ?> -->

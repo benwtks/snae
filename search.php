@@ -22,7 +22,7 @@ get_header();
 					printf( esc_html__( 'Search Results for: %s', 'snae' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
-			</header><!-- .page-header -->
+			</header>
 
 			<?php
 			/* Start the Loop */
@@ -47,8 +47,8 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		</main>
+	</section>
 
 <?php
 get_sidebar();

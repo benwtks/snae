@@ -42,7 +42,7 @@ get_header();
 							);
 							?>
 						</ul>
-					</div><!-- .widget -->
+					</div>
 
 					<?php
 					/* translators: %1$s: smiley */
@@ -52,11 +52,11 @@ get_header();
 					the_widget( 'WP_Widget_Tag_Cloud' );
 					?>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+				</div>
+			</section>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_footer();
