@@ -29,23 +29,23 @@
 		<div class="site-branding section">
 			<div class="content-wrapper">
 				<div class="social-links nav-icons">
-					<a href="#"><i class="fab fa-facebook"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a class="nav-icon" href="#"><i class="fab fa-facebook"></i></a>
+					<a class="nav-icon" href="#"><i class="fab fa-instagram"></i></a>
 				</div>
 				<div class="logo">
 					<?php the_custom_logo(); ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div>
 				<div class="user-links nav-icons">
-					<a href="#"><i class="fas fa-search"></i></a>
-					<a href="#"><i class="fas fa-shopping-cart"></i></a>
+					<a class="nav-icon" id="search-icon" href="#"><i class="fas fa-search"></i></a>
+					<a class="nav-icon" href="#"><i class="fas fa-shopping-cart"></i></a>
+					<button class="nav-icon" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars" id="menu-toggle"></i></button>
 				</div>
 			</div>
 		</div>
 
 		<nav class="main-navigation section">
 			<div class="content-wrapper">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'snae' ); ?></button>
 				<?php
 				wp_nav_menu(
 					array(

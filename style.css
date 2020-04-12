@@ -743,7 +743,7 @@ readers do not read off random characters that represent icons */
 .fa-barcode:before {
   content: "\f02a"; }
 
-.fa-bars:before {
+.fa-bars:before, header #menu-toggle i:before {
   content: "\f0c9"; }
 
 .fa-baseball-ball:before {
@@ -4235,7 +4235,7 @@ readers do not read off random characters that represent icons */
 .fa-ticket-alt:before {
   content: "\f3ff"; }
 
-.fa-times:before {
+.fa-times:before, header.toggled #menu-toggle i:before {
   content: "\f00d"; }
 
 .fa-times-circle:before {
@@ -5005,7 +5005,6 @@ a:active {
 
 header.site-header .content-wrapper {
   padding: 12px 0; }
-
 header.site-header a {
   color: #555;
   text-decoration: none; }
@@ -5023,23 +5022,22 @@ header.site-header a {
     color: #2B2B2B; }
     .site-branding .content-wrapper .logo h1 a:hover {
       color: #2AB890; }
-  .site-branding .content-wrapper .nav-icons a i {
+  .site-branding .content-wrapper .nav-icons a i, .site-branding .content-wrapper .nav-icons button#menu-toggle {
     color: #555;
     font-size: 1.4rem; }
-    .site-branding .content-wrapper .nav-icons a i:hover {
+    .site-branding .content-wrapper .nav-icons a i:hover, .site-branding .content-wrapper .nav-icons button#menu-toggle:hover {
       color: #2AB890; }
-    .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover {
-      color: #e1306c; }
-    .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover {
-      color: #1778f2; }
-  .site-branding .content-wrapper .nav-icons a:not(:last-of-type) {
+  .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover {
+    color: #e1306c; }
+  .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover {
+    color: #1778f2; }
+  .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-child) {
     margin-right: 15px; }
 
 .main-navigation {
   text-align: center; }
 
 .main-navigation ul {
-  display: none;
   list-style: none;
   margin: 0;
   padding-left: 0; }
@@ -5048,17 +5046,33 @@ header.site-header a {
     .main-navigation ul li:not(:last-of-type) {
       margin-right: 20px; }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.nav-icon {
+  width: 20px;
+  margin: 0 auto; }
+
+#menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none; }
+  #menu-toggle:focus {
+    outline: none; }
+
+header.toggled .main-navigation {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
+@media screen and (max-width: 700px) {
+  header .main-navigation {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background: #fff; }
+
+  #search-icon {
     display: none; }
 
-  .main-navigation ul {
-    display: block; } }
+  #menu-toggle {
+    display: inline-block; } }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
