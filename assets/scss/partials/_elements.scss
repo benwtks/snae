@@ -11,18 +11,11 @@ html {
 }
 
 body {
-	background: #fff;
-}
-
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+	background: $body-bg;
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 $list-bottom-spacing $list-left-spacing;
 }
 
 ul {
