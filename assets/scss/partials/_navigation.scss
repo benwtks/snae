@@ -77,6 +77,8 @@ header.site-header {
 	display: none;
 	cursor: pointer;
 	background: none;
+	width: 20px;
+	text-align: center;
 
 	&:focus {
 		outline: none;

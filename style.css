@@ -5049,7 +5049,9 @@ header.site-header a {
 #menu-toggle {
   display: none;
   cursor: pointer;
-  background: none; }
+  background: none;
+  width: 20px;
+  text-align: center; }
   #menu-toggle:focus {
     outline: none; }
 
