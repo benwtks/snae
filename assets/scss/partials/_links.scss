@@ -1,15 +1,15 @@
 a {
-	color: #4169e1;
+	color: $link-color;
 }
 
 a:visited {
-	color: #800080;
+	color: $link-color;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: $link-color-hover;
 }
 
 a:focus {
