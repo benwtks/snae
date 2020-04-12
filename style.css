@@ -5046,10 +5046,6 @@ header.site-header a {
     .main-navigation ul li:not(:last-of-type) {
       margin-right: 20px; }
 
-.nav-icon {
-  width: 20px;
-  margin: 0 auto; }
-
 #menu-toggle {
   display: none;
   cursor: pointer;
