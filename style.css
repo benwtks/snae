@@ -323,6 +323,30 @@ mark, ins {
 big {
   font-size: 125%; }
 
+.sticky {
+  display: block; }
+
+.post, .page {
+  margin: 0 0 1.5em; }
+
+.updated:not(.published) {
+  display: none; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+.content-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow: visible; }
+
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -546,24 +570,6 @@ a:active {
 
 .widget select {
   max-width: 100%; }
-
-.sticky {
-  display: block; }
-
-.post, .page {
-  margin: 0 0 1.5em; }
-
-.updated:not(.published) {
-  display: none; }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0; }
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em; }
 
 .comment-content a {
   word-wrap: break-word; }
