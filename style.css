@@ -4904,7 +4904,7 @@ big {
   overflow: visible; }
 
 .section {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #e1e1e1; }
 
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
@@ -5003,6 +5003,38 @@ a:hover,
 a:active {
   outline: 0; }
 
+header.site-header .content-wrapper {
+  padding: 12px 0; }
+
+header.site-header a {
+  color: #555;
+  text-decoration: none; }
+  header.site-header a:hover {
+    color: #2AB890; }
+
+.site-branding .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .site-branding .content-wrapper .logo h1 {
+    font-size: 1.5em;
+    margin: 0; }
+  .site-branding .content-wrapper .logo h1 a {
+    color: #2B2B2B; }
+    .site-branding .content-wrapper .logo h1 a:hover {
+      color: #2AB890; }
+  .site-branding .content-wrapper .nav-icons a i {
+    color: #555;
+    font-size: 1.4rem; }
+    .site-branding .content-wrapper .nav-icons a i:hover {
+      color: #2AB890; }
+    .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover {
+      color: #e1306c; }
+    .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover {
+      color: #1778f2; }
+  .site-branding .content-wrapper .nav-icons a:not(:last-of-type) {
+    margin-right: 15px; }
+
 .main-navigation {
   text-align: center; }
 
@@ -5013,8 +5045,6 @@ a:active {
   padding-left: 0; }
   .main-navigation ul li {
     display: inline-block; }
-    .main-navigation ul li a {
-      text-decoration: none; }
     .main-navigation ul li:not(:last-of-type) {
       margin-right: 20px; }
 

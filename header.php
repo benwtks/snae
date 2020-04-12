@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding section">
 			<div class="content-wrapper">
-				<div class="social">
+				<div class="social-links nav-icons">
 					<a href="#"><i class="fab fa-facebook"></i></a>
 					<a href="#"><i class="fab fa-instagram"></i></a>
 				</div>
@@ -36,7 +36,7 @@
 					<?php the_custom_logo(); ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div>
-				<div class="nav-icons">
+				<div class="user-links nav-icons">
 					<a href="#"><i class="fas fa-search"></i></a>
 					<a href="#"><i class="fas fa-shopping-cart"></i></a>
 				</div>
