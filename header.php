@@ -26,20 +26,24 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'snae' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
+		<div class="site-branding section">
 			<div class="content-wrapper">
 				<div class="social">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
 				</div>
 				<div class="logo">
 					<?php the_custom_logo(); ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div>
 				<div class="nav-icons">
+					<a href="#"><i class="fas fa-search"></i></a>
+					<a href="#"><i class="fas fa-shopping-cart"></i></a>
 				</div>
 			</div>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav class="main-navigation section">
 			<div class="content-wrapper">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'snae' ); ?></button>
 				<?php
@@ -50,7 +54,7 @@
 					)
 				);
 				?>
-			</div?
+			</div>
 		</nav>
 	</header>
 
