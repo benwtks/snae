@@ -26,7 +26,8 @@
 }
 
 .content-wrapper {
-	width: 90%;
+	width: $page-width;
+	max-width: $max-page-width;
 	margin: 0 auto;
 	overflow-x: hidden;
 	overflow: visible;
