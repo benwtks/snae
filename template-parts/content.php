@@ -29,7 +29,9 @@
 		<?php endif; ?>
 	</header>
 
-	<?php snae_post_thumbnail(); ?>
+	<?php if (is_singular() ):
+		snae_post_thumbnail();
+	endif; ?>
 
 	<div class="entry-content">
 		<?php
@@ -47,18 +49,6 @@
 				wp_kses_post( get_the_title() )
 			)
 		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'snae' ),
-				'after'  => '</div>',
-			)
-		);
 		?>
-	</div>t s
-
-
-	<footer class="entry-footer">
-		<?php snae_entry_footer(); ?>
-	</footer>
-</article><!-- #post-<?php the_ID(); ?> -->
+	</div>
+</article>

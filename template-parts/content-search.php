@@ -28,8 +28,4 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div>
-
-	<footer class="entry-footer">
-		<?php snae_entry_footer(); ?>
-	</footer>
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
