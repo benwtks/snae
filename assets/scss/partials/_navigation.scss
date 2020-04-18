@@ -57,18 +57,18 @@ header.site-header {
 
 .main-navigation {
 	text-align: center;
-}
 
-.main-navigation ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-	
-	li {
-		display: inline-block;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		
+		li {
+			display: inline-block;
 
-		&:not(:last-of-type) {
-			margin-right: $side-spacing;
+			&:not(:last-of-type) {
+				margin-right: $side-spacing;
+			}
 		}
 	}
 }
@@ -79,6 +79,7 @@ header.site-header {
 	background: none;
 	text-align: center;
 	padding: 0;
+	width: 20px;
 
 	&:focus {
 		outline: none;
@@ -101,8 +102,8 @@ header.toggled #menu-toggle i {
 	header .main-navigation {
 		display: none;
 		position: absolute;
-		width: 100%;
 		z-index: 999;
+		width: 100%;
 		background: #fff;
 	}
 
