@@ -7,8 +7,9 @@ $dark-grey: #555;
 $separator-colour: #e1e1e1;
 
 $body-bg: #fff;
-$link-color: $snae-turquoise;
-$link-color-hover: darken($snae-turquoise, 15%);
+$link-colour: $snae-turquoise;
+$link-colour-visited: $link-colour;
+$link-colour-hover: darken($snae-turquoise, 15%);
 
 $nav-icon-colour: $dark-grey;
 $nav-icon-hover-colour: $snae-turquoise;

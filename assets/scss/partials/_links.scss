@@ -1,15 +1,18 @@
 a {
-	color: $link-color;
+	color: $link-colour;
+	text-decoration: none;
 }
 
-a:visited {
-	color: $link-color;
+@if $link-colour != $link-colour-visited {
+	a:visited {
+		color: $link-colour-visited;
+	}
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: $link-color-hover;
+	color: $link-colour-hover;
 }
 
 a:focus {
