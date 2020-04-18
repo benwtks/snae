@@ -5066,10 +5066,9 @@ header.toggled .main-navigation {
     z-index: 999;
     background: #fff; }
 
-  #search-icon {
+  .user-links.nav-icons a.nav-icon:first-of-type {
     display: none; }
-
-  .nav-icons a.nav-icon:last-of-type {
+  .user-links.nav-icons a.nav-icon:last-of-type {
     margin-right: 20px; }
 
   #menu-toggle {

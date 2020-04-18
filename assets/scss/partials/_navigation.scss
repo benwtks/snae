@@ -106,12 +106,14 @@ header.toggled #menu-toggle i {
 		background: #fff;
 	}
 
-	#search-icon {
-		display: none;
-	}
+	.user-links.nav-icons a.nav-icon {
+		&:first-of-type {
+			display: none;
+		}
 
-	.nav-icons a.nav-icon:last-of-type {
-		margin-right: $side-spacing;
+		&:last-of-type {
+			margin-right: $side-spacing;
+		}
 	}
 
 	#menu-toggle {
