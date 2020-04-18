@@ -4837,7 +4837,7 @@ body, button,
 input, select,
 optgroup, textarea {
   color: #2B2B2B;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
