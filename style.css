@@ -5067,9 +5067,9 @@ header.toggled .main-navigation {
     background: #fff; }
 
   .user-links.nav-icons a.nav-icon:first-of-type {
-    display: none; }
-  .user-links.nav-icons a.nav-icon:last-of-type {
     margin-right: 20px; }
+  .user-links.nav-icons a.nav-icon:last-of-type {
+    display: none; }
 
   #menu-toggle {
     display: inline-block; } }

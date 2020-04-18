@@ -108,11 +108,11 @@ header.toggled #menu-toggle i {
 
 	.user-links.nav-icons a.nav-icon {
 		&:first-of-type {
-			display: none;
+			margin-right: $side-spacing;
 		}
 
 		&:last-of-type {
-			margin-right: $side-spacing;
+			display: none;
 		}
 	}
 
