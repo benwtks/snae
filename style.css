@@ -5031,7 +5031,7 @@ header.site-header a {
     color: #e1306c; }
   .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover {
     color: #1778f2; }
-  .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-child) {
+  .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-of-type) {
     margin-right: 15px; }
 
 .main-navigation {
@@ -5050,8 +5050,8 @@ header.site-header a {
   display: none;
   cursor: pointer;
   background: none;
-  width: 20px;
-  text-align: center; }
+  text-align: center;
+  padding: 0; }
   #menu-toggle:focus {
     outline: none; }
 
@@ -5068,6 +5068,9 @@ header.toggled .main-navigation {
 
   #search-icon {
     display: none; }
+
+  .nav-icons a.nav-icon:last-of-type {
+    margin-right: 20px; }
 
   #menu-toggle {
     display: inline-block; } }

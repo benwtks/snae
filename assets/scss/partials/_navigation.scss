@@ -50,7 +50,7 @@ header.site-header {
 		}
 	}
 
-	.nav-icons .nav-icon:not(:last-child) {
+	.nav-icons .nav-icon:not(:last-of-type) {
 		margin-right: $nav-icon-spacing;
 	}
 }
@@ -77,8 +77,8 @@ header.site-header {
 	display: none;
 	cursor: pointer;
 	background: none;
-	width: 20px;
 	text-align: center;
+	padding: 0;
 
 	&:focus {
 		outline: none;
@@ -108,6 +108,10 @@ header.toggled #menu-toggle i {
 
 	#search-icon {
 		display: none;
+	}
+
+	.nav-icons a.nav-icon:last-of-type {
+		margin-right: $side-spacing;
 	}
 
 	#menu-toggle {

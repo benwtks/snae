@@ -39,7 +39,7 @@
 				<div class="user-links nav-icons">
 					<a class="nav-icon" id="search-icon" href="#"><i class="fas fa-search"></i></a>
 					<a class="nav-icon" href="#"><i class="fas fa-shopping-cart"></i></a>
-					<button class="nav-icon" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars" id="menu-toggle"></i></button>
+					<button class="nav-icon" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
 				</div>
 			</div>
 		</div>
