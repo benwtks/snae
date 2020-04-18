@@ -33,13 +33,13 @@
 	overflow: visible;
 }
 
-	.news-wrapper {
-		@extend .content-wrapper;
+.news-wrapper {
+	@extend .content-wrapper;
 
-		@if $max-news-width != $max-page-width {
-			max-width: $max-news-width;
-		}
+	@if $max-news-width != $max-page-width {
+		max-width: $max-news-width;
 	}
+}
 
 .section {
 	border-bottom: $section-border;

@@ -4928,9 +4928,6 @@ html {
 body {
   background: #fff; }
 
-ul, ol {
-  margin: 0 0 20px 3em; }
-
 ul {
   list-style: disc; }
 
@@ -5160,6 +5157,9 @@ header.toggled .main-navigation {
 
 .widget select {
   max-width: 100%; }
+
+ol.comment-list {
+  list-style: none; }
 
 .comment-content a {
   word-wrap: break-word; }
