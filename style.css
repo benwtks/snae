@@ -4843,7 +4843,8 @@ optgroup, textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-weight: initial; }
+  font-weight: initial;
+  margin: 0 0 10px 0; }
 
 p {
   margin-bottom: 1.5em; }
@@ -4883,8 +4884,11 @@ big {
 .sticky {
   display: block; }
 
+#content {
+  margin-top: 20px; }
+
 .post, .page {
-  margin: 0 0 1.5em; }
+  margin-bottom: 20px; }
 
 .updated:not(.published) {
   display: none; }
@@ -4892,11 +4896,11 @@ big {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 20px 0 0; }
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5em; }
+  margin: 0 0 20px; }
 
 .content-wrapper {
   width: 90%;
@@ -4921,7 +4925,7 @@ body {
   background: #fff; }
 
 ul, ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 20px 3em; }
 
 ul {
   list-style: disc; }
@@ -5146,30 +5150,6 @@ header.toggled .main-navigation {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em; }
-
-.clear::before,
-.clear::after,
-.entry-content::before,
-.entry-content::after,
-.comment-content::before,
-.comment-content::after,
-.site-header::before,
-.site-header::after,
-.site-content::before,
-.site-content::after,
-.site-footer::before,
-.site-footer::after {
-  content: "";
-  display: table;
-  table-layout: fixed; }
-
-.clear::after,
-.entry-content::after,
-.comment-content::after,
-.site-header::after,
-.site-content::after,
-.site-footer::after {
-  clear: both; }
 
 .widget {
   margin: 0 0 1.5em; }
