@@ -4902,12 +4902,15 @@ big {
   clear: both;
   margin: 0 0 20px; }
 
-.content-wrapper {
+.content-wrapper, .news-wrapper {
   width: 90%;
   max-width: 1500px;
   margin: 0 auto;
   overflow-x: hidden;
   overflow: visible; }
+
+.news-wrapper {
+  max-width: 820px; }
 
 .section {
   border-bottom: 1px solid #e1e1e1; }
@@ -5007,7 +5010,7 @@ a:hover,
 a:active {
   outline: 0; }
 
-header.site-header .content-wrapper {
+header.site-header .content-wrapper, header.site-header .news-wrapper {
   padding: 12px 0; }
 header.site-header a {
   color: #555;
@@ -5015,27 +5018,27 @@ header.site-header a {
   header.site-header a:hover {
     color: #2AB890; }
 
-.site-branding .content-wrapper {
+.site-branding .content-wrapper, .site-branding .news-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .site-branding .content-wrapper .logo h1 {
+  .site-branding .content-wrapper .logo h1, .site-branding .news-wrapper .logo h1 {
     font-size: 1.5em;
     margin: 0; }
-  .site-branding .content-wrapper .logo h1 a {
+  .site-branding .content-wrapper .logo h1 a, .site-branding .news-wrapper .logo h1 a {
     color: #2B2B2B; }
-    .site-branding .content-wrapper .logo h1 a:hover {
+    .site-branding .content-wrapper .logo h1 a:hover, .site-branding .news-wrapper .logo h1 a:hover {
       color: #2AB890; }
-  .site-branding .content-wrapper .nav-icons a i, .site-branding .content-wrapper .nav-icons button#menu-toggle {
+  .site-branding .content-wrapper .nav-icons a i, .site-branding .news-wrapper .nav-icons a i, .site-branding .content-wrapper .nav-icons button#menu-toggle, .site-branding .news-wrapper .nav-icons button#menu-toggle {
     color: #555;
     font-size: 1.4rem; }
-    .site-branding .content-wrapper .nav-icons a i:hover, .site-branding .content-wrapper .nav-icons button#menu-toggle:hover {
+    .site-branding .content-wrapper .nav-icons a i:hover, .site-branding .news-wrapper .nav-icons a i:hover, .site-branding .content-wrapper .nav-icons button#menu-toggle:hover, .site-branding .news-wrapper .nav-icons button#menu-toggle:hover {
       color: #2AB890; }
-  .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover {
+  .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover, .site-branding .news-wrapper .nav-icons a i.fa-instagram:hover {
     color: #e1306c; }
-  .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover {
+  .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover, .site-branding .news-wrapper .nav-icons a i.fa-facebook:hover {
     color: #1778f2; }
-  .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-of-type) {
+  .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-of-type), .site-branding .news-wrapper .nav-icons .nav-icon:not(:last-of-type) {
     margin-right: 15px; }
 
 .main-navigation {

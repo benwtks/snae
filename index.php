@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main content-wrapper">
+		<main id="main" class="site-main news-wrapper">
 		<?php
 		if ( have_posts() ) :
 
