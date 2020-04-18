@@ -182,3 +182,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Disable access to author page
+function snae_disable_author_page() {
+    global $wp_query;
+
+    if ( is_author() ) {
+        // Redirect to homepage
+        wp_redirect(get_option('home'));
+    }
+}
+
+add_action('template_redirect', 'snae_disable_author_page');
