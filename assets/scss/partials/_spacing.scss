@@ -9,6 +9,10 @@
 header.entry-header {
 	margin: 0 0 $entry-header-margin-bottom;
 
+	.post-preview & {
+		margin: 0 0 $preview-entry-header-margin-bottom 0;
+	}
+
 	.entry-title:not(last-child) {
 		margin: 0 0 $entry-title-margin-bottom;
 	}

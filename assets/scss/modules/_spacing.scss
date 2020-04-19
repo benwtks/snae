@@ -8,8 +8,9 @@ $nav-icon-spacing: 15px;
 $header-spacing: 12px;
 
 $post-preview-spacing: $standard-spacing * 2;
-$entry-header-margin-bottom: $standard-spacing / 2;
-$entry-title-margin-bottom: $entry-header-margin-bottom / 4;
+$entry-header-margin-bottom: $standard-spacing;
+$preview-entry-header-margin-bottom: $standard-spacing / 2;
+$entry-title-margin-bottom: 5px;
 
 $p-margin-bottom: $standard-spacing / 2;
 $heading-margin-bottom: $standard-spacing / 2;
