@@ -964,14 +964,16 @@ template {
   margin-top: 25px; }
 
 .post-preview {
-  margin-bottom: 50px; }
+  margin-bottom: 40px; }
 
 header.entry-header {
-  margin: 0 0 25px; }
+  margin: 0 0 15px; }
   header.entry-header .entry-title:not(last-child) {
     margin: 0 0 5px; }
-  .post-page header.entry-header .entry-title:not(last-child) {
-    margin: 0 0 15px; }
+  .post-page header.entry-header {
+    margin: 0 0 25px; }
+    .post-page header.entry-header .entry-title:not(last-child) {
+      margin: 0 0 15px; }
 
 .page-title {
   margin: 0 0 20px 0; }
@@ -1235,6 +1237,10 @@ table {
 .entry-meta .meta-icon i {
   margin-right: 10px; }
 
+@supports (object-fit: cover) {
+  .post-thumbnail img {
+    object-fit: cover;
+    height: 400px; } }
 button,
 input[type="button"],
 input[type="reset"],

@@ -63,3 +63,10 @@ table {
 		margin-right: 10px;
 	}
 }
+
+@supports (object-fit: cover) {
+	.post-thumbnail img {
+		object-fit: cover;
+		height: 400px;
+	}
+}

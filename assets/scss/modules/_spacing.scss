@@ -7,9 +7,10 @@ $nav-icon-spacing: 15px;
 
 $header-spacing: 12px;
 
-$post-preview-spacing: 50px;
-$entry-header-margin-bottom: 25px;
+$post-preview-spacing: $standard-spacing * 2;
+$entry-header-margin-bottom: $standard-spacing - 5;
 $entry-title-margin-bottom: 5px;
+$post-page-entry-header-margin-bottom: $standard-spacing + 5;
 $post-page-entry-title-margin-bottom: 15px;
 
 $p-margin-bottom: $standard-spacing / 2;
