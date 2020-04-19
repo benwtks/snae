@@ -1185,6 +1185,12 @@ header.toggled .main-navigation {
 
   button#menu-toggle {
     display: inline-block; } }
+@media screen and (max-width: 600px) {
+  .content-wrapper .nav-icons.social-links, .news-wrapper .nav-icons.social-links {
+    display: none; }
+
+  .main-navigation {
+    text-align: left; } }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
