@@ -1,0 +1,41 @@
+#content, .post-thumbnail {
+	margin-top: $standard-spacing;
+}
+
+.post-preview {
+	margin-bottom: $post-preview-spacing;
+}
+
+header.entry-header {
+	margin: 0 0 $entry-header-margin-bottom;
+
+	.entry-title:not(last-child) {
+		margin: 0 0 $entry-title-margin-bottom;
+	}
+}
+
+.page-title {
+	margin: 0 0 $standard-spacing 0;
+}
+
+.page-links {
+	margin: 0 0 $standard-spacing;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 $heading-margin-bottom 0;
+}
+
+p {
+	margin: 0 0 $p-margin-bottom 0;
+}
+
+blockquote {
+	margin: 0 $general-text-spacing;
+}
+
+address {
+	margin: 0 0 $general-text-spacing;
+}
+
+

@@ -1,36 +1,9 @@
 .sticky {
 	display: block;
 }
-
-#content, .post-thumbnail {
-	margin-top: $standard-spacing;
-}
-
-.post-preview {
-	margin-bottom: $post-preview-spacing;
-}
-
-header.entry-header {
-	margin: 0 0 $header-margin-bottom;
-
-	.entry-title:not(last-child) {
-		margin: 0 0 $entry-title-margin-bottom;
-	}
-}
-
-.page-title {
-	margin: 0 0 $standard-spacing 0;
-}
-
 .updated:not(.published) {
 	display: none;
 }
-
-.page-links {
-	clear: both;
-	margin: 0 0 $standard-spacing;
-}
-
 .content-wrapper {
 	width: $page-width;
 	max-width: $max-page-width;
