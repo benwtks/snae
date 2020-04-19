@@ -960,16 +960,14 @@ template {
 .section {
   border-bottom: 1px solid #e1e1e1; }
 
-#content, .post-thumbnail {
-  margin-top: 20px; }
+#content {
+  margin-top: 25px; }
 
 .post-preview {
-  margin-bottom: 40px; }
+  margin-bottom: 50px; }
 
 header.entry-header {
-  margin: 0 0 20px; }
-  .post-preview header.entry-header {
-    margin: 0 0 10px 0; }
+  margin: 0 0 25px; }
   header.entry-header .entry-title:not(last-child) {
     margin: 0 0 5px; }
 
