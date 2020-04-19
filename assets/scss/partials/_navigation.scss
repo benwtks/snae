@@ -132,6 +132,12 @@ header.toggled button#menu-toggle {
 	}
 }
 
+@media screen and (max-width: 480px) {
+	.user-links #cart-icon {
+		display: none;
+	}
+}
+
 .site-main {
 	.comment-navigation,
 	.posts-navigation,

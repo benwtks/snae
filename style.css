@@ -1153,6 +1153,9 @@ header.toggled .main-navigation {
 
   .main-navigation {
     text-align: left; } }
+@media screen and (max-width: 480px) {
+  .user-links #cart-icon {
+    display: none; } }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
