@@ -205,3 +205,29 @@ function wpdocs_excerpt_more( $more ) {
     return '...';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+/* Remove website field from comments form */
+
+function remove_website_field($fields) {
+	    unset($fields['url']);
+		    return $fields;
+}
+ 
+add_filter('comment_form_default_fields', 'remove_website_field');
+
+/* Move comment field and opt in to bottom in comments form */
+
+function move_comment_fields( $fields ) {
+		$comment_field = $fields['comment'];
+		unset( $fields['comment'] );
+		$fields['comment'] = $comment_field;
+
+		$cookies_field = $fields['cookies'];
+		unset( $fields['cookies'] );
+		$fields['cookies'] = $cookies_field;
+
+
+		return $fields;
+}
+
+add_filter( 'comment_form_fields', 'move_comment_fields' );

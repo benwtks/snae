@@ -1287,6 +1287,15 @@ ol.comment-list {
 .bypostauthor {
   display: block; }
 
+.comment-form-author, .comment-form-email {
+  width: 50%; }
+
+.comment-form-author {
+  float: left; }
+
+.comment-form-email {
+  float: right; }
+
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
