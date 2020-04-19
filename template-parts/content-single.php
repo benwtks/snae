@@ -9,12 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-page'); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php snae_posted_on(); snae_posted_by(); ?>
+			<span class="posted_on meta-icon"><i class="dripicons-calendar"></i><?php snae_posted_on($natural = FALSE) ?></span>
+			<span class="posted_by meta-icon"><i class="dripicons-user"></i><?php snae_posted_by($natural = FALSE) ?></span>
+			<span class="comments meta-icon"><i class="dripicons-message"></i><?php snae_comments_number() ?></span>
 		</div>
 	</header>
 

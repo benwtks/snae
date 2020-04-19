@@ -17,10 +17,8 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<?php
-				snae_posted_on();
-				snae_posted_by();
-				?>
+				<span class="posted_on"><?php snae_posted_on() ?></span>
+				<span class="posted_by"><?php snae_posted_by() ?></span>
 			</div>
 		<?php endif; ?>
 	</header>

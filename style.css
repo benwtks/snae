@@ -970,6 +970,8 @@ header.entry-header {
   margin: 0 0 25px; }
   header.entry-header .entry-title:not(last-child) {
     margin: 0 0 5px; }
+  .post-page header.entry-header .entry-title:not(last-child) {
+    margin: 0 0 15px; }
 
 .page-title {
   margin: 0 0 20px 0; }
@@ -1224,6 +1226,14 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+
+.post-page .entry-meta {
+  color: #555; }
+
+.entry-meta .meta-icon:not(:last-child) {
+  margin-right: 20px; }
+.entry-meta .meta-icon i {
+  margin-right: 10px; }
 
 button,
 input[type="button"],

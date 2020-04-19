@@ -12,6 +12,10 @@ header.entry-header {
 	.entry-title:not(last-child) {
 		margin: 0 0 $entry-title-margin-bottom;
 	}
+
+	.post-page & .entry-title:not(last-child) {
+		margin: 0 0 $post-page-entry-title-margin-bottom;
+	}
 }
 
 .page-title {

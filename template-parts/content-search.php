@@ -14,12 +14,10 @@
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			snae_posted_on();
-			snae_posted_by();
-			?>
-		</div>
+			<div class="entry-meta">
+				<span class="posted_on"><?php snae_posted_on() ?></span>
+				<span class="posted_by"><?php snae_posted_by() ?></span>
+			</div>
 		<?php endif; ?>
 	</header>
 
