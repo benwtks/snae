@@ -991,6 +991,9 @@ blockquote {
 address {
   margin: 0 0 10px; }
 
+.post img {
+  margin: 0 0 20px; }
+
 body, button,
 input, select,
 optgroup, textarea {
