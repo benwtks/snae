@@ -37,9 +37,9 @@
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div>
 				<div class="user-links nav-icons">
-					<a class="nav-icon" href="#"><i class="fas fa-shopping-cart"></i></a>
-					<a class="nav-icon" id="search-icon" href="#"><i class="fas fa-search"></i></a>
-					<button class="nav-icon" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+					<a class="nav-icon" href="#"><i class="dripicons-cart"></i></a>
+					<a class="nav-icon" id="search-icon" href="#"><i class="dripicons-search"></i></a>
+					<button class="nav-icon dripicons-menu" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 				</div>
 			</div>
 		</div>
