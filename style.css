@@ -992,7 +992,7 @@ big {
 .sticky {
   display: block; }
 
-#content {
+#content, .post-thumbnail {
   margin-top: 20px; }
 
 .post, .page {
