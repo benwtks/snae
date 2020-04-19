@@ -9,14 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="page-header">
+		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 	</header>
 
 	<?php snae_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="page-content">
 		<?php the_content(); ?>
 	</div>
-</article>
+</div>

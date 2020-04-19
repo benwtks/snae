@@ -955,16 +955,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px 0; }
 
 p {
-  margin-bottom: 1.5em; }
+  margin: 0 0 10px 0; }
 
 dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5em; }
+  margin: 0 10px; }
 
 address {
-  margin: 0 0 1.5em; }
+  margin: 0 0 10px; }
 
 pre {
   background: #eee;
@@ -995,16 +995,19 @@ big {
 #content, .post-thumbnail {
   margin-top: 20px; }
 
-.post, .page {
-  margin-bottom: 20px; }
+.post-preview {
+  margin-bottom: 40px; }
+
+header.entry-header {
+  margin: 0 0 10px; }
+  header.entry-header .entry-title:not(last-child) {
+    margin: 0 0 5px; }
+
+.page-title {
+  margin: 0 0 20px 0; }
 
 .updated:not(.published) {
   display: none; }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 20px 0 0; }
 
 .page-links {
   clear: both;

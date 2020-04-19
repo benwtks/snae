@@ -4,6 +4,6 @@ $pre-font: "Courier 10 Pitch", courier, monospace;
 $standard-font-size: 1rem;
 $standard-line-height: 1.5;
 
-$text-margin-bottom: 1.5em;
 
-$heading-margin-bottom: 10px;
+$heading-margin-bottom: $standard-spacing / 2;
+$text-margin-bottom: $standard-spacing / 2;
