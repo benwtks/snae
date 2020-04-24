@@ -12,12 +12,27 @@ ol.comment-list {
 
 .comment-form-author, .comment-form-email {
 	width: 50%;
+
+	input {
+		width: 100%;
+		size: initial;
+	}
 }
 
 .comment-form-author {
 	float: left;
+	padding-right: 10px;
 }
 
 .comment-form-email {
 	float: right;
+	padding-left: 10px;
+}
+
+form p label {
+	display: block;
+}
+
+form p.comment-form-cookies-consent label {
+	display:inline-block;
 }

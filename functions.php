@@ -230,3 +230,11 @@ function move_comment_fields( $fields ) {
 }
 
 add_filter( 'comment_form_fields', 'move_comment_fields' );
+
+function custom_reply_title( $defaults ){
+  $defaults['title_reply_before'] = '<h2 id="reply-title" class="comment-reply-title">';
+  $defaults['title_reply_after'] = '</h2>';
+  return $defaults;
+}
+
+add_filter( 'comment_form_defaults', 'custom_reply_title' );

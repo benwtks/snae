@@ -1478,12 +1478,23 @@ ol.comment-list {
 
 .comment-form-author, .comment-form-email {
   width: 50%; }
+  .comment-form-author input, .comment-form-email input {
+    width: 100%;
+    size: initial; }
 
 .comment-form-author {
-  float: left; }
+  float: left;
+  padding-right: 10px; }
 
 .comment-form-email {
-  float: right; }
+  float: right;
+  padding-left: 10px; }
+
+form p label {
+  display: block; }
+
+form p.comment-form-cookies-consent label {
+  display: inline-block; }
 
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
