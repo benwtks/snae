@@ -33,8 +33,11 @@
 					<a class="nav-icon" href="#"><i class="fab fa-instagram"></i></a>
 				</div>
 				<div class="logo">
-					<?php the_custom_logo(); ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php if (has_custom_logo()): ?>
+						<?php the_custom_logo() ?>
+					<?php else: ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php endif; ?>
 				</div>
 				<div class="user-links nav-icons">
 					<a class="nav-icon" id="cart-icon" href="#"><i class="dripicons-cart"></i></a>
