@@ -26,9 +26,3 @@ function crb_attach_theme_options() {
             Field::make( 'textarea', 'crb_theme_address', 'Address' ),
         ) );
 }
-
-add_action( 'after_setup_theme', 'crb_load' );
-function crb_load() {
-    require_once( ABSPATH . '/vendor/autoload.php' );
-    \Carbon_Fields\Carbon_Fields::boot();
-}
