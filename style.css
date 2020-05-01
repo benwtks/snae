@@ -1089,6 +1089,9 @@ header.site-header a {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .site-branding .content-wrapper .logo img.custom-logo, .site-branding .news-wrapper .logo img.custom-logo {
+    width: initial;
+    height: 50px; }
   .site-branding .content-wrapper .logo h1, .site-branding .news-wrapper .logo h1 {
     font-size: 1.5em;
     margin: 0; }
@@ -1174,6 +1177,13 @@ header.toggled .main-navigation {
   float: right;
   text-align: right;
   width: 50%; }
+
+footer.site-footer {
+  border-bottom: 1px solid #e1e1e1;
+  height: 400px;
+  background: #bbb;
+  display: flex;
+  justify-content: space-between; }
 
 a {
   color: #2AB890;
