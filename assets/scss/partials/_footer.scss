@@ -1,9 +1,50 @@
 footer.site-footer {
-	border-bottom: $section-border;
+	border-top: $footer-border;
 	height: 400px;
-	background: #bbb;
-	display: flex;
-	justify-content: space-between;
+	background: #fff;
+	margin-top: $footer-margin-top;
+	padding-top: $footer-padding-top;
+
+	.content-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
+footer.site-footer .company-details {
+	.logo .site-title {
+		font-size: $footer-site-title-size;
+	}
 
+	div {
+		margin-bottom: $footer-details-margin-bottom;
+
+		span.detail-value {
+			color: $footer-details-font-colour;
+		}
+	}
+
+	.copyright {
+		font-size: $footer-copyright-font-size;
+	}
+}
+
+footer.site-footer .explore .links {
+	display: flex;
+
+	.footer-nav {
+		.footer-nav-title {
+			font-size: $footer-nav-header-size;
+		}
+
+		div ul {
+			list-style: none;
+			padding: 0;
+			line-height: $footer-nav-line-height;
+		}
+
+		&:not(:last-of-type) {
+			margin-right: $footer-nav-spacing;
+		}
+	}
+}

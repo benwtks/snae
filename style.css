@@ -1179,11 +1179,34 @@ header.toggled .main-navigation {
   width: 50%; }
 
 footer.site-footer {
-  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
   height: 400px;
-  background: #bbb;
-  display: flex;
-  justify-content: space-between; }
+  background: #fff;
+  margin-top: 100px;
+  padding-top: 60px; }
+  footer.site-footer .content-wrapper, footer.site-footer .news-wrapper {
+    display: flex;
+    justify-content: space-between; }
+
+footer.site-footer .company-details .logo .site-title {
+  font-size: 1.3em; }
+footer.site-footer .company-details div {
+  margin-bottom: 10px; }
+  footer.site-footer .company-details div span.detail-value {
+    color: #676767; }
+footer.site-footer .company-details .copyright {
+  font-size: 0.7em; }
+
+footer.site-footer .explore .links {
+  display: flex; }
+  footer.site-footer .explore .links .footer-nav .footer-nav-title {
+    font-size: 1.2em; }
+  footer.site-footer .explore .links .footer-nav div ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.75; }
+  footer.site-footer .explore .links .footer-nav:not(:last-of-type) {
+    margin-right: 30px; }
 
 a {
   color: #2AB890;
