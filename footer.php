@@ -50,11 +50,13 @@
 					$menu_name = wp_get_nav_menu_name($menu_location);
 
 					if (!empty($menu_name)) {
+						echo ('<div class="footer-nav">');
 						echo ("<h1>". $menu_name. "</h1>");
 						wp_nav_menu( array(
 							'theme_location' => $menu_location,
 							'container-class' => 'footer_nav'
 						));
+						echo ("</div>");
 					}
 				}
 
