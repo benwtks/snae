@@ -243,4 +243,14 @@ function custom_reply_title( $defaults ){
 add_filter( 'comment_form_defaults', 'custom_reply_title' );
 
 add_action( 'admin_init', 'hide_editor' );
- 
+
+function snae_register_footer_nav_menus(){
+	register_nav_menus( array(
+		'footer_1' => __('First footer menu'),
+		'footer_2' => __('Second footer menu'),
+		'footer_3' => __('Third footer menu'),
+		'footer_4' => __('Fourth footer menu')
+	));
+}
+
+add_action('after_setup_theme','snae_register_footer_nav_menus', 0);

@@ -23,16 +23,46 @@
 					<?php endif; ?>
 			</div>
 			<div class="address">
-				<span></span>
+				<span><?php echo nl2br (carbon_get_theme_option('crb_theme_address')) ?></span>
 			</div>
-			<span class="telephone-no"></span>
-			<span class="email"></span>
-			<span class="copyright"></span>
+			<div class="telephone-no">
+				<span class="detail-title">Telephone:</span>
+				<span class="detail-value"><?php echo carbon_get_theme_option('crb_theme_telephone')?></span>
+			</div>
+			<div class="email">
+				<span class="detail-title">Email:</span>
+				<span class="detail-value">
+					<a href="mailto:<?php echo carbon_get_theme_option('crb_theme_email') ?>">
+						<?php echo carbon_get_theme_option('crb_theme_email') ?>
+					</a>
+				</span>
+			</div>
+			<div class="copyright">
+				<span>©<?php echo date("Y"), " ", bloginfo('name') ?> | All rights reserved</span>
+			</div>
 		</div>
 		<div class="explore">
 			<div class="newsletter">
 			</div>
 			<div class="links">
+				<?php
+				function snae_footer_nav($menu_location) {
+					$menu_name = wp_get_nav_menu_name($menu_location);
+
+					if (!empty($menu_name)) {
+						echo ("<h1>". $menu_name. "</h1>");
+						wp_nav_menu( array(
+							'theme_location' => $menu_location,
+							'container-class' => 'footer_nav'
+						));
+					}
+				}
+
+				snae_footer_nav('footer_1');
+				snae_footer_nav('footer_2');
+				snae_footer_nav('footer_3');
+				snae_footer_nav('footer_4');
+				?>
 			</div>
 		</div>
 	</footer>
