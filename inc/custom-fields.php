@@ -33,7 +33,8 @@ add_action( 'carbon_fields_register_fields', 'crb_attach_artist_options' );
 function crb_attach_artist_options() {
     Container::make( 'post_meta', 'Artist Details' )
         ->where( 'post_type', '=', 'artists' )
-        ->add_fields( array(
+		->add_fields( array(
+			Field::make( 'image', 'crb_artist_photo', 'Profile photo' ),
             Field::make( 'text', 'crb_job', 'Job title' ),
             Field::make( 'textarea', 'crb_short_bio', 'Short Bio (80 character limit)' )
                 ->set_attribute( 'maxLength', 80 ),
@@ -53,7 +54,8 @@ function crb_attach_artist_options() {
     Container::make( 'post_meta', 'Gallery' )
         ->where( 'post_type', '=', 'artists' )
         ->add_fields( array(
-            Field::make( 'media_gallery', 'crb_artist_gallery', 'Gallery' )
+			Field::make( 'media_gallery', 'crb_artist_gallery', 'Gallery' )
+			    ->set_type( array( 'image' ) )
 		));
 
 }
