@@ -254,3 +254,37 @@ function snae_register_footer_nav_menus(){
 }
 
 add_action('after_setup_theme','snae_register_footer_nav_menus', 0);
+
+function snae_create_custom_types() {
+	register_post_type('artists',
+        array(
+            'labels' => array(
+                'name' => __( 'Artists' ),
+                'singular_name' => __( 'Artist' )
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'rewrite' => array('slug' => 'artists'),
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-admin-customizer',
+            'supports' => array('title')
+        )
+    );
+
+	register_post_type('workshops',
+        array(
+            'labels' => array(
+                'name' => __( 'Workshops' ),
+                'singular_name' => __( 'Workshop' )
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'rewrite' => array('slug' => 'workshops'),
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-cart'
+        )
+    );
+
+}
+
+add_action('init', 'snae_create_custom_types');
