@@ -1,0 +1,16 @@
+.artist-header .about {
+	img.artist-photo, .intro {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	img.artist-photo {
+		border-radius: 50%;
+	}
+
+	.intro {
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+}
