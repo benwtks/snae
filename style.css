@@ -949,7 +949,7 @@ template {
 
 .content-wrapper, .news-wrapper {
   width: 90%;
-  max-width: 1500px;
+  max-width: 1000px;
   margin: 0 auto;
   overflow-x: hidden;
   overflow: visible; }
@@ -1374,8 +1374,13 @@ form p.comment-form-cookies-consent label {
   vertical-align: middle; }
 .artist-header .about img.artist-photo {
   border-radius: 50%; }
-.artist-header .about .intro h1 {
-  margin-bottom: 0; }
+.artist-header .about .intro {
+  margin-left: 15px; }
+  .artist-header .about .intro h1 {
+    margin-bottom: 0; }
+
+.artist-bio, .artist-gallery {
+  margin-top: 25px; }
 
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
