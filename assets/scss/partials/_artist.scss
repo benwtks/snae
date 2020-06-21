@@ -9,8 +9,14 @@
 	}
 
 	.intro {
+		margin-left: $standard-horizontal-spacing;
+
 		h1 {
 			margin-bottom: 0;
 		}
 	}
+}
+
+.artist-bio, .artist-gallery {
+	margin-top: $content-margin-top;
 }

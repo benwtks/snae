@@ -3,7 +3,9 @@ $standard-spacing: 20px;
 $input-spacing: 3px;
 $side-spacing: 20px;
 
-$nav-icon-spacing: 15px;
+$standard-horizontal-spacing: 15px;
+
+$nav-icon-spacing: $standard-horizontal-spacing;
 
 $header-spacing: 12px;
 
