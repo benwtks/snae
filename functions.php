@@ -304,7 +304,8 @@ function snae_create_custom_types() {
             'has_archive' => false,
             'rewrite' => array('slug' => 'workshops'),
             'show_in_rest' => true,
-            'menu_icon' => 'dashicons-cart',
+			'menu_icon' => 'dashicons-cart',
+			'taxonomies' => array( 'category' ),
             'supports' => array('title')
         )
     );
