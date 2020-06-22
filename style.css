@@ -33,6 +33,9 @@ Text Domain: snae
 .fa-twitter:before {
   content: "\f099"; }
 
+.fa-etsy:before {
+  content: "\f2d7"; }
+
 .fa-facebook:before {
   content: "\f09a"; }
 
@@ -1369,18 +1372,40 @@ form p.comment-form-cookies-consent label {
 .infinity-end.neverending .site-footer {
   display: block; }
 
-.artist-header .about img.artist-photo, .artist-header .about .intro {
+.artist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.artist-header .details img.artist-photo, .artist-header .details .intro {
   display: inline-block;
   vertical-align: middle; }
-.artist-header .about img.artist-photo {
+.artist-header .details img.artist-photo {
   border-radius: 50%; }
-.artist-header .about .intro {
+.artist-header .details .intro {
   margin-left: 15px; }
-  .artist-header .about .intro h1 {
+  .artist-header .details .intro h1 {
     margin-bottom: 0; }
 
+.artist-header .links .artist-icon {
+  color: #454545; }
+  .artist-header .links .artist-icon:not(:last-of-type) {
+    margin-right: 15px; }
+  .artist-header .links .artist-icon i {
+    font-size: 1.2rem; }
+  .artist-header .links .artist-icon:hover {
+    color: #1c7a5f; }
+  .artist-header .links .artist-icon.facebook:hover {
+    color: #1778f2; }
+  .artist-header .links .artist-icon.instagram:hover {
+    color: #e1306c; }
+  .artist-header .links .artist-icon.twitter:hover {
+    color: #00aced; }
+  .artist-header .links .artist-icon.etsy:hover {
+    color: #eb6d20; }
+
 .artist-bio, .artist-gallery {
-  margin-top: 25px; }
+  margin-top: 50px; }
 
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
