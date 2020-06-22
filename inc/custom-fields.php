@@ -86,6 +86,8 @@ function crb_attach_workshop_options() {
 		->add_fields( array(
 			Field::make( 'text', 'crb_workshop_price', 'Price (£)' )
 				->set_attribute( 'placeholder', 'e.g. 49.99' ),
+			Field::make( 'checkbox', 'crb_artist_sold_by_snae', 'Sold by SNAE' )
+				->set_option_value( 'yes' ),
 			Field::make( 'text', 'crb_workshop_places', 'Places available (Stock)' ),
 			Field::make( 'complex', 'crb_workshop_guarantees', 'Customer guarantees' )
 				->add_fields( array(
