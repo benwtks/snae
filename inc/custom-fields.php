@@ -44,18 +44,53 @@ function crb_attach_artist_options() {
     Container::make( 'post_meta', 'Links' )
         ->where( 'post_type', '=', 'artists' )
         ->add_fields( array(
-			Field::make( 'text', 'crb_website', 'Website/Portfolio'),
-			Field::make( 'text', 'crb_facebook', 'Facebook'),
-			Field::make( 'text', 'crb_twitter', 'Twitter'),
-			Field::make( 'text', 'crb_instagram', 'Instagram'),
-			Field::make( 'text', 'crb_etsy', 'Etsy')
+			Field::make( 'text', 'crb_artist_website', 'Website/Portfolio'),
+			Field::make( 'text', 'crb_artist_facebook', 'Facebook'),
+			Field::make( 'text', 'crb_artist_twitter', 'Twitter'),
+			Field::make( 'text', 'crb_artist_instagram', 'Instagram'),
+			Field::make( 'text', 'crb_artist_etsy', 'Etsy')
 	    ));
 
     Container::make( 'post_meta', 'Gallery' )
         ->where( 'post_type', '=', 'artists' )
         ->add_fields( array(
-			Field::make( 'media_gallery', 'crb_artist_gallery', 'Gallery' )
-			    ->set_type( array( 'image' ) )
+			Field::make( 'text', 'crb_artist_gallery_shortcode', 'Gallery code (e.g. Envira Gallery)')
+		));
+
+}
+
+function get_artist_name_array() {
+	$artist_query = new WP_Query( array (
+		'post_type' => 'artists',
+		'posts_per_page' => -1
+	));
+
+	$artists_array = $artist_query->posts;
+	return wp_list_pluck( $artists_array, 'post_title', 'ID' );
+}
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_workshop_options' );
+function crb_attach_workshop_options() {
+	Container::make( 'post_meta', 'Workshop Details' )
+		->where( 'post_type', '=', 'workshops' )
+		->add_fields( array(
+			Field::make( 'select', 'crb_workshop_artist', 'Artist' )
+				->add_options( 'get_artist_name_array' ),
+			Field::make( 'textarea', 'crb_workshop_short_desc', 'Short Description (80 character limit)' )
+				->set_attribute( 'maxLength', 80 ),
+			Field::make( 'textarea', 'crb_workshop_desc', 'Description' ),
+		));
+
+	Container::make( 'post_meta', 'Ecommerce' )
+		->where( 'post_type', '=', 'workshops' )
+		->add_fields( array(
+			Field::make( 'text', 'crb_workshop_price', 'Price (£)' )
+				->set_attribute( 'placeholder', 'e.g. 49.99' ),
+			Field::make( 'text', 'crb_workshop_places', 'Places available (Stock)' ),
+			Field::make( 'complex', 'crb_workshop_guarantees', 'Customer guarantees' )
+				->add_fields( array(
+					Field::make( 'text', 'crb_workshop_gaurantee', 'Gaurantee'),
+				)),
 		));
 
 }
