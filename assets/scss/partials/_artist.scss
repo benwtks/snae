@@ -1,4 +1,10 @@
-.artist-header .about {
+.artist-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.artist-header .details {
 	img.artist-photo, .intro {
 		display: inline-block;
 		vertical-align: middle;
@@ -17,6 +23,38 @@
 	}
 }
 
+.artist-header .links .artist-icon {
+	color: lighten($standard-text-colour, 10%);
+
+	&:not(:last-of-type) {
+		margin-right: 15px;
+	}
+
+	i {
+		font-size: $artist-icon-size;
+	}
+
+	&:hover {
+		color: $link-colour-hover;
+	}
+
+	&.facebook:hover {
+		color: $facebook-colour;
+	}
+
+	&.instagram:hover {
+		color: $instagram-colour;
+	}
+
+	&.twitter:hover {
+		color: $twitter-colour;
+	}
+
+	&.etsy:hover {
+		color: $etsy-colour;
+	}
+}
+
 .artist-bio, .artist-gallery {
-	margin-top: $content-margin-top;
+	margin-top: $content-margin-top * 2;
 }

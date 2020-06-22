@@ -16,7 +16,7 @@ get_header();
 		<main id="main" class="site-main">
 			<div class="artist-about">
 				<div class="artist-header">
-					<div class="about">
+					<div class="details">
 						<?php
 						require_once ABSPATH . '/wp-admin/includes/image.php';
 
@@ -50,10 +50,23 @@ get_header();
 						</div>
 					</div>
 					<div class="links">
-						<!--
-						$link = carbon_get_post_meta(get_the_ID(), 'crb_instagram');
-						if ($link != null) {
-							echo  -->
+						<?php
+						function print_artist_icon($crb_name) {
+							$site = substr(strrchr($crb_name, "_"), 1);
+							$class = $site == "website" ? "dripicons-web" : "fab fa-" . $site;
+
+							$link = carbon_get_post_meta(get_the_ID(), $crb_name);
+
+							if ($link) {
+								echo "<a class='artist-icon " . $site . "' href='" . $link . "'><i class='" . $class . "'></i></a>";
+							}
+						}
+
+						print_artist_icon('crb_artist_facebook');
+						print_artist_icon('crb_artist_twitter');
+						print_artist_icon('crb_artist_instagram');
+						print_artist_icon('crb_artist_etsy');
+						?>
 					</div>
 				</div>
 				<div class="artist-bio">
@@ -66,13 +79,7 @@ get_header();
 					?>
 				</div>
 				<div class="artist-gallery">
-					<?php
-					$gallery_photos = carbon_get_post_meta(get_the_ID(), 'crb_artist_gallery');
-
-					foreach ($gallery_photos as $photo_ID) {
-						echo wp_get_attachment_image($photo_ID);
-					}
-					?>
+					<?php echo do_shortcode(carbon_get_Post_meta(get_the_ID(), 'crb_artist_gallery_shortcode')) ?>
 				</div>
 			</div>
 		</main>
