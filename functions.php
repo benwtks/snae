@@ -8,6 +8,8 @@
  */
 
 require_once( __DIR__ . '/inc/custom-fields.php');
+require_once( __DIR__ . '/inc/artists.php');
+require_once( __DIR__ . '/inc/workshops.php');
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
@@ -254,62 +256,3 @@ function snae_register_footer_nav_menus(){
 }
 
 add_action('after_setup_theme','snae_register_footer_nav_menus', 0);
-
-function snae_create_custom_types() {
-	register_post_type('artists',
-        array(
-            'labels' => array(
-                'name' => __( 'Artists' ),
-				'singular_name' => __( 'Artist' ),
-				'name_admin_bar'     => _x( 'Artist', 'add new on admin bar'),
-				'add_new'            => _x( 'Add New', 'artist'),
-				'add_new_item'       => __( 'Add New Artist'),
-				'new_item'           => __( 'New Artist'),
-				'edit_item'          => __( 'Edit Artist'),
-				'view_item'          => __( 'View Artist'),
-				'all_items'          => __( 'All Artists'),
-				'search_items'       => __( 'Search Artists'),
-				'parent_item_colon'  => __( 'Parent Artists:'),
-				'not_found'          => __( 'No artists found.'),
-				'not_found_in_trash' => __( 'No artists found in Trash.')
-            ),
-            'public' => true,
-            'has_archive' => false,
-            'rewrite' => array('slug' => 'artists'),
-            'show_in_rest' => true,
-            'menu_icon' => 'dashicons-admin-customizer',
-            'supports' => array('title')
-        )
-    );
-
-	register_post_type('workshops',
-        array(
-            'labels' => array(
-                'name' => __( 'Workshops' ),
-				'singular_name' => __( 'Workshop' ),
-				'edit_item' => __('Edit Workshop'),
-				'name_admin_bar'     => _x( 'Workshop', 'add new on admin bar'),
-				'add_new'            => _x( 'Add New', 'workshop'),
-				'add_new_item'       => __( 'Add New Workshop'),
-				'new_item'           => __( 'New Workshop'),
-				'edit_item'          => __( 'Edit Workshop'),
-				'view_item'          => __( 'View Workshop'),
-				'all_items'          => __( 'All Workshops'),
-				'search_items'       => __( 'Search Workshops'),
-				'parent_item_colon'  => __( 'Parent Workshops'),
-				'not_found'          => __( 'No workshops found.'),
-				'not_found_in_trash' => __( 'No workshops found in Trash.')
-            ),
-            'public' => true,
-            'has_archive' => false,
-            'rewrite' => array('slug' => 'workshops'),
-            'show_in_rest' => true,
-			'menu_icon' => 'dashicons-cart',
-			'taxonomies' => array( 'category' ),
-            'supports' => array('title')
-        )
-    );
-
-}
-
-add_action('init', 'snae_create_custom_types');
