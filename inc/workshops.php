@@ -1,6 +1,7 @@
 <?php
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
+require_once( __DIR__ . '/photo-resizer.php');
 
 function snae_create_workshop_post_type() {
 	register_post_type('workshops',
@@ -55,6 +56,12 @@ function crb_attach_workshop_options() {
 			Field::make( 'textarea', 'crb_workshop_desc', 'Description' ),
 		));
 
+	Container::make( 'post_meta', 'Photos' )
+		->where( 'post_type', '=', 'workshops' )
+		->add_fields( array(
+			Field::make( 'media_gallery', 'crb_workshop_photos', 'Photos' )
+		));
+
 	Container::make( 'post_meta', 'Ecommerce' )
 		->where( 'post_type', '=', 'workshops' )
 		->add_fields( array(
@@ -68,8 +75,39 @@ function crb_attach_workshop_options() {
 					Field::make( 'text', 'crb_workshop_gaurantee', 'Gaurantee'),
 				)),
 		));
-
 }
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_workshop_options' );
+
+function snae_get_workshop_artist($post_id) {
+	return get_the_title(carbon_get_post_meta($post_id, 'crb_workshop_artist'));
+}
+
+function snae_save_workshop($post_id) {
+	if (get_post_type($post_id) !== "workshops") {
+		return false;
+	}
+
+	$photos = carbon_get_post_meta($post_id, 'crb_workshop_photos');
+
+	foreach ($photos as $photo) {
+		snae_resize_if_needed($photo, 200, 200, "workshop-thumbnail");
+	}
+}
+
+function snae_print_workshop_thumbnails($post_id, $size, $alt) {
+	snae_save_workshop($post_id);
+	$photos = carbon_get_post_meta($post_id, 'crb_workshop_photos');
+
+	foreach ($photos as $photo_ID) {
+		$onclick = 'updateWorkshop("' . wp_get_attachment_url($photo_ID) . '")';
+		$cropped_url = snae_get_cropped_url($photo_ID, "workshop-thumbnail");
+		echo ("<img width='". $size . "' height='" . $size . "' class='workshop-thumbnail' src='" . $cropped_url . "' alt='" . $alt . "' onclick='". $onclick . "' />");
+	}
+}
+
+function snae_get_first_workshop_photo_url($post_id) {
+	$photos = carbon_get_post_meta($post_id, 'crb_workshop_photos');
+	return wp_get_attachment_url($photos[0]);
+}
 ?>

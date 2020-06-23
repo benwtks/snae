@@ -1,0 +1,24 @@
+.workshop-details {
+	.meta h1.title {
+		margin-bottom: 0;
+	}
+
+	.photos {
+		display: flex;
+		margin-top: $content-margin-top;
+
+		.thumbnails {
+			display: flex;
+			flex-direction: column;
+			margin-right: $workshop-thumbnail-spacing;
+
+			.workshop-thumbnail:not(last-of-type) {
+				margin-bottom: $workshop-thumbnail-spacing;
+			}
+		}
+
+		img#featured {
+			width: 400px;
+		}
+	}
+}

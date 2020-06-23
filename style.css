@@ -1407,6 +1407,20 @@ form p.comment-form-cookies-consent label {
 .artist-bio, .artist-gallery {
   margin-top: 50px; }
 
+.workshop-details .meta h1.title {
+  margin-bottom: 0; }
+.workshop-details .photos {
+  display: flex;
+  margin-top: 25px; }
+  .workshop-details .photos .thumbnails {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px; }
+    .workshop-details .photos .thumbnails .workshop-thumbnail:not(last-of-type) {
+      margin-bottom: 15px; }
+  .workshop-details .photos img#featured {
+    width: 400px; }
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {

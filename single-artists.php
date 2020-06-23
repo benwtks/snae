@@ -17,9 +17,7 @@ get_header();
 			<div class="artist-about">
 				<div class="artist-header">
 					<div class="details">
-<?php
-snae_save_artist(get_the_ID());
-echo (snae_get_artist_image(120, 'artist-photo')) ?>
+						<?php echo (snae_get_artist_image(get_the_ID(), 120, 'artist-photo')) ?>
 						<div class="intro">
 							<h1 class="name"><?php echo(get_the_title()) ?></h1>
 							<span><?php echo(carbon_get_post_meta(get_the_ID(), 'crb_job')) ?></span>

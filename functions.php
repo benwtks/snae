@@ -156,6 +156,10 @@ function snae_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if (is_singular() && get_post_type() == 'workshops') {
+		wp_enqueue_script( 'workshop_photo', get_template_directory_uri() . '/assets/js/workshop_photo.js', array(), _S_VERSION);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'snae_scripts' );
 

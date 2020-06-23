@@ -1,7 +1,7 @@
 <?php
-require_once ABSPATH . '/wp-admin/includes/image.php';
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
+require_once( __DIR__ . '/photo-resizer.php');
 
 function snae_create_artist_post_type() {
 	register_post_type('artists',
@@ -64,40 +64,21 @@ function crb_attach_artist_options() {
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_artist_options' );
 
-function generate_cropped_path($photo_ID, $file) {
-	$photo_folder = substr($file, 0, strrpos($file, "/")) . "/";
-	$photo_file_type = strrchr($file, '.');
-
-	return "uploads/" . $photo_folder . $photo_ID . "-artist-photo" . $photo_file_type;
-}
-
 function snae_save_artist($post_id) {
 	if (get_post_type($post_id) !== "artists") {
 		return false;
 	}
 
 	$photo_ID = carbon_get_post_meta($post_id, 'crb_artist_photo');
-	$file = wp_get_attachment_metadata($photo_ID)['file'];
-
-	$cropped_path = generate_cropped_path($photo_ID, $file);
-	$cropped_url = content_url($cropped_path);
-
-	if (!file_exists(WP_CONTENT_DIR . "/" . $cropped_path)) {
-		$image = wp_get_image_editor(WP_CONTENT_DIR . '/uploads/' . $file);
-
-		if (! is_WP_error($editor)) {
-			$image->resize(400,400, array( 'center', 'center'));
-			$image->save("wp-content/" . $cropped_path);
-		}
-	}
+	snae_resize_if_needed($photo_ID, 400, 400, "artist-photo");
 }
 // hook not firing?
 add_action('carbon_fields_post_meta_container_saved', 'snae_save_artist', 10, 1);
 
-function snae_get_artist_image($size, $alt) {
-	$photo_ID = carbon_get_post_meta(get_the_ID(), 'crb_artist_photo');
-	$file = wp_get_attachment_metadata($photo_ID)['file'];
-	$cropped_url = content_url(generate_cropped_path($photo_ID, $file));
+function snae_get_artist_image($post_id, $size, $alt) {
+	snae_save_artist($post_id);
+	$photo_ID = carbon_get_post_meta($post_id, 'crb_artist_photo');
+	$cropped_url = snae_get_cropped_url($photo_ID, "artist-photo");
 
 	return ("<img width='". $size . "' height='" . $size . "' class='artist-photo' src='" . $cropped_url . "' alt='" . $alt . "'/>");
 }
