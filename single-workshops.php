@@ -18,13 +18,18 @@ get_header();
 				<div class="workshop-details">
 					<div class="meta">
 						<h1 class="title"><?php echo(get_the_title()) ?></h1>
-						<span><?php echo snae_get_workshop_artist($post_id) ?></span>
+						<?php echo snae_get_workshop_artist($post_id) ?>
 					</div>
 					<div class="photos">
 						<div class="thumbnails">
 							<?php snae_print_workshop_thumbnails(get_the_ID(), 100, "workshop thumbnail"); ?>
 						</div>
-						<img id="featured" class="workshop-photo" src="<?php echo snae_get_first_workshop_photo_url(get_the_ID()) ?>" >
+						<?php
+						$first_url = snae_get_first_workshop_photo_url(get_the_ID());
+						$srcset = snae_get_workshop_photos_srcset(get_the_ID());
+
+						echo "<img id='featured' class='workshop-photo' src='" . $first_url . "' srcset='" . $srcset . "' >"
+						?>
 					</div>
 				</div>
 				<div class="ecommerce-details">
@@ -32,3 +37,5 @@ get_header();
 			</div>
 		</main>
 	</div>
+
+<?php get_footer(); ?>

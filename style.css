@@ -1416,10 +1416,14 @@ form p.comment-form-cookies-consent label {
     display: flex;
     flex-direction: column;
     margin-right: 15px; }
-    .workshop-details .photos .thumbnails .workshop-thumbnail:not(last-of-type) {
+    .workshop-details .photos .thumbnails .workshop-thumbnail {
+      cursor: pointer;
       margin-bottom: 15px; }
+    .workshop-details .photos .thumbnails .workshop-thumbnail.selected {
+      border: 3px solid #2B2B2B;
+      box-sizing: content-box; }
   .workshop-details .photos img#featured {
-    width: 400px; }
+    width: 600px; }
 
 .page-content .wp-smiley,
 .entry-content .wp-smiley,

@@ -80,7 +80,11 @@ function crb_attach_workshop_options() {
 add_action( 'carbon_fields_register_fields', 'crb_attach_workshop_options' );
 
 function snae_get_workshop_artist($post_id) {
-	return get_the_title(carbon_get_post_meta($post_id, 'crb_workshop_artist'));
+	$artist = carbon_get_post_meta($post_id, 'crb_workshop_artist');
+	$title = get_the_title($artist);
+	$link = get_the_permalink($artist);
+
+	return "<a href='" . $link . "' alt='artist-profile'>" . $title . "</a>";
 }
 
 function snae_save_workshop($post_id) {
@@ -95,14 +99,22 @@ function snae_save_workshop($post_id) {
 	}
 }
 
+function snae_print_workshop_thumbnail($size, $photo_ID, $alt, $class = "") {
+	$onclick = 'updateWorkshop("' . wp_get_attachment_url($photo_ID) . '")';
+	$cropped_url = snae_get_cropped_url($photo_ID, "workshop-thumbnail");
+
+	return ("<img width='". $size . "' height='" . $size . "' class='workshop-thumbnail " . $class ."' src='" . $cropped_url . "' alt='" . $alt . "' onclick='". $onclick . "' />");
+}
+
 function snae_print_workshop_thumbnails($post_id, $size, $alt) {
 	snae_save_workshop($post_id);
 	$photos = carbon_get_post_meta($post_id, 'crb_workshop_photos');
 
-	foreach ($photos as $photo_ID) {
-		$onclick = 'updateWorkshop("' . wp_get_attachment_url($photo_ID) . '")';
-		$cropped_url = snae_get_cropped_url($photo_ID, "workshop-thumbnail");
-		echo ("<img width='". $size . "' height='" . $size . "' class='workshop-thumbnail' src='" . $cropped_url . "' alt='" . $alt . "' onclick='". $onclick . "' />");
+	echo snae_print_workshop_thumbnail($size, $photos[0], $alt, "selected");
+	unset($photos[0]);
+
+	foreach ($photos as $photo_id) {
+		echo snae_print_workshop_thumbnail($size, $photo_id, $alt);
 	}
 }
 
@@ -110,4 +122,16 @@ function snae_get_first_workshop_photo_url($post_id) {
 	$photos = carbon_get_post_meta($post_id, 'crb_workshop_photos');
 	return wp_get_attachment_url($photos[0]);
 }
+
+function snae_get_workshop_photos_srcset($post_id) {
+	$photos = carbon_get_post_meta($post_id, 'crb_workshop_photos');
+	$srcset = "";
+
+	foreach ($photos as $photo_id) {
+		$srcset .= " " . wp_get_attachment_image_url($photo_id);
+	}
+
+	return $srcset;
+}
+
 ?>
