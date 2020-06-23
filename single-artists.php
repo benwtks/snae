@@ -12,7 +12,7 @@
 
 get_header();
 ?>
-	<div id="primary" class="content-area content-wrapper">
+	<div id="primary" class="content-area content-wrapper artist-wrapper">
 		<main id="main" class="site-main">
 			<div class="artist-about">
 				<div class="artist-header">

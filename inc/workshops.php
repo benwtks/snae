@@ -123,15 +123,4 @@ function snae_get_first_workshop_photo_url($post_id) {
 	return wp_get_attachment_url($photos[0]);
 }
 
-function snae_get_workshop_photos_srcset($post_id) {
-	$photos = carbon_get_post_meta($post_id, 'crb_workshop_photos');
-	$srcset = "";
-
-	foreach ($photos as $photo_id) {
-		$srcset .= " " . wp_get_attachment_image_url($photo_id);
-	}
-
-	return $srcset;
-}
-
 ?>

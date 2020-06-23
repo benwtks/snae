@@ -1372,6 +1372,9 @@ form p.comment-form-cookies-consent label {
 .infinity-end.neverending .site-footer {
   display: block; }
 
+.artist-wrapper {
+  max-width: 1000px; }
+
 .artist-header {
   display: flex;
   align-items: center;
