@@ -40,18 +40,53 @@ get_header();
 							</span>
 							<button class="buy-now">Buy now</a>
 						</div>
-						<ul class="workshop-guarantees">
-							<?php
-							$guarantees = carbon_get_post_meta(get_the_ID(), 'crb_workshop_guarantees');
-							
-							foreach ($guarantees as $g) {
-								echo '<li class="guarantee">';
-								echo $g['crb_workshop_guarantee'];
-								echo '</li>';
-							}
+						<div class="workshop-guarantees">
+							<ul>
+								<?php
+								$guarantees = carbon_get_post_meta(get_the_ID(), 'crb_workshop_guarantees');
+								
+								foreach ($guarantees as $g) {
+									echo '<li class="guarantee">';
+									echo $g['crb_workshop_guarantee'];
+									echo '</li>';
+								}
 
-							?>
-						</ul>
+								?>
+							</ul>
+						</div>
+				</div>
+			</div>
+			<div class="workshop-middle">
+				<div class="description">
+					<?php
+					$bio = carbon_get_post_meta(get_the_ID(), 'crb_workshop_desc');
+
+					foreach (explode(PHP_EOL, trim($bio, PHP_EOL)) as $paragraph) {
+						echo ("<p>" . $paragraph . "</p>");
+					}
+					?>
+				</div>
+				<div class="artist">
+					<?php $artist_id = carbon_get_post_meta(get_the_ID(), 'crb_workshop_artist') ?>
+					<div class="artist-name">
+						<div class="details">
+							<?php echo (snae_get_artist_image($artist_id, 100, 'artist-photo')) ?>
+							<div class="intro">
+								<h2 class="name"><?php echo(get_the_title($artist_id)) ?></h2>
+								<span><?php echo(carbon_get_post_meta($artist_id, 'crb_job')) ?></span>
+							</div>
+						</div>
+						<a class="see-more" href="google.com">Learn moore</a>
+					</div>
+					<div class="artist-bio">
+					<?php
+					$bio = carbon_get_post_meta($artist_id, 'crb_bio');
+
+					foreach (explode(PHP_EOL, trim($bio, PHP_EOL)) as $paragraph) {
+						echo ("<p>" . $paragraph . "</p>");
+					}
+					?>
+					</div>
 				</div>
 			</div>
 		</main>
