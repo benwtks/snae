@@ -1410,23 +1410,56 @@ form p.comment-form-cookies-consent label {
 .artist-bio, .artist-gallery {
   margin-top: 50px; }
 
-.workshop-details .meta h1.title {
+.workshop-meta h1.title {
   margin-bottom: 0; }
-.workshop-details .photos {
+
+.workshop-top {
   display: flex;
+  align-items: flex-start;
   margin-top: 25px; }
-  .workshop-details .photos .thumbnails {
+
+.workshop-photos {
+  display: flex; }
+  .workshop-photos .thumbnails {
     display: flex;
     flex-direction: column;
     margin-right: 15px; }
-    .workshop-details .photos .thumbnails .workshop-thumbnail {
+    .workshop-photos .thumbnails .workshop-thumbnail {
       cursor: pointer;
+      width: 100px;
       margin-bottom: 15px; }
-    .workshop-details .photos .thumbnails .workshop-thumbnail.selected {
+    .workshop-photos .thumbnails .workshop-thumbnail.selected {
       border: 3px solid #2B2B2B;
       box-sizing: content-box; }
-  .workshop-details .photos img#featured {
+  .workshop-photos img#featured {
     width: 600px; }
+
+.ecommerce-details {
+  margin-left: 15px;
+  background-color: #f3f3f3;
+  flex: 1; }
+  .ecommerce-details .intro {
+    padding: 20px; }
+    .ecommerce-details .intro p.description {
+      font-style: italic; }
+  .ecommerce-details .buy {
+    width: 100%;
+    color: #fff;
+    background-color: #2B2B2B;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px; }
+    .ecommerce-details .buy .price {
+      font-size: 30px;
+      vertical-align: middle; }
+    .ecommerce-details .buy .buy-now {
+      vertical-align: middle;
+      padding: 10px 15px; }
+
+.workshop-guarantees {
+  margin-bottom: 50px;
+  padding-top: 10px; }
 
 .page-content .wp-smiley,
 .entry-content .wp-smiley,

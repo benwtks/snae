@@ -26,7 +26,7 @@ function snae_create_artist_post_type() {
 			'rewrite' => array('slug' => 'artists'),
 			'show_in_rest' => true,
 			'menu_icon' => 'dashicons-admin-customizer',
-			'supports' => array('title', 'editor')
+			'supports' => array('title')
 		)
 	);
 }

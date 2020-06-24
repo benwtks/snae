@@ -53,7 +53,7 @@ get_header();
 					?>
 				</div>
 				<div class="artist-gallery">
-					<?php echo do_shortcode(carbon_get_Post_meta(get_the_ID(), 'crb_artist_gallery_shortcode')) ?>
+					<?php echo do_shortcode(carbon_get_post_meta(get_the_ID(), 'crb_artist_gallery_shortcode')) ?>
 				</div>
 			</div>
 		</main>

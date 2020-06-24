@@ -53,6 +53,8 @@ function crb_attach_workshop_options() {
 				->add_options( 'get_artist_name_array' ),
 			Field::make( 'textarea', 'crb_workshop_short_desc', 'Short Description (80 character limit)' )
 				->set_attribute( 'maxLength', 80 ),
+			Field::make( 'textarea', 'crb_workshop_longer_desc', 'Longer Description (280 character limit)' )
+				->set_attribute( 'maxLength', 280 ),
 			Field::make( 'textarea', 'crb_workshop_desc', 'Description' ),
 		));
 
@@ -72,7 +74,7 @@ function crb_attach_workshop_options() {
 			Field::make( 'text', 'crb_workshop_places', 'Places available (Stock)' ),
 			Field::make( 'complex', 'crb_workshop_guarantees', 'Customer guarantees' )
 				->add_fields( array(
-					Field::make( 'text', 'crb_workshop_gaurantee', 'Gaurantee'),
+					Field::make( 'text', 'crb_workshop_guarantee', 'Guarantee'),
 				)),
 		));
 }
