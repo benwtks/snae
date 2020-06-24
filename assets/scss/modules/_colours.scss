@@ -1,5 +1,6 @@
 $snae-dark: #2B2B2B;
-$snae-turquoise: #2AB890;
+$old-snae-green: #2AB890;
+$snae-green: #2fa684;
 
 $grey: #ccc;
 $dark-grey: #555;
@@ -9,15 +10,19 @@ $separator-colour: #e1e1e1;
 
 $body-bg: #fff;
 $standard-text-colour: $snae-dark;
-$link-colour: $snae-turquoise;
+$link-colour: $snae-green;
 $link-colour-visited: $link-colour;
-$link-colour-hover: darken($snae-turquoise, 15%);
+$link-colour-hover: darken($snae-green, 15%);
+
+$button-bg: $snae-green;
+$button-text: #fff;
+
 
 $nav-icon-colour: $dark-grey;
-$nav-icon-hover-colour: $snae-turquoise;
+$nav-icon-hover-colour: $snae-green;
 
 $nav-link-colour: $dark-grey;
-$nav-link-hover-colour: $snae-turquoise;
+$nav-link-hover-colour: $snae-green;
 
 $instagram-colour: #e1306c;
 $facebook-colour: #1778f2;
@@ -25,7 +30,7 @@ $twitter-colour: #00aced;
 $etsy-colour: #eb6d20;
 
 $header-logo-colour: $snae-dark;
-$header-logo-hover-colour: $snae-turquoise;
+$header-logo-hover-colour: $snae-green;
 
 $post-page-meta-colour: $dark-grey;
 

@@ -1088,7 +1088,7 @@ header.site-header a {
   color: #555;
   text-decoration: none; }
   header.site-header a:hover {
-    color: #2AB890; }
+    color: #2fa684; }
 
 .site-branding .content-wrapper, .site-branding .news-wrapper {
   display: flex;
@@ -1103,12 +1103,12 @@ header.site-header a {
   .site-branding .content-wrapper .logo h1 a, .site-branding .news-wrapper .logo h1 a {
     color: #2B2B2B; }
     .site-branding .content-wrapper .logo h1 a:hover, .site-branding .news-wrapper .logo h1 a:hover {
-      color: #2AB890; }
+      color: #2fa684; }
   .site-branding .content-wrapper .nav-icons a i, .site-branding .news-wrapper .nav-icons a i, .site-branding .content-wrapper .nav-icons button#menu-toggle, .site-branding .news-wrapper .nav-icons button#menu-toggle {
     color: #555;
     font-size: 1.4rem; }
     .site-branding .content-wrapper .nav-icons a i:hover, .site-branding .news-wrapper .nav-icons a i:hover, .site-branding .content-wrapper .nav-icons button#menu-toggle:hover, .site-branding .news-wrapper .nav-icons button#menu-toggle:hover {
-      color: #2AB890; }
+      color: #2fa684; }
   .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover, .site-branding .news-wrapper .nav-icons a i.fa-instagram:hover {
     color: #e1306c; }
   .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover, .site-branding .news-wrapper .nav-icons a i.fa-facebook:hover {
@@ -1215,13 +1215,13 @@ footer.site-footer .explore .links {
     margin-right: 30px; }
 
 a {
-  color: #2AB890;
+  color: #2fa684;
   text-decoration: none; }
 
 a:hover,
 a:focus,
 a:active {
-  color: #1c7a5f; }
+  color: #1e6a55; }
 
 a:focus {
   outline: thin dotted; }
@@ -1289,7 +1289,7 @@ input[type="reset"],
 input[type="submit"] {
   border: 0;
   border-radius: 3px;
-  background: #2AB890;
+  background: #2fa684;
   color: #fff; }
 
 input[type="text"],
@@ -1400,7 +1400,7 @@ form p.comment-form-cookies-consent label {
   .artist-header .links .artist-icon i {
     font-size: 1.2rem; }
   .artist-header .links .artist-icon:hover {
-    color: #1c7a5f; }
+    color: #1e6a55; }
   .artist-header .links .artist-icon.facebook:hover {
     color: #1778f2; }
   .artist-header .links .artist-icon.instagram:hover {
@@ -1445,8 +1445,7 @@ form p.comment-form-cookies-consent label {
 .ecommerce-details {
   margin-left: 15px;
   background-color: #f3f3f3;
-  max-width: 300px;
-  flex: 1; }
+  max-width: 300px; }
   .ecommerce-details .intro {
     padding: 20px; }
     .ecommerce-details .intro p.description {
