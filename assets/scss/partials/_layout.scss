@@ -6,10 +6,13 @@
 }
 .content-wrapper {
 	width: $page-width;
-	max-width: $max-page-width;
 	margin: 0 auto;
 	overflow-x: hidden;
 	overflow: visible;
+}
+
+.page-wrapper {
+	max-width: $max-page-width;
 }
 
 .news-wrapper {

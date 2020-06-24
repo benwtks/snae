@@ -12,7 +12,7 @@
 
 get_header();
 ?>
-	<div id="primary" class="content-area content-wrapper">
+	<div id="primary" class="content-area content-wrapper workshop-wrapper">
 		<main id="main" class="site-main">
 			<div class="workshop-meta">
 				<h1 class="title"><?php echo(get_the_title()) ?></h1>

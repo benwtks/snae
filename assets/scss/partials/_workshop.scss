@@ -1,3 +1,7 @@
+.workshop-wrapper {
+	max-width: $max-workshop-width;
+}
+
 .workshop-meta h1.title {
 	margin-bottom: 0;
 }
@@ -5,6 +9,7 @@
 .workshop-top {
 	display: flex;
 	align-items: flex-start;
+	justify-content: space-between;
 	margin-top: $content-margin-top;
 }
 
@@ -19,6 +24,7 @@
 		.workshop-thumbnail {
 			cursor: pointer;
 			width: 100px;
+			padding: 1px;
 			margin-bottom: $workshop-thumbnail-spacing;
 		}
 
@@ -36,6 +42,7 @@
 .ecommerce-details {
 	margin-left: $workshop-top-detail-spacing;
 	background-color: $workshop-ecommerce;
+	max-width: $ecommerce-max-width;
 	flex: 1;
 
 	.intro {

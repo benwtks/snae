@@ -952,10 +952,12 @@ template {
 
 .content-wrapper, .news-wrapper {
   width: 90%;
-  max-width: 1000px;
   margin: 0 auto;
   overflow-x: hidden;
   overflow: visible; }
+
+.page-wrapper {
+  max-width: 1000px; }
 
 .news-wrapper {
   max-width: 820px; }
@@ -1410,12 +1412,16 @@ form p.comment-form-cookies-consent label {
 .artist-bio, .artist-gallery {
   margin-top: 50px; }
 
+.workshop-wrapper {
+  max-width: 1100px; }
+
 .workshop-meta h1.title {
   margin-bottom: 0; }
 
 .workshop-top {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   margin-top: 25px; }
 
 .workshop-photos {
@@ -1427,6 +1433,7 @@ form p.comment-form-cookies-consent label {
     .workshop-photos .thumbnails .workshop-thumbnail {
       cursor: pointer;
       width: 100px;
+      padding: 1px;
       margin-bottom: 15px; }
     .workshop-photos .thumbnails .workshop-thumbnail.selected {
       border: 3px solid #2B2B2B;
@@ -1437,6 +1444,7 @@ form p.comment-form-cookies-consent label {
 .ecommerce-details {
   margin-left: 15px;
   background-color: #f3f3f3;
+  max-width: 300px;
   flex: 1; }
   .ecommerce-details .intro {
     padding: 20px; }
