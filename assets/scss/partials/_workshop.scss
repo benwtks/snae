@@ -26,6 +26,7 @@
 			width: 100px;
 			padding: 1px;
 			margin-bottom: $workshop-thumbnail-spacing;
+			border-radius: $border-radius;
 		}
 
 		.workshop-thumbnail.selected {
@@ -36,6 +37,7 @@
 
 	img#featured {
 		width: $featured-width;
+		border-radius: $border-radius;
 	}
 }
 
@@ -43,6 +45,7 @@
 	margin-left: $workshop-top-detail-spacing;
 	background-color: $workshop-ecommerce;
 	max-width: $ecommerce-max-width;
+	border-radius: $border-radius;
 
 	.intro {
 		padding: $workshop-padding;
@@ -58,16 +61,14 @@
 		background-color: $workshop-buy-bg;
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		padding: $workshop-padding;
 
 		.price {
 			font-size: $workshop-price-size;
-			vertical-align: middle;
 		}
 
 		.buy-now {
-			vertical-align: middle;
 			padding: $workshop-buy-padding;
 		}
 	}
@@ -76,4 +77,32 @@
 .workshop-guarantees {
 	margin-bottom: $workshop-margin-bottom;
 	padding-top: $workshop-padding / 2;
+}
+
+.workshop-middle {
+	margin-top: $content-margin-top * 2;
+	border: $section-border;
+	border-radius: $border-radius;
+
+	.title, .description, .artist {
+		padding: $workshop-middle-padding;
+	}
+
+	.title { border-bottom: $section-border; }
+
+	.artist {
+		border-top: $section-border;
+
+		.artist-name {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.name a { color: initial; }
+		}
+
+		.artist-bio {
+			margin-top: $content-margin-top;
+		}
+	}
 }

@@ -72,8 +72,8 @@ function snae_save_artist($post_id) {
 	$photo_ID = carbon_get_post_meta($post_id, 'crb_artist_photo');
 	snae_resize_if_needed($photo_ID, 400, 400, "artist-photo");
 }
-// hook not firing?
-add_action('carbon_fields_post_meta_container_saved', 'snae_save_artist', 10, 1);
+// it's firing but only when you create a new artist??
+//add_action('carbon_fields_post_meta_container_saved', 'snae_save_artist', 10, 1);
 
 function snae_get_artist_image($post_id, $size, $alt) {
 	snae_save_artist($post_id);
@@ -81,6 +81,25 @@ function snae_get_artist_image($post_id, $size, $alt) {
 	$cropped_url = snae_get_cropped_url($photo_ID, "artist-photo");
 
 	return ("<img width='". $size . "' height='" . $size . "' class='artist-photo' src='" . $cropped_url . "' alt='" . $alt . "'/>");
+}
+
+function snae_get_artist_workshops($post_id) {
+	$workshop_query = new WP_Query( array(
+		'post_type' => 'workshops',
+		'posts_per_page' => -1
+	));
+
+	$workshop_ids = wp_list_pluck( $workshop_query->posts, 'ID' );
+
+	foreach ($workshop_ids as $w_id => $workshop) {
+		$artist = carbon_get_post_meta($workshop, 'crb_workshop_artist');
+
+		if ($artist !== $post_id) {
+			unset($workshop_ids[$w_id]);
+		}
+	}
+
+	return $workshop_ids;
 }
 
 ?>

@@ -16,7 +16,7 @@ get_header();
 		<main id="main" class="site-main">
 			<div class="artist-about">
 				<div class="artist-header">
-					<div class="details">
+					<div class="artist-details">
 						<?php echo (snae_get_artist_image(get_the_ID(), 120, 'artist-photo')) ?>
 						<div class="intro">
 							<h1 class="name"><?php echo(get_the_title()) ?></h1>
@@ -56,6 +56,19 @@ get_header();
 					<?php echo do_shortcode(carbon_get_post_meta(get_the_ID(), 'crb_artist_gallery_shortcode')) ?>
 				</div>
 			</div>
+			<!--<div class="workshops">
+				<h2>Workshops</h2>
+				<div class="workshop-previews">
+				<?php
+					/* $workshops = snae_get_artist_workshops(get_the_ID()); */
+
+					/* foreach($workshops as $w) { */
+					/* 	echo '<div class="workshop-preview">'; */
+					/* 	echo '<img ' */
+					/* } */
+				?>
+				</div>
+			</div>-->
 		</main>
 	</div>
 

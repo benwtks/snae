@@ -8,7 +8,7 @@
 	justify-content: space-between;
 }
 
-.artist-header .details {
+.artist-details {
 	img.artist-photo, .intro {
 		display: inline-block;
 		vertical-align: middle;
@@ -21,7 +21,7 @@
 	.intro {
 		margin-left: $standard-horizontal-spacing;
 
-		h1 {
+		.name {
 			margin-bottom: 0;
 		}
 	}
@@ -59,6 +59,12 @@
 	}
 }
 
-.artist-bio, .artist-gallery {
-	margin-top: $content-margin-top * 2;
+.artist-about {
+	.artist-bio, .artist-gallery {
+		margin-top: $content-margin-top * 2;
+	}
+
+	.artist-gallery img {
+		border-radius: $border-radius;
+	}
 }

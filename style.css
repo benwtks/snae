@@ -1318,6 +1318,9 @@ select {
 textarea {
   width: 100%; }
 
+button:hover {
+  cursor: pointer; }
+
 .alignleft {
   display: inline;
   float: left;
@@ -1383,14 +1386,14 @@ form p.comment-form-cookies-consent label {
   align-items: center;
   justify-content: space-between; }
 
-.artist-header .details img.artist-photo, .artist-header .details .intro {
+.artist-details img.artist-photo, .artist-details .intro {
   display: inline-block;
   vertical-align: middle; }
-.artist-header .details img.artist-photo {
+.artist-details img.artist-photo {
   border-radius: 50%; }
-.artist-header .details .intro {
+.artist-details .intro {
   margin-left: 15px; }
-  .artist-header .details .intro h1 {
+  .artist-details .intro .name {
     margin-bottom: 0; }
 
 .artist-header .links .artist-icon {
@@ -1410,8 +1413,10 @@ form p.comment-form-cookies-consent label {
   .artist-header .links .artist-icon.etsy:hover {
     color: #eb6d20; }
 
-.artist-bio, .artist-gallery {
+.artist-about .artist-bio, .artist-about .artist-gallery {
   margin-top: 50px; }
+.artist-about .artist-gallery img {
+  border-radius: 3px; }
 
 .workshop-wrapper {
   max-width: 1100px; }
@@ -1435,17 +1440,20 @@ form p.comment-form-cookies-consent label {
       cursor: pointer;
       width: 100px;
       padding: 1px;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      border-radius: 3px; }
     .workshop-photos .thumbnails .workshop-thumbnail.selected {
       border: 3px solid #2B2B2B;
       box-sizing: content-box; }
   .workshop-photos img#featured {
-    width: 600px; }
+    width: 600px;
+    border-radius: 3px; }
 
 .ecommerce-details {
   margin-left: 15px;
   background-color: #f3f3f3;
-  max-width: 300px; }
+  max-width: 300px;
+  border-radius: 3px; }
   .ecommerce-details .intro {
     padding: 20px; }
     .ecommerce-details .intro p.description {
@@ -1456,18 +1464,35 @@ form p.comment-form-cookies-consent label {
     background-color: #2B2B2B;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px; }
     .ecommerce-details .buy .price {
-      font-size: 30px;
-      vertical-align: middle; }
+      font-size: 30px; }
     .ecommerce-details .buy .buy-now {
-      vertical-align: middle;
       padding: 10px 15px; }
 
 .workshop-guarantees {
   margin-bottom: 50px;
   padding-top: 10px; }
+
+.workshop-middle {
+  margin-top: 50px;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px; }
+  .workshop-middle .title, .workshop-middle .description, .workshop-middle .artist {
+    padding: 30px; }
+  .workshop-middle .title {
+    border-bottom: 1px solid #e1e1e1; }
+  .workshop-middle .artist {
+    border-top: 1px solid #e1e1e1; }
+    .workshop-middle .artist .artist-name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .workshop-middle .artist .artist-name .name a {
+        color: initial; }
+    .workshop-middle .artist .artist-bio {
+      margin-top: 25px; }
 
 .page-content .wp-smiley,
 .entry-content .wp-smiley,

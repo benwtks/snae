@@ -38,7 +38,7 @@ get_header();
 							<span class="price"><span class="currency">£</span>
 									<?php echo carbon_get_post_meta(get_the_ID(), 'crb_workshop_price') ?>
 							</span>
-							<button class="buy-now">Buy now</a>
+							<button class="buy-now" onclick="window.location.href='ttps://checkout.stripe.com/pay/ppage_1GxP8fFKnpzPB0MXLeXsu2EX#fidkdWxOYHwnPyd1blpxYHZxWm9CPHY2XUhhVm9fQzxOYWgwYjA8f2lcYScpJ3dgY2B3d2B3SndsYmxrJz8nbXFxdXY%2FKip2cXdsdWArZmpoJyknaWpmZGlgJz9rcGlpKSdobGF2Jz9%2BJ2JwbGEnPyc1Nz08MTU9NChmNzw9KDE9NmMoPWdkYSg8YTNkMzJmMmQzMz0nKSdocGxhJz8nNDw3Z2Y1ZzEoNDw1NCgxNGdkKGdkZzEoYz03NjJmMzcwZ2ZkJykndmxhJz8nYDU1YDNmPGEoZmNkZCgxNjM1KGc3NT0oZjNkYDc8YTE3N2c0J3gpJ2dgcWR2Jz9eWHgl'">Buy now</a>
 						</div>
 						<div class="workshop-guarantees">
 							<ul>
@@ -57,6 +57,7 @@ get_header();
 				</div>
 			</div>
 			<div class="workshop-middle">
+				<h2 class="title">Workshop Description</h2>
 				<div class="description">
 					<?php
 					$bio = carbon_get_post_meta(get_the_ID(), 'crb_workshop_desc');
@@ -69,14 +70,14 @@ get_header();
 				<div class="artist">
 					<?php $artist_id = carbon_get_post_meta(get_the_ID(), 'crb_workshop_artist') ?>
 					<div class="artist-name">
-						<div class="details">
-							<?php echo (snae_get_artist_image($artist_id, 100, 'artist-photo')) ?>
+						<div class="artist-details">
+							<?php echo (snae_get_artist_image($artist_id, 90, 'artist-photo')) ?>
 							<div class="intro">
-								<h2 class="name"><?php echo(get_the_title($artist_id)) ?></h2>
+								<h2 class="name"><?php echo(snae_get_workshop_artist($artist_id)) ?></h2>
 								<span><?php echo(carbon_get_post_meta($artist_id, 'crb_job')) ?></span>
 							</div>
 						</div>
-						<a class="see-more" href="google.com">Learn moore</a>
+						<a class="see-more" href="<?php echo(get_permalink($artist_id)) ?>">Learn more</a>
 					</div>
 					<div class="artist-bio">
 					<?php

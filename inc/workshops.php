@@ -36,7 +36,7 @@ function snae_create_workshop_post_type() {
 add_action( 'init', 'snae_create_workshop_post_type' );
 
 function get_artist_name_array() {
-	$artist_query = new WP_Query( array (
+	$artist_query = new WP_Query( array(
 		'post_type' => 'artists',
 		'posts_per_page' => -1
 	));
@@ -81,8 +81,7 @@ function crb_attach_workshop_options() {
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_workshop_options' );
 
-function snae_get_workshop_artist($post_id) {
-	$artist = carbon_get_post_meta($post_id, 'crb_workshop_artist');
+function snae_get_workshop_artist($artist) {
 	$title = get_the_title($artist);
 	$link = get_the_permalink($artist);
 
