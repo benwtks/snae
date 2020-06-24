@@ -12,11 +12,12 @@
 
 get_header();
 ?>
+	<?php $artist_id = carbon_get_post_meta(get_the_ID(), 'crb_workshop_artist') ?>
 	<div id="primary" class="content-area content-wrapper workshop-wrapper">
 		<main id="main" class="site-main">
 			<div class="workshop-meta">
 				<h1 class="title"><?php echo(get_the_title()) ?></h1>
-				<?php echo snae_get_workshop_artist($post_id) ?>
+				<?php echo snae_get_workshop_artist($artist_id) ?>
 			</div>
 			<div class="workshop-top">
 				<div class="workshop-photos">
@@ -68,7 +69,6 @@ get_header();
 					?>
 				</div>
 				<div class="artist">
-					<?php $artist_id = carbon_get_post_meta(get_the_ID(), 'crb_workshop_artist') ?>
 					<div class="artist-name">
 						<div class="artist-details">
 							<?php echo (snae_get_artist_image($artist_id, 90, 'artist-photo')) ?>

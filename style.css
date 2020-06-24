@@ -1431,7 +1431,8 @@ form p.comment-form-cookies-consent label {
   margin-top: 25px; }
 
 .workshop-photos {
-  display: flex; }
+  display: flex;
+  align-items: flex-start; }
   .workshop-photos .thumbnails {
     display: flex;
     flex-direction: column;
