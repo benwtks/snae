@@ -1,7 +1,6 @@
 footer.site-footer {
-	border-top: $footer-border;
 	height: 400px;
-	background: #fff;
+	background: $footer-bg;
 	margin-top: $footer-margin-top;
 	padding-top: $footer-padding-top;
 
@@ -14,6 +13,8 @@ footer.site-footer {
 footer.site-footer .company-details {
 	.logo .site-title {
 		font-size: $footer-site-title-size;
+
+		a { color: initial; }
 	}
 
 	div {

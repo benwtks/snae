@@ -1184,9 +1184,8 @@ header.toggled .main-navigation {
   width: 50%; }
 
 footer.site-footer {
-  border-top: 1px solid #e1e1e1;
   height: 400px;
-  background: #fff;
+  background: #f3f3f3;
   margin-top: 100px;
   padding-top: 60px; }
   footer.site-footer .content-wrapper, footer.site-footer .news-wrapper {
@@ -1195,6 +1194,8 @@ footer.site-footer {
 
 footer.site-footer .company-details .logo .site-title {
   font-size: 1.3em; }
+  footer.site-footer .company-details .logo .site-title a {
+    color: initial; }
 footer.site-footer .company-details div {
   margin-bottom: 10px; }
   footer.site-footer .company-details div span.detail-value {

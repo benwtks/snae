@@ -3,6 +3,7 @@ $snae-turquoise: #2AB890;
 
 $grey: #ccc;
 $dark-grey: #555;
+$light-grey: #f3f3f3;
 
 $separator-colour: #e1e1e1;
 
@@ -29,8 +30,9 @@ $header-logo-hover-colour: $snae-turquoise;
 $post-page-meta-colour: $dark-grey;
 
 $footer-details-font-colour: #676767;
+$footer-bg: $light-grey;
 
 $selected-workshop: $snae-dark;
-$workshop-ecommerce: #f3f3f3;
+$workshop-ecommerce: $light-grey;
 $workshop-buy-text: #fff;
 $workshop-buy-bg: $snae-dark;
