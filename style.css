@@ -965,6 +965,14 @@ template {
 .section {
   border-bottom: 1px solid #e1e1e1; }
 
+#page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  height: 100%; }
+  #page #content {
+    flex: 1; }
+
 #content {
   margin-top: 25px; }
 
