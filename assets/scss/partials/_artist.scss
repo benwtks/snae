@@ -60,11 +60,21 @@
 }
 
 .artist-about {
+	margin-bottom: $content-margin-top;
+
 	.artist-bio, .artist-gallery {
 		margin-top: $content-margin-top * 2;
 	}
 
 	.artist-gallery img {
 		border-radius: $border-radius;
+	}
+}
+
+.workshops {
+	border-top: $section-border;
+
+	h2 {
+		margin-top: $content-margin-top;
 	}
 }

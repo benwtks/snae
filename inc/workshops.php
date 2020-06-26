@@ -30,7 +30,9 @@ function snae_create_workshop_post_type() {
 			'taxonomies' => array( 'category' ),
             'supports' => array('title')
         )
-    );
+	);
+
+	add_image_size( 'workshop-preview', 1000, 800, true);
 }
 
 add_action( 'init', 'snae_create_workshop_post_type' );
@@ -119,9 +121,11 @@ function snae_print_workshop_thumbnails($post_id, $size, $alt) {
 	}
 }
 
-function snae_get_first_workshop_photo_url($post_id) {
+function snae_get_first_workshop_photo_url($post_id, $size = '') {
 	$photos = carbon_get_post_meta($post_id, 'crb_workshop_photos');
-	return wp_get_attachment_url($photos[0]);
+
+	return $size? wp_get_attachment_image_url($photos[0], $size) :
+		wp_get_attachment_url($photos[0]);
 }
 
 ?>

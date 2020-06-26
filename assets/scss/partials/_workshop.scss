@@ -107,3 +107,42 @@
 		}
 	}
 }
+
+.workshop-previews {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-auto-rows: 420px;
+	margin-top: $content-margin-top;
+
+	.workshop-preview {
+		position: relative;
+	}
+
+	.workshop-preview img.preview-photo {
+		border-radius: $preview-radius $preview-radius 0 0;
+		max-height: 420px;
+		min-height: 280px;
+		width: 100%;
+	}
+
+	.workshop-preview .details {
+		border-radius: 0 0 $preview-radius $preview-radius;
+		background: $preview-colour;
+		height: 140px;
+		position: absolute;
+		bottom: 0;
+		padding: $standard-spacing;
+		color: #fff;
+
+		.title a { 
+			color: inherit;
+			&:hover { color: #000000b0; }
+		}
+
+		p {
+			font-size: 0.9rem;
+			color: #ffffffd1;
+		}
+	}
+}
