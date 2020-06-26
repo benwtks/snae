@@ -78,3 +78,26 @@
 		margin-top: $content-margin-top;
 	}
 }
+
+@media screen and (max-width: 700px) {
+	.artist-details img.artist-photo {
+		width: 100px;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.artist-details img.artist-photo {
+		width: 80px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.artist-details img.artist-photo {
+		width: 60px;
+	}
+
+	.artist-details .intro {
+		margin-left: 5px;
+	}
+}
+

@@ -1184,13 +1184,15 @@ header.toggled .main-navigation {
   width: 50%; }
 
 footer.site-footer {
-  height: 400px;
   background: #f3f3f3;
   margin-top: 100px;
   padding-top: 60px; }
   footer.site-footer .content-wrapper, footer.site-footer .news-wrapper {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  footer.site-footer .company-details, footer.site-footer .explore {
+    margin-bottom: 25px; }
 
 footer.site-footer .company-details .logo .site-title {
   font-size: 1.3em; }
@@ -1204,7 +1206,8 @@ footer.site-footer .company-details .copyright {
   font-size: 0.7em; }
 
 footer.site-footer .explore .links {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   footer.site-footer .explore .links .footer-nav .footer-nav-title {
     font-size: 1.2em; }
   footer.site-footer .explore .links .footer-nav div ul {
@@ -1425,6 +1428,18 @@ form p.comment-form-cookies-consent label {
   .workshops h2 {
     margin-top: 25px; }
 
+@media screen and (max-width: 700px) {
+  .artist-details img.artist-photo {
+    width: 100px; } }
+@media screen and (max-width: 630px) {
+  .artist-details img.artist-photo {
+    width: 80px; } }
+@media screen and (max-width: 550px) {
+  .artist-details img.artist-photo {
+    width: 60px; }
+
+  .artist-details .intro {
+    margin-left: 5px; } }
 .workshop-wrapper {
   max-width: 1100px; }
 

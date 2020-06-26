@@ -1,5 +1,4 @@
 footer.site-footer {
-	height: 400px;
 	background: $footer-bg;
 	margin-top: $footer-margin-top;
 	padding-top: $footer-padding-top;
@@ -7,8 +6,14 @@ footer.site-footer {
 	.content-wrapper {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	
+	.company-details, .explore {
+		margin-bottom: $content-margin-top;
 	}
 }
+
 
 footer.site-footer .company-details {
 	.logo .site-title {
@@ -32,6 +37,7 @@ footer.site-footer .company-details {
 
 footer.site-footer .explore .links {
 	display: flex;
+	flex-wrap: wrap;
 
 	.footer-nav {
 		.footer-nav-title {
