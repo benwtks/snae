@@ -6,6 +6,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
+
+	.artist-details, .links {
+		margin-bottom: $content-margin-top;
+	}
 }
 
 .artist-details {
@@ -16,14 +21,11 @@
 
 	img.artist-photo {
 		border-radius: 50%;
+		margin-right: $standard-horizontal-spacing;
 	}
 
-	.intro {
-		margin-left: $standard-horizontal-spacing;
-
-		.name {
-			margin-bottom: 0;
-		}
+	.intro .name {
+		margin-bottom: 0;
 	}
 }
 
@@ -63,7 +65,7 @@
 	margin-bottom: $content-margin-top;
 
 	.artist-bio, .artist-gallery {
-		margin-top: $content-margin-top * 2;
+		margin-top: $content-margin-top;
 	}
 
 	.artist-gallery img {
@@ -94,10 +96,7 @@
 @media screen and (max-width: 550px) {
 	.artist-details img.artist-photo {
 		width: 60px;
-	}
-
-	.artist-details .intro {
-		margin-left: 5px;
+		margin-right: 5px;
 	}
 }
 
