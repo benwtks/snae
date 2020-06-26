@@ -248,8 +248,6 @@ function custom_reply_title( $defaults ){
 
 add_filter( 'comment_form_defaults', 'custom_reply_title' );
 
-add_action( 'admin_init', 'hide_editor' );
-
 function snae_register_footer_nav_menus(){
 	register_nav_menus( array(
 		'footer_1' => __('First footer menu'),
