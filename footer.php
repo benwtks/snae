@@ -64,6 +64,10 @@
 			</div>
 			<div class="explore">
 				<div class="newsletter">
+					<form action="/subscribe" method="POST">
+						<input type="email" name="email" id="email" placeholder="Email address" required>
+						<input type="submit" value="Subscribe" class="button">
+					</form>
 				</div>
 				<div class="links">
 					<?php

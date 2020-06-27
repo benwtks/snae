@@ -18,9 +18,9 @@ $link-colour: $snae-green;
 $link-colour-visited: $link-colour;
 $link-colour-hover: darken($snae-green, 15%);
 
-$button-bg: $snae-green;
+$button-bg: $link-colour;
+$button-hover-bg: darken($button-bg, 8%);
 $button-text: #fff;
-
 
 $nav-icon-colour: $dark-grey;
 $nav-icon-hover-colour: $snae-green;

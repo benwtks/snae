@@ -1208,7 +1208,13 @@ input[type="submit"] {
   border: 0;
   border-radius: 3px;
   background: #2fa684;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background: #26866b; }
 
 input[type="text"],
 input[type="email"],
@@ -1238,6 +1244,17 @@ textarea {
 
 button:hover {
   cursor: pointer; }
+
+footer.site-footer .newsletter form {
+  display: flex;
+  margin-bottom: 25px; }
+  footer.site-footer .newsletter form input {
+    padding: 10px 20px; }
+  footer.site-footer .newsletter form input[type="email"] {
+    flex: 1;
+    border-radius: 3px 0 0 3px; }
+  footer.site-footer .newsletter form input[type="submit"] {
+    border-radius: 0 3px 3px 0; }
 
 .alignleft {
   display: inline;

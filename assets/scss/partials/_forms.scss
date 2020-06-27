@@ -6,6 +6,11 @@ input[type="submit"] {
 	border-radius: $border-radius;
 	background: $button-bg;
 	color: $button-text;
+	cursor: pointer;
+
+	&:hover {
+		background: $button-hover-bg;
+	}
 }
 
 input[type="text"],
@@ -39,4 +44,22 @@ textarea {
 
 button:hover {
 	cursor: pointer;
+}
+
+footer.site-footer .newsletter form {
+	display: flex;
+	margin-bottom: $content-margin-top;
+
+	input {
+		padding: 10px 20px;
+	}
+
+	input[type="email"] {
+		flex: 1;
+		border-radius: $border-radius 0 0 $border-radius;
+	}
+
+	input[type="submit"] {
+		border-radius: 0 $border-radius $border-radius 0;
+	}
 }
