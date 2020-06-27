@@ -1,0 +1,21 @@
+header.combined .logo h1 {
+	font-size: 1.3em;
+
+	&:not(.no-img) {
+		margin-left: $standard-horizontal-spacing;
+	}
+
+	&.no-img {
+		padding: 15px 0;
+	}
+}
+
+header.combined .logo,
+header.combined .links {
+	display: flex;
+	align-items: center;
+}
+
+header.combined .links nav {
+	margin-right: $standard-horizontal-spacing * 1.5;
+}

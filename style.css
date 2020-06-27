@@ -1087,124 +1087,6 @@ big {
 .widget select {
   max-width: 100%; }
 
-header.site-header .content-wrapper, header.site-header .news-wrapper {
-  padding: 12px 0; }
-header.site-header a {
-  color: #555;
-  text-decoration: none; }
-  header.site-header a:hover {
-    color: #2fa684; }
-
-header .site-branding .content-wrapper, header .site-branding .news-wrapper {
-  justify-content: space-between; }
-  header .site-branding .content-wrapper .logo img, header .site-branding .news-wrapper .logo img {
-    width: initial;
-    height: 60px; }
-  header .site-branding .content-wrapper .logo h1, header .site-branding .news-wrapper .logo h1 {
-    margin-bottom: 0; }
-  header .site-branding .content-wrapper .logo h1 a, header .site-branding .news-wrapper .logo h1 a {
-    color: #2B2B2B; }
-    header .site-branding .content-wrapper .logo h1 a:hover, header .site-branding .news-wrapper .logo h1 a:hover {
-      color: #2fa684; }
-  header .site-branding .content-wrapper .nav-icons a i, header .site-branding .news-wrapper .nav-icons a i, header .site-branding .content-wrapper .nav-icons button#menu-toggle, header .site-branding .news-wrapper .nav-icons button#menu-toggle {
-    color: #555;
-    font-size: 1.4rem; }
-    header .site-branding .content-wrapper .nav-icons a i:hover, header .site-branding .news-wrapper .nav-icons a i:hover, header .site-branding .content-wrapper .nav-icons button#menu-toggle:hover, header .site-branding .news-wrapper .nav-icons button#menu-toggle:hover {
-      color: #2fa684; }
-  header .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover, header .site-branding .news-wrapper .nav-icons a i.fa-instagram:hover {
-    color: #e1306c; }
-  header .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover, header .site-branding .news-wrapper .nav-icons a i.fa-facebook:hover {
-    color: #1778f2; }
-  header .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-of-type), header .site-branding .news-wrapper .nav-icons .nav-icon:not(:last-of-type) {
-    margin-right: 15px; }
-
-header.split .logo h1 {
-  font-size: 1.5em; }
-
-header.combined .logo h1 {
-  font-size: 1.3em; }
-  header.combined .logo h1:not(.no-img) {
-    margin-left: 15px; }
-  header.combined .logo h1.no-img {
-    padding: 15px 0; }
-
-header .site-branding .content-wrapper, header .site-branding .news-wrapper,
-header.combined .logo,
-header.combined .links {
-  display: flex;
-  align-items: center; }
-
-header.combined .links nav {
-  margin-right: 22.5px; }
-
-header .main-navigation ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-  header .main-navigation ul li {
-    display: inline-block; }
-    header .main-navigation ul li:not(:last-of-type) {
-      margin-right: 15px; }
-
-header.split .main-navigation {
-  text-align: center; }
-
-#menu-toggle {
-  display: none;
-  cursor: pointer;
-  background: none;
-  text-align: center;
-  padding: 0;
-  width: 20px; }
-  #menu-toggle:focus {
-    outline: none; }
-
-header.toggled .main-navigation {
-  display: block; }
-
-@media screen and (max-width: 700px) {
-  header.split .main-navigation {
-    display: none;
-    position: absolute;
-    z-index: 999;
-    width: 100%;
-    background: #fff; }
-
-  header.split .user-links.nav-icons a.nav-icon:first-of-type {
-    margin-right: 15px; }
-  header.split .user-links.nav-icons a.nav-icon:last-of-type {
-    display: none; }
-
-  button#menu-toggle {
-    display: inline-block; } }
-@media screen and (max-width: 600px) {
-  header.split .content-wrapper .nav-icons.social-links, header.split .news-wrapper .nav-icons.social-links {
-    display: none; }
-
-  header.split .main-navigation {
-    text-align: left; } }
-@media screen and (max-width: 480px) {
-  header.split .user-links #cart-icon {
-    display: none; } }
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
-
 footer.site-footer {
   background: #f3f3f3;
   margin-top: 100px;
@@ -1647,5 +1529,126 @@ object {
 
 .gallery-caption {
   display: block; }
+
+header.site-header .content-wrapper, header.site-header .news-wrapper {
+  padding: 12px 0; }
+header.site-header a {
+  color: #555;
+  text-decoration: none; }
+  header.site-header a:hover {
+    color: #2fa684; }
+
+header .site-branding .content-wrapper, header .site-branding .news-wrapper {
+  justify-content: space-between; }
+  header .site-branding .content-wrapper .logo img, header .site-branding .news-wrapper .logo img {
+    width: initial;
+    height: 60px; }
+  header .site-branding .content-wrapper .logo h1, header .site-branding .news-wrapper .logo h1 {
+    margin-bottom: 0; }
+  header .site-branding .content-wrapper .logo h1 a, header .site-branding .news-wrapper .logo h1 a {
+    color: #2B2B2B; }
+    header .site-branding .content-wrapper .logo h1 a:hover, header .site-branding .news-wrapper .logo h1 a:hover {
+      color: #2fa684; }
+  header .site-branding .content-wrapper .nav-icons a i, header .site-branding .news-wrapper .nav-icons a i, header .site-branding .content-wrapper .nav-icons button#menu-toggle, header .site-branding .news-wrapper .nav-icons button#menu-toggle {
+    color: #555;
+    font-size: 1.4rem; }
+    header .site-branding .content-wrapper .nav-icons a i:hover, header .site-branding .news-wrapper .nav-icons a i:hover, header .site-branding .content-wrapper .nav-icons button#menu-toggle:hover, header .site-branding .news-wrapper .nav-icons button#menu-toggle:hover {
+      color: #2fa684; }
+  header .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover, header .site-branding .news-wrapper .nav-icons a i.fa-instagram:hover {
+    color: #e1306c; }
+  header .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover, header .site-branding .news-wrapper .nav-icons a i.fa-facebook:hover {
+    color: #1778f2; }
+  header .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-of-type), header .site-branding .news-wrapper .nav-icons .nav-icon:not(:last-of-type) {
+    margin-right: 15px; }
+
+header .site-branding .content-wrapper, header .site-branding .news-wrapper {
+  display: flex;
+  align-items: center; }
+
+header .main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+  header .main-navigation ul li {
+    display: inline-block; }
+    header .main-navigation ul li:not(:last-of-type) {
+      margin-right: 15px; }
+
+#menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  padding: 0;
+  width: 20px; }
+  #menu-toggle:focus {
+    outline: none; }
+
+header.toggled .main-navigation {
+  display: block; }
+
+header.split .logo h1 {
+  font-size: 1.5em; }
+
+header.split .main-navigation {
+  text-align: center; }
+
+@media screen and (max-width: 700px) {
+  header.split .main-navigation {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    background: #fff; }
+
+  header.split .user-links.nav-icons a.nav-icon:first-of-type {
+    margin-right: 15px; }
+  header.split .user-links.nav-icons a.nav-icon:last-of-type {
+    display: none; }
+
+  button#menu-toggle {
+    display: inline-block; } }
+@media screen and (max-width: 600px) {
+  header.split .content-wrapper .nav-icons.social-links, header.split .news-wrapper .nav-icons.social-links {
+    display: none; }
+
+  header.split .main-navigation {
+    text-align: left; } }
+@media screen and (max-width: 480px) {
+  header.split .user-links #cart-icon {
+    display: none; } }
+header.combined .logo h1 {
+  font-size: 1.3em; }
+  header.combined .logo h1:not(.no-img) {
+    margin-left: 15px; }
+  header.combined .logo h1.no-img {
+    padding: 15px 0; }
+
+header.combined .logo,
+header.combined .links {
+  display: flex;
+  align-items: center; }
+
+header.combined .links nav {
+  margin-right: 22.5px; }
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
 
 /*# sourceMappingURL=style.css.map */
