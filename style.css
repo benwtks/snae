@@ -1095,42 +1095,59 @@ header.site-header a {
   header.site-header a:hover {
     color: #2fa684; }
 
-.site-branding .content-wrapper, .site-branding .news-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .site-branding .content-wrapper .logo img.custom-logo, .site-branding .news-wrapper .logo img.custom-logo {
+header .site-branding .content-wrapper, header .site-branding .news-wrapper {
+  justify-content: space-between; }
+  header .site-branding .content-wrapper .logo img, header .site-branding .news-wrapper .logo img {
     width: initial;
     height: 60px; }
-  .site-branding .content-wrapper .logo h1, .site-branding .news-wrapper .logo h1 {
-    font-size: 1.5em;
-    margin: 0; }
-  .site-branding .content-wrapper .logo h1 a, .site-branding .news-wrapper .logo h1 a {
+  header .site-branding .content-wrapper .logo h1, header .site-branding .news-wrapper .logo h1 {
+    margin-bottom: 0; }
+  header .site-branding .content-wrapper .logo h1 a, header .site-branding .news-wrapper .logo h1 a {
     color: #2B2B2B; }
-    .site-branding .content-wrapper .logo h1 a:hover, .site-branding .news-wrapper .logo h1 a:hover {
+    header .site-branding .content-wrapper .logo h1 a:hover, header .site-branding .news-wrapper .logo h1 a:hover {
       color: #2fa684; }
-  .site-branding .content-wrapper .nav-icons a i, .site-branding .news-wrapper .nav-icons a i, .site-branding .content-wrapper .nav-icons button#menu-toggle, .site-branding .news-wrapper .nav-icons button#menu-toggle {
+  header .site-branding .content-wrapper .nav-icons a i, header .site-branding .news-wrapper .nav-icons a i, header .site-branding .content-wrapper .nav-icons button#menu-toggle, header .site-branding .news-wrapper .nav-icons button#menu-toggle {
     color: #555;
     font-size: 1.4rem; }
-    .site-branding .content-wrapper .nav-icons a i:hover, .site-branding .news-wrapper .nav-icons a i:hover, .site-branding .content-wrapper .nav-icons button#menu-toggle:hover, .site-branding .news-wrapper .nav-icons button#menu-toggle:hover {
+    header .site-branding .content-wrapper .nav-icons a i:hover, header .site-branding .news-wrapper .nav-icons a i:hover, header .site-branding .content-wrapper .nav-icons button#menu-toggle:hover, header .site-branding .news-wrapper .nav-icons button#menu-toggle:hover {
       color: #2fa684; }
-  .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover, .site-branding .news-wrapper .nav-icons a i.fa-instagram:hover {
+  header .site-branding .content-wrapper .nav-icons a i.fa-instagram:hover, header .site-branding .news-wrapper .nav-icons a i.fa-instagram:hover {
     color: #e1306c; }
-  .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover, .site-branding .news-wrapper .nav-icons a i.fa-facebook:hover {
+  header .site-branding .content-wrapper .nav-icons a i.fa-facebook:hover, header .site-branding .news-wrapper .nav-icons a i.fa-facebook:hover {
     color: #1778f2; }
-  .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-of-type), .site-branding .news-wrapper .nav-icons .nav-icon:not(:last-of-type) {
+  header .site-branding .content-wrapper .nav-icons .nav-icon:not(:last-of-type), header .site-branding .news-wrapper .nav-icons .nav-icon:not(:last-of-type) {
     margin-right: 15px; }
 
-.main-navigation {
+header.split .logo h1 {
+  font-size: 1.5em; }
+
+header.combined .logo h1 {
+  font-size: 1.3em; }
+  header.combined .logo h1:not(.no-img) {
+    margin-left: 15px; }
+  header.combined .logo h1.no-img {
+    padding: 15px 0; }
+
+header .site-branding .content-wrapper, header .site-branding .news-wrapper,
+header.combined .logo,
+header.combined .links {
+  display: flex;
+  align-items: center; }
+
+header.combined .links nav {
+  margin-right: 22.5px; }
+
+header .main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+  header .main-navigation ul li {
+    display: inline-block; }
+    header .main-navigation ul li:not(:last-of-type) {
+      margin-right: 15px; }
+
+header.split .main-navigation {
   text-align: center; }
-  .main-navigation ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul li {
-      display: inline-block; }
-      .main-navigation ul li:not(:last-of-type) {
-        margin-right: 20px; }
 
 #menu-toggle {
   display: none;
@@ -1146,28 +1163,28 @@ header.toggled .main-navigation {
   display: block; }
 
 @media screen and (max-width: 700px) {
-  header .main-navigation {
+  header.split .main-navigation {
     display: none;
     position: absolute;
     z-index: 999;
     width: 100%;
     background: #fff; }
 
-  .user-links.nav-icons a.nav-icon:first-of-type {
-    margin-right: 20px; }
-  .user-links.nav-icons a.nav-icon:last-of-type {
+  header.split .user-links.nav-icons a.nav-icon:first-of-type {
+    margin-right: 15px; }
+  header.split .user-links.nav-icons a.nav-icon:last-of-type {
     display: none; }
 
   button#menu-toggle {
     display: inline-block; } }
 @media screen and (max-width: 600px) {
-  .content-wrapper .nav-icons.social-links, .news-wrapper .nav-icons.social-links {
+  header.split .content-wrapper .nav-icons.social-links, header.split .news-wrapper .nav-icons.social-links {
     display: none; }
 
-  .main-navigation {
+  header.split .main-navigation {
     text-align: left; } }
 @media screen and (max-width: 480px) {
-  .user-links #cart-icon {
+  header.split .user-links #cart-icon {
     display: none; } }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
@@ -1203,6 +1220,9 @@ footer.site-footer .company-details .logo .site-title {
   font-size: 1.3em; }
   footer.site-footer .company-details .logo .site-title a {
     color: initial; }
+footer.site-footer .company-details .logo img {
+  height: 100px;
+  width: auto; }
 footer.site-footer .company-details div {
   margin-bottom: 10px; }
   footer.site-footer .company-details div span.detail-value {

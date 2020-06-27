@@ -13,19 +13,16 @@ header.site-header {
 	}
 }
 
-.site-branding .content-wrapper {
-	display: flex;
+header .site-branding .content-wrapper {
 	justify-content: space-between;
-	align-items: center;
 
-	.logo img.custom-logo {
+	.logo img {
 		width: initial;
-		height: 60px;
+		height: $header-logo-height;
 	}
 
 	.logo h1 {
-		font-size: 1.5em;
-		margin: 0;
+		margin-bottom: 0;
 	}
 
 	.logo h1 a {
@@ -56,12 +53,38 @@ header.site-header {
 	}
 
 	.nav-icons .nav-icon:not(:last-of-type) {
-		margin-right: $nav-icon-spacing;
+		margin-right: $standard-horizontal-spacing;
 	}
 }
 
-.main-navigation {
-	text-align: center;
+header.split .logo h1 {
+	font-size: 1.5em;
+}
+
+header.combined .logo h1 {
+	font-size: 1.3em;
+
+	&:not(.no-img) {
+		margin-left: $standard-horizontal-spacing;
+	}
+
+	&.no-img {
+		padding: 15px 0;
+	}
+}
+
+header .site-branding .content-wrapper,
+header.combined .logo,
+header.combined .links {
+	display: flex;
+	align-items: center;
+}
+
+header.combined .links nav {
+	margin-right: $standard-horizontal-spacing * 1.5;
+}
+
+header .main-navigation {
 
 	ul {
 		list-style: none;
@@ -72,10 +95,14 @@ header.site-header {
 			display: inline-block;
 
 			&:not(:last-of-type) {
-				margin-right: $side-spacing;
+				margin-right: $standard-horizontal-spacing;
 			}
 		}
 	}
+}
+
+header.split .main-navigation {
+	text-align: center;
 }
 
 #menu-toggle {
@@ -104,7 +131,7 @@ header.toggled button#menu-toggle {
 }
 
 @media screen and (max-width: 700px) {
-	header .main-navigation {
+	header.split .main-navigation {
 		display: none;
 		position: absolute;
 		z-index: 999;
@@ -112,9 +139,9 @@ header.toggled button#menu-toggle {
 		background: #fff;
 	}
 
-	.user-links.nav-icons a.nav-icon {
+	header.split .user-links.nav-icons a.nav-icon {
 		&:first-of-type {
-			margin-right: $side-spacing;
+			margin-right: $standard-horizontal-spacing;
 		}
 
 		&:last-of-type {
@@ -128,17 +155,17 @@ header.toggled button#menu-toggle {
 }
 
 @media screen and (max-width: 600px) {
-	.content-wrapper .nav-icons.social-links {
+	header.split .content-wrapper .nav-icons.social-links {
 		display: none;
 	}
 
-	.main-navigation {
+	header.split .main-navigation {
 		text-align: left;
 	}
 }
 
 @media screen and (max-width: 480px) {
-	.user-links #cart-icon {
+	header.split .user-links #cart-icon {
 		display: none;
 	}
 }

@@ -14,12 +14,20 @@ footer.site-footer {
 	}
 }
 
-
 footer.site-footer .company-details {
-	.logo .site-title {
-		font-size: $footer-site-title-size;
+	.logo {
+		.site-title {
+			font-size: $footer-site-title-size;
 
-		a { color: initial; }
+			a   {
+				color: initial;
+			}
+		}
+
+		img {
+			height: 100px;
+			width: auto;
+		}
 	}
 
 	div {

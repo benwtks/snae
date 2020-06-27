@@ -25,40 +25,15 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'snae' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding section">
-			<div class="content-wrapper">
-				<div class="social-links nav-icons">
-					<a class="nav-icon" href="#"><i class="fab fa-facebook"></i></a>
-					<a class="nav-icon" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="logo">
-					<?php if (has_custom_logo()): ?>
-						<?php the_custom_logo() ?>
-					<?php else: ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php endif; ?>
-				</div>
-				<div class="user-links nav-icons">
-					<a class="nav-icon" id="cart-icon" href="#"><i class="dripicons-cart"></i></a>
-					<a class="nav-icon" id="search-icon" href="#"><i class="dripicons-search"></i></a>
-					<button class="nav-icon dripicons-menu" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
-				</div>
-			</div>
-		</div>
+	<?php
+	$header_style = carbon_get_theme_option('crb_header_style');
 
-		<nav class="main-navigation section">
-			<div class="content-wrapper">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-				?>
-			</div>
-		</nav>
-	</header>
+	if ($header_style == 'split') {
+		include get_theme_file_path('headers/split.php');
+	} else {
+		include get_theme_file_path('headers/combined.php');
+	}
+
+	?>
 
 	<div id="content" class="site-content">
