@@ -8,6 +8,7 @@
  */
 
 require_once( __DIR__ . '/inc/custom-fields.php');
+require_once( __DIR__ . '/inc/newsletter.php');
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.

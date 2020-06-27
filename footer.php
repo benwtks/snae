@@ -62,10 +62,20 @@
 					<span>© <?php echo date("Y"), " ", bloginfo('name') ?> | All rights reserved</span>
 				</div>
 			</div>
-			<div class="explore">
-				<div class="newsletter">
-					<form action="/subscribe" method="POST">
+			<div class="explore" id="subscribe">
+			<?php
+			$_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+
+			if ($_GET['subbed']) {
+				echo '<div class="newsletter success">';
+			} else {
+				echo '<div class="newsletter">';
+			}
+			?>
+					<p id="successfully-subscribed">Thanks for subscribing!</p>
+					<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST">
 						<input type="email" name="email" id="email" placeholder="Email address" required>
+						<input type="hidden" name="action" value="newsletter_form">
 						<input type="submit" value="Subscribe" class="button">
 					</form>
 				</div>

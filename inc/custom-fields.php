@@ -23,7 +23,6 @@ function crb_attach_theme_options() {
 				->set_option_value( 'yes' ),
 			Field::make( 'checkbox', 'crb_show_top_bar', 'Show bar above main header for social and site functions')
 				->set_option_value( 'yes' ),
-
 		));
 }
 

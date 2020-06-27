@@ -63,3 +63,13 @@ footer.site-footer .explore .links {
 		}
 	}
 }
+
+.newsletter {
+	#successfully-subscribed {
+		display: none;
+	}
+
+	&.success #successfully-subscribed {
+		display: block;
+	}
+}
