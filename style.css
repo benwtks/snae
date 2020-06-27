@@ -1601,9 +1601,9 @@ header.split .main-navigation {
     width: 100%;
     background: #fff; }
 
-  header.split .user-links.nav-icons a.nav-icon:first-of-type {
+  header.split:not(.bar-shown) .user-links.nav-icons a.nav-icon:first-of-type {
     margin-right: 15px; }
-  header.split .user-links.nav-icons a.nav-icon:last-of-type {
+  header.split:not(.bar-shown) .user-links.nav-icons a.nav-icon:last-of-type {
     display: none; }
 
   button#menu-toggle {

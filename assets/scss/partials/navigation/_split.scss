@@ -15,7 +15,7 @@ header.split .main-navigation {
 		background: #fff;
 	}
 
-	header.split .user-links.nav-icons a.nav-icon {
+	header.split:not(.bar-shown) .user-links.nav-icons a.nav-icon {
 		&:first-of-type {
 			margin-right: $standard-horizontal-spacing;
 		}
