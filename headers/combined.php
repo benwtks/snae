@@ -21,6 +21,7 @@
 					?>
 				</nav>
 				<div class="user-links nav-icons">
+					<a class="nav-icon" id="cart-icon" href="#"><i class="dripicons-cart"></i></a>
 					<a class="nav-icon" id="search-icon" href="#"><i class="dripicons-search"></i></a>
 					<button class="nav-icon dripicons-menu" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 				</div>

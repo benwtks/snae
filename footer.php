@@ -10,7 +10,6 @@
  */
 
 ?>
-
 	<!-- closing content div -->
 	</div>
 
