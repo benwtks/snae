@@ -25,8 +25,8 @@ header.split .main-navigation {
 		}
 	}
 
-	button#menu-toggle {
-		display: inline-block;
+	header.site-header.split.bar-shown  .site-branding .content-wrapper {
+		justify-content: space-between !important;
 	}
 }
 
@@ -41,7 +41,7 @@ header.split .main-navigation {
 }
 
 @media screen and (max-width: 480px) {
-	header.split .user-links #cart-icon {
+	header.split:not(.bar-shown) .user-links #cart-icon {
 		display: none;
 	}
 }
