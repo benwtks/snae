@@ -22,7 +22,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="links">
-				<nav class="main-navigation">
+				<nav class="main-navigation main-desktop-nav">
 					<?php
 					wp_nav_menu(
 						array(
@@ -43,4 +43,16 @@
 			</div>
 		</div>
 	</div>
+	<nav class="main-navigation section combined">
+		<div class="content-wrapper">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+		</div>
+	</nav>
 </header>

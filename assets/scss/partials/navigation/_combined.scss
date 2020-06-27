@@ -16,6 +16,45 @@ header.combined .links {
 	align-items: center;
 }
 
-header.combined .links nav {
+header.combined:not(.bar-shown) .links nav {
 	margin-right: $standard-horizontal-spacing * 1.5;
+}
+
+header .main-navigation.combined {
+	display: none;
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+	background: #fff;
+}
+
+header.combined button#menu-toggle {
+	margin-left: $standard-horizontal-spacing;
+}
+
+@media screen and (max-width: 1000px) {
+	header.combined button#menu-toggle {
+		display: inline-block;
+	}
+
+	header.combined .links nav {
+		display:none;
+	}
+}
+
+@media screen and (max-width: 670px) {
+	header.combined .links #search-icon {
+		display: none;
+	}
+
+	header.combined button#menu-toggle {
+		margin-left: 0;
+	}
+
+}
+
+@media screen and (max-width: 630px) {
+	header.combined .logo h1.site-title {
+		display: none;
+	}
 }

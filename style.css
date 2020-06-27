@@ -1588,7 +1588,7 @@ header.combined .main-navigation ul {
     outline: none; }
 
 header.split.toggled .main-navigation,
-header.combined.toggled .main-navigation {
+header.combined.toggled .main-navigation:not(.main-desktop-nav) {
   display: block; }
 
 @media screen and (max-width: 700px) {
@@ -1660,9 +1660,34 @@ header.combined .links {
   display: flex;
   align-items: center; }
 
-header.combined .links nav {
+header.combined:not(.bar-shown) .links nav {
   margin-right: 22.5px; }
 
+header .main-navigation.combined {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  background: #fff; }
+
+header.combined button#menu-toggle {
+  margin-left: 15px; }
+
+@media screen and (max-width: 1000px) {
+  header.combined button#menu-toggle {
+    display: inline-block; }
+
+  header.combined .links nav {
+    display: none; } }
+@media screen and (max-width: 670px) {
+  header.combined .links #search-icon {
+    display: none; }
+
+  header.combined button#menu-toggle {
+    margin-left: 0; } }
+@media screen and (max-width: 630px) {
+  header.combined .logo h1.site-title {
+    display: none; } }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {

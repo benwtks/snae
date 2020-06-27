@@ -93,7 +93,7 @@ header.combined .main-navigation {
 }
 
 header.split.toggled .main-navigation,
-header.combined.toggled .main-navigation {
+header.combined.toggled .main-navigation:not(.main-desktop-nav) {
 	display: block;
 }
 
