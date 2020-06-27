@@ -14,9 +14,11 @@ function crb_attach_theme_options() {
 					'combined' => 'Combined navigation with title',
 				) ),
 			Field::make( 'text', 'crb_facebook', 'Facebook profile (used for split header style)' ),
-			Field::make( 'text', 'crb_instagram', 'Instagram profile (used for split header style)')
+			Field::make( 'text', 'crb_instagram', 'Instagram profile (used for split header style)'),
 			Field::make( 'checkbox', 'crb_show_footer_title', 'Show site title in footer')
+				->set_option_value( 'yes' ),
 			Field::make( 'checkbox', 'crb_show_footer_logo', 'Show site logo in footer')
+				->set_option_value( 'yes' ),
 		));
 }
 

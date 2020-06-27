@@ -11,33 +11,54 @@
 
 ?>
 
+	<!-- closing content div -->
 	</div>
 
+	<!-- site footer -->
 	<footer class="site-footer">
 		<div class="content-wrapper">
 			<div class="company-details">
 				<div class="logo">
-						<?php if (has_custom_logo()): ?>
-							<?php the_custom_logo() ?>
-						<?php else: ?>
-							<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-						<?php endif; ?>
+					<?php
+					$title_enabled = carbon_get_theme_option('crb_show_footer_title');
+					$logo_enabled = carbon_get_theme_option('crb_show_footer_logo');
+
+					if ($logo_enabled && has_custom_logo()) {
+						the_custom_logo();
+					}
+
+					if ($title_enabled) {
+						$home_url = esc_url (home_url( '/' ));
+						$name = get_bloginfo( 'name' );
+
+						echo '<h2 class="site-title"><a href="' . $home_url . '" rel="home">' . $name . '</a></h2>';
+					}
+					?>
 				</div>
-				<div class="address">
-					<span class="detail-value"><?php echo nl2br (carbon_get_theme_option('crb_theme_address')) ?></span>
-				</div>
-				<div class="telephone-no">
-					<span class="detail-title">Telephone:</span>
-					<span class="detail-value"><?php echo carbon_get_theme_option('crb_theme_telephone')?></span>
-				</div>
-				<div class="email">
-					<span class="detail-title">Email:</span>
-					<span class="detail-value">
-						<a href="mailto:<?php echo carbon_get_theme_option('crb_theme_email') ?>">
-							<?php echo carbon_get_theme_option('crb_theme_email') ?>
-						</a>
-					</span>
-				</div>
+				<?php
+				if ($address = carbon_get_theme_option('crb_theme_address')) : ?>
+					<div class="address">
+						<span class="detail-value"><?php echo nl2br ($address) ?></span>
+					</div>
+				<?php
+				endif;
+				if ($phone = carbon_get_theme_option('crb_theme_telephone')) : ?>
+					<div class="telephone-no">
+						<span class="detail-title">Telephone:</span>
+						<span class="detail-value"><?php echo $phone ?></span>
+					</div>
+				<?php
+				endif;
+				if ($email = carbon_get_theme_option('crb_theme_email')) : ?>
+					<div class="email">
+						<span class="detail-title">Email:</span>
+						<span class="detail-value">
+							<a href="mailto:<?php echo carbon_get_theme_option('crb_theme_email') ?>">
+								<?php echo carbon_get_theme_option('crb_theme_email') ?>
+							</a>
+						</span>
+					</div>
+				<?php endif; ?>
 				<div class="copyright">
 					<span>© <?php echo date("Y"), " ", bloginfo('name') ?> | All rights reserved</span>
 				</div>
