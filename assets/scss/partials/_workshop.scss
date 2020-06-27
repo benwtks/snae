@@ -10,7 +10,10 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	margin-top: $content-margin-top;
+
+	&:not(.raised) {
+		margin-top: $content-margin-top;
+	}
 }
 
 .workshop-photos {
@@ -145,4 +148,8 @@
 			color: #ffffffd1;
 		}
 	}
+}
+
+.workshop-panel .workshop-meta {
+	margin-bottom: $content-margin-top;
 }

@@ -1366,8 +1366,9 @@ form p.comment-form-cookies-consent label {
 .workshop-top {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 25px; }
+  justify-content: space-between; }
+  .workshop-top:not(.raised) {
+    margin-top: 25px; }
 
 .workshop-photos {
   display: flex;
@@ -1462,6 +1463,9 @@ form p.comment-form-cookies-consent label {
     .workshop-previews .workshop-preview .details p {
       font-size: 0.9rem;
       color: #ffffffd1; }
+
+.workshop-panel .workshop-meta {
+  margin-bottom: 25px; }
 
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
