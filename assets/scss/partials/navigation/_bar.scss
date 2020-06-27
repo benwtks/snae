@@ -1,0 +1,45 @@
+header.site-header .top-bar {
+	display: flex;
+	justify-content: space-between;
+	background-color: $header-bar-colour;
+	padding: 4px 16px;
+	align-items: center;
+
+	a i {
+		color: #fff;
+
+		&:hover {
+			color: $link-colour;
+		}
+
+		&.fa-instagram:hover {
+			color: $instagram-colour;
+		}
+
+		&.fa-facebook:hover {
+			color: $facebook-colour;
+		}
+
+		&.fa-linkedin:hover {
+			color: $linkedin-colour;
+		}
+
+		&.fa-twitter:hover {
+			color: $twitter-colour;
+		}
+
+	}
+
+
+	.nav-icons a.nav-icon:not(:last-of-type) {
+		margin-right: 10px;
+	}
+}
+
+header.site-header.split.bar-shown .site-branding {
+	.content-wrapper {
+		justify-content: center;
+	}
+}
+
+

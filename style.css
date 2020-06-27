@@ -1329,7 +1329,7 @@ form p.comment-form-cookies-consent label {
   .artist-header .links .artist-icon.instagram:hover {
     color: #e1306c; }
   .artist-header .links .artist-icon.twitter:hover {
-    color: #00aced; }
+    color: #1da1f2; }
   .artist-header .links .artist-icon.etsy:hover {
     color: #eb6d20; }
 
@@ -1631,6 +1631,30 @@ header.combined .links {
 
 header.combined .links nav {
   margin-right: 22.5px; }
+
+header.site-header .top-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #303132;
+  padding: 4px 16px;
+  align-items: center; }
+  header.site-header .top-bar a i {
+    color: #fff; }
+    header.site-header .top-bar a i:hover {
+      color: #2fa684; }
+    header.site-header .top-bar a i.fa-instagram:hover {
+      color: #e1306c; }
+    header.site-header .top-bar a i.fa-facebook:hover {
+      color: #1778f2; }
+    header.site-header .top-bar a i.fa-linkedin:hover {
+      color: #0a66c2; }
+    header.site-header .top-bar a i.fa-twitter:hover {
+      color: #1da1f2; }
+  header.site-header .top-bar .nav-icons a.nav-icon:not(:last-of-type) {
+    margin-right: 10px; }
+
+header.site-header.split.bar-shown .site-branding .content-wrapper, header.site-header.split.bar-shown .site-branding .news-wrapper {
+  justify-content: center; }
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
