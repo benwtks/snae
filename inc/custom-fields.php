@@ -13,12 +13,17 @@ function crb_attach_theme_options() {
 					'split' => 'Split navigation without title',
 					'combined' => 'Combined navigation with title',
 				) ),
-			Field::make( 'text', 'crb_facebook', 'Facebook profile (used for split header style)' ),
-			Field::make( 'text', 'crb_instagram', 'Instagram profile (used for split header style)'),
+			Field::make( 'text', 'crb_facebook', 'Facebook profile' ),
+			Field::make( 'text', 'crb_instagram', 'Instagram profile'),
+			Field::make( 'text', 'crb_linkedin', 'Linkedin profile'),
+			Field::make( 'text', 'crb_twitter', 'Twitter profile'),
 			Field::make( 'checkbox', 'crb_show_footer_title', 'Show site title in footer')
 				->set_option_value( 'yes' ),
 			Field::make( 'checkbox', 'crb_show_footer_logo', 'Show site logo in footer')
 				->set_option_value( 'yes' ),
+			Field::make( 'checkbox', 'crb_show_top_bar', 'Show bar above main header for social and site functions')
+				->set_option_value( 'yes' ),
+
 		));
 }
 
