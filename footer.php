@@ -64,24 +64,42 @@
 			</div>
 			<div class="explore" id="subscribe">
 			<?php
+			$mc_api = carbon_get_theme_option('crb_mc_api_key');
+			$list_id = carbon_get_theme_option('crb_mc_list_id');
+
+			if ($mc_api && $list_id) :
+
 			$_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
 
 			if ($_GET['subbed'] == "success") {
 				echo '<div class="newsletter success">';
 			} else if ($_GET['subbed'] == "failed") {
 				echo '<div class="newsletter failed">';
+			} else if ($_GET['subbed'] == "exists") {
+				echo '<div class="newsletter exists">';
+			} else if ($_GET['subbed'] == "api") {
+				echo '<div class="newsletter api">';
 			} else {
 				echo '<div class="newsletter">';
 			}
 			?>
-					<p id="successfully-subscribed">Thanks for subscribing!</p>
 					<p id="failed">Subscription failed, please try again or get in touch</p>
+					<p id="exists">Guess we've got a fan! Subscription failed, already subscribed</p>
+					<div id="api">
+						<h3>Subscription failed</h3>
+						<p>API Key misconfigured, please get in touch to let us know</p>
+					</div>
+					<div id="successfully-subscribed">
+						<h3>Thanks for subscribing!</h3>
+						<p>Please check your email to confirm your subscription</p>
+					</div>
 					<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST">
 						<input type="email" name="email" id="email" placeholder="Email address" required>
 						<input type="hidden" name="action" value="newsletter_form">
 						<input type="submit" value="Subscribe" class="button">
 					</form>
 				</div>
+				<?php endif; ?>
 				<div class="links">
 					<?php
 					function snae_footer_nav($menu_location) {

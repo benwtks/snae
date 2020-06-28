@@ -65,15 +65,15 @@ footer.site-footer .explore .links {
 }
 
 .newsletter {
-	#successfully-subscribed, #failed {
+	#successfully-subscribed, #failed, #exists, #api {
 		display: none;
+		margin-bottom: $content-margin-top;
 	}
 
-	&.success #successfully-subscribed {
-		display: block;
-	}
-
-	&.failed #failed {
+	&.success #successfully-subscribed,
+	&.failed #failed,
+	&.exists #exists,
+	&.api #api {
 		display: block;
 	}
 }
