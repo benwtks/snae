@@ -1124,9 +1124,11 @@ footer.site-footer .explore .links {
   footer.site-footer .explore .links .footer-nav:not(:last-of-type) {
     margin-right: 30px; }
 
-.newsletter #successfully-subscribed {
+.newsletter #successfully-subscribed, .newsletter #failed {
   display: none; }
 .newsletter.success #successfully-subscribed {
+  display: block; }
+.newsletter.failed #failed {
   display: block; }
 
 a {

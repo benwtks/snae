@@ -66,13 +66,16 @@
 			<?php
 			$_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
 
-			if ($_GET['subbed']) {
+			if ($_GET['subbed'] == "success") {
 				echo '<div class="newsletter success">';
+			} else if ($_GET['subbed'] == "failed") {
+				echo '<div class="newsletter failed">';
 			} else {
 				echo '<div class="newsletter">';
 			}
 			?>
 					<p id="successfully-subscribed">Thanks for subscribing!</p>
+					<p id="failed">Subscription failed, please try again or get in touch</p>
 					<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST">
 						<input type="email" name="email" id="email" placeholder="Email address" required>
 						<input type="hidden" name="action" value="newsletter_form">

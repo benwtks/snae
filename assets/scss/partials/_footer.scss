@@ -65,11 +65,15 @@ footer.site-footer .explore .links {
 }
 
 .newsletter {
-	#successfully-subscribed {
+	#successfully-subscribed, #failed {
 		display: none;
 	}
 
 	&.success #successfully-subscribed {
+		display: block;
+	}
+
+	&.failed #failed {
 		display: block;
 	}
 }

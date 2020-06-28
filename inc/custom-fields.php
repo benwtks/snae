@@ -8,6 +8,8 @@ function crb_attach_theme_options() {
 			Field::make( 'textarea', 'crb_theme_address', 'Address' ),
 			Field::make( 'text', 'crb_theme_telephone', 'Phone number' ),
 			Field::make( 'text', 'crb_theme_email', 'Email' ),
+			Field::make( 'text', 'crb_mc_list_id', 'Mailchimp newsletter list id' ),
+			Field::make( 'text', 'crb_mc_api_key', 'Mailchimp API key' ),
 			Field::make( 'select', 'crb_header_style', 'Header style' )
 				->set_options( array(
 					'split' => 'Split navigation without title',
