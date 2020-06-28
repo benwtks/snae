@@ -35,6 +35,7 @@ function handle_subscribe_post_request() {
 		));
 
 		$body_title = json_decode(wp_remote_retrieve_body($mc_response), true)['title'];
+		$code =  wp_remote_retrieve_response_code($mc_response);
 
 		if (strpos(strtolower($body_title), "api key") !== false) {
 			wp_redirect($sent_from . '?subbed=api#subscribe');
@@ -47,13 +48,13 @@ function handle_subscribe_post_request() {
 			die();
 		}
 		
-		if (!is_wp_error($mc_response) && $code == 200) {
+		if (!is_wp_error($mc_response) && $code === 200) {
 			wp_redirect($sent_from . '?subbed=success#subscribe');
 			die();
 		}
 	}
 
-	wp_redirect($sent_from . '?subbed=failed&?body=' . $body_title . '#subscribe');
+	wp_redirect($sent_from . '?subbed=failed&?error=' . $body_title . '#subscribe');
 	die();
 }
 
