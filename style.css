@@ -1760,7 +1760,7 @@ header.combined button#menu-toggle {
   header.combined button#menu-toggle {
     margin-left: 0; } }
 @media screen and (max-width: 630px) {
-  header.combined .logo h1.site-title {
+  header.combined .logo h1.site-title:not(.no-img) {
     display: none; } }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
