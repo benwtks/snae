@@ -38,16 +38,34 @@ form p.comment-form-cookies-consent label {
 }
 
 .comment-body {
-	padding: 10px;
-	border-radius: $border-radius;
+	padding: 25px;;
+	border-radius: $border-radius * 2;
 	margin-bottom: 12px;
 	background-color: $comment-bg;
+
+	footer.comment-meta {
+		margin-bottom: $content-margin-top;
+
+		.comment-author {
+				b.fn {
+				font-weight: initial;
+				font-size: 1.2rem;
+			}
+		}
+
+		.comment-metadata {
+			margin-left: 39px;
+
+			a {
+				color: initial;
+			}
+		}
+	}
 }
 
-.vcard {
+#comments .vcard {
 	display: flex;
 	align-items: center;
-	margin-bottom: 15px;
 
 	img {
 		margin-right: 7px;
@@ -59,9 +77,30 @@ form p.comment-form-cookies-consent label {
 }
 
 .comment-list {
-	padding: 20px;
+	padding: 0;
 
 	li {
 		margin-bottom: 25px;
 	}
+}
+
+.comments-wrapper {
+	border-top: $section-border;
+	margin-top: 80px;
+	padding-top: 30px;
+}
+
+#respond {
+	border-top: $section-border;
+	padding-top: 30px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+
+	input[type="submit"] {
+		background: $comment-button-bg;
+	}
+}
+
+h2.comments-title {
+	margin-bottom: $content-margin-top * 1.5;
 }

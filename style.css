@@ -1312,24 +1312,48 @@ form p.comment-form-cookies-consent label {
   display: inline-block; }
 
 .comment-body {
-  padding: 10px;
-  border-radius: 3px;
+  padding: 25px;
+  border-radius: 6px;
   margin-bottom: 12px;
-  background-color: #f7f7f7; }
+  background-color: #f6f6f6; }
+  .comment-body footer.comment-meta {
+    margin-bottom: 25px; }
+    .comment-body footer.comment-meta .comment-author b.fn {
+      font-weight: initial;
+      font-size: 1.2rem; }
+    .comment-body footer.comment-meta .comment-metadata {
+      margin-left: 39px; }
+      .comment-body footer.comment-meta .comment-metadata a {
+        color: initial; }
 
-.vcard {
+#comments .vcard {
   display: flex;
-  align-items: center;
-  margin-bottom: 15px; }
-  .vcard img {
+  align-items: center; }
+  #comments .vcard img {
     margin-right: 7px; }
-  .vcard span.says {
+  #comments .vcard span.says {
     display: none; }
 
 .comment-list {
-  padding: 20px; }
+  padding: 0; }
   .comment-list li {
     margin-bottom: 25px; }
+
+.comments-wrapper {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 80px;
+  padding-top: 30px; }
+
+#respond {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px; }
+  #respond input[type="submit"] {
+    background: #303132; }
+
+h2.comments-title {
+  margin-bottom: 37.5px; }
 
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
