@@ -36,3 +36,32 @@ form p label {
 form p.comment-form-cookies-consent label {
 	display:inline-block;
 }
+
+.comment-body {
+	padding: 10px;
+	border-radius: $border-radius;
+	margin-bottom: 12px;
+	background-color: $comment-bg;
+}
+
+.vcard {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+
+	img {
+		margin-right: 7px;
+	}
+
+	span.says {
+		display: none;
+	}
+}
+
+.comment-list {
+	padding: 20px;
+
+	li {
+		margin-bottom: 25px;
+	}
+}

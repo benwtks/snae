@@ -1215,7 +1215,8 @@ input[type="submit"] {
   border-radius: 3px;
   background: #2fa684;
   color: #fff;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 4px 8px; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -1309,6 +1310,26 @@ form p label {
 
 form p.comment-form-cookies-consent label {
   display: inline-block; }
+
+.comment-body {
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  background-color: #f7f7f7; }
+
+.vcard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; }
+  .vcard img {
+    margin-right: 7px; }
+  .vcard span.says {
+    display: none; }
+
+.comment-list {
+  padding: 20px; }
+  .comment-list li {
+    margin-bottom: 25px; }
 
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
