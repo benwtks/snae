@@ -1312,12 +1312,12 @@ form p.comment-form-cookies-consent label {
   display: inline-block; }
 
 .comment-body {
-  padding: 25px;
+  padding: 15px;
   border-radius: 6px;
   margin-bottom: 12px;
   background-color: #f6f6f6; }
   .comment-body footer.comment-meta {
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between; }
@@ -1326,6 +1326,9 @@ form p.comment-form-cookies-consent label {
       font-size: 1.2rem; }
     .comment-body footer.comment-meta .comment-metadata > a {
       color: initial; }
+
+#comments ol.children {
+  border-left: 2px solid #f1f1f1; }
 
 #comments .vcard {
   display: flex;

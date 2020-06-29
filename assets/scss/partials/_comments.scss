@@ -38,13 +38,13 @@ form p.comment-form-cookies-consent label {
 }
 
 .comment-body {
-	padding: 25px;;
+	padding: 15px;
 	border-radius: $border-radius * 2;
 	margin-bottom: 12px;
 	background-color: $comment-bg;
 
 	footer.comment-meta {
-		margin-bottom: $content-margin-top;
+		margin-bottom: 12px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -60,6 +60,10 @@ form p.comment-form-cookies-consent label {
 			color: initial;
 		}
 	}
+}
+
+#comments ol.children {
+	border-left: 2px solid #f1f1f1;
 }
 
 #comments .vcard {
