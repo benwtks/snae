@@ -8,6 +8,7 @@ function crb_attach_theme_options() {
 			Field::make( 'textarea', 'crb_theme_address', 'Address' ),
 			Field::make( 'text', 'crb_theme_telephone', 'Phone number' ),
 			Field::make( 'text', 'crb_theme_email', 'Email' ),
+			Field::make( 'text', 'crb_mc_form_url', 'Mailchimp subscribe form - Needed to redirect users resubscribing since Mailchimp requires this to be done through their form'),
 			Field::make( 'text', 'crb_mc_list_id', 'Mailchimp newsletter list id' ),
 			Field::make( 'text', 'crb_mc_api_key', 'Mailchimp API key' ),
 			Field::make( 'select', 'crb_header_style', 'Header style' )

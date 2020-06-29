@@ -1124,10 +1124,10 @@ footer.site-footer .explore .links {
   footer.site-footer .explore .links .footer-nav:not(:last-of-type) {
     margin-right: 30px; }
 
-.newsletter #successfully-subscribed, .newsletter #failed, .newsletter #exists, .newsletter #api {
+.newsletter #successfully-subscribed, .newsletter #failed, .newsletter #exists, .newsletter #api, .newsletter #unsubscribed {
   display: none;
   margin-bottom: 25px; }
-.newsletter.success #successfully-subscribed, .newsletter.failed #failed, .newsletter.exists #exists, .newsletter.api #api {
+.newsletter.success #successfully-subscribed, .newsletter.failed #failed, .newsletter.exists #exists, .newsletter.unsubscribed #unsubscribed, .newsletter.api #api {
   display: block; }
 
 a {

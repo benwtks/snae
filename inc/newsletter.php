@@ -37,6 +37,11 @@ function handle_subscribe_post_request() {
 		$body_title = json_decode(wp_remote_retrieve_body($mc_response), true)['title'];
 		$code =  wp_remote_retrieve_response_code($mc_response);
 
+		if (strpos(strtolower($body_title), "forgotten") !== false) {
+			wp_redirect($sent_from . '?subbed=unsubscribed#subscribe');
+			die();
+		}
+
 		if (strpos(strtolower($body_title), "api key") !== false) {
 			wp_redirect($sent_from . '?subbed=api#subscribe');
 			die();

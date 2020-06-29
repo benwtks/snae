@@ -65,7 +65,7 @@ footer.site-footer .explore .links {
 }
 
 .newsletter {
-	#successfully-subscribed, #failed, #exists, #api {
+	#successfully-subscribed, #failed, #exists, #api, #unsubscribed {
 		display: none;
 		margin-bottom: $content-margin-top;
 	}
@@ -73,6 +73,7 @@ footer.site-footer .explore .links {
 	&.success #successfully-subscribed,
 	&.failed #failed,
 	&.exists #exists,
+	&.unsubscribed #unsubscribed,
 	&.api #api {
 		display: block;
 	}

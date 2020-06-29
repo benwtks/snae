@@ -79,12 +79,19 @@
 				echo '<div class="newsletter exists">';
 			} else if ($_GET['subbed'] == "api") {
 				echo '<div class="newsletter api">';
+			} else if ($_GET['subbed'] == "unsubscribed") {
+				$mc_form_url = carbon_get_theme_option('crb_mc_form_url');
+				echo '<div class="newsletter unsubscribed">';
 			} else {
 				echo '<div class="newsletter">';
 			}
 			?>
 					<p id="failed">Subscription failed, please try again or get in touch</p>
 					<p id="exists">Guess we've got a fan! Subscription failed, already subscribed</p>
+					<div id="unsubscribed">
+						<h3>Sorry, we can't resubscribe you from here</h3>
+						<p>Please use <a href="<?php $mc_form_url ?>">this form</a> to resubscribe</p>
+					</div>
 					<div id="api">
 						<h3>Subscription failed</h3>
 						<p>API Key misconfigured, please get in touch to let us know</p>
