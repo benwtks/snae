@@ -45,6 +45,9 @@ form p.comment-form-cookies-consent label {
 
 	footer.comment-meta {
 		margin-bottom: $content-margin-top;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
 		.comment-author {
 				b.fn {
@@ -53,12 +56,8 @@ form p.comment-form-cookies-consent label {
 			}
 		}
 
-		.comment-metadata {
-			margin-left: 39px;
-
-			a {
-				color: initial;
-			}
+		.comment-metadata > a {
+			color: initial;
 		}
 	}
 }

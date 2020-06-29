@@ -1317,14 +1317,15 @@ form p.comment-form-cookies-consent label {
   margin-bottom: 12px;
   background-color: #f6f6f6; }
   .comment-body footer.comment-meta {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
     .comment-body footer.comment-meta .comment-author b.fn {
       font-weight: initial;
       font-size: 1.2rem; }
-    .comment-body footer.comment-meta .comment-metadata {
-      margin-left: 39px; }
-      .comment-body footer.comment-meta .comment-metadata a {
-        color: initial; }
+    .comment-body footer.comment-meta .comment-metadata > a {
+      color: initial; }
 
 #comments .vcard {
   display: flex;
