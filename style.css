@@ -1615,7 +1615,8 @@ header.site-header .content-wrapper, header.site-header .news-wrapper {
   padding: 12px 0; }
 header.site-header a {
   color: #555;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   header.site-header a:hover {
     color: #2fa684; }
 

@@ -39,7 +39,7 @@ endif; ?>
 			<div class="user-links nav-icons">
 			<?php if (!$bar) : ?>
 				<a class="nav-icon" id="cart-icon" href="#"><i class="dripicons-cart"></i></a>
-				<a class="nav-icon" id="search-icon" href="#"><i class="dripicons-search"></i></a>
+				<a class="nav-icon" id="search-icon" ><i class="dripicons-search"></i></a>
 			<?php endif; ?>
 
 				<button class="nav-icon dripicons-menu hamburger-menu-button" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
