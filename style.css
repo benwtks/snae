@@ -1006,6 +1006,9 @@ address {
 .post img {
   margin: 0 0 20px; }
 
+.error-404 header.page-header {
+  margin-bottom: 40px; }
+
 body, button,
 input, select,
 optgroup, textarea {
