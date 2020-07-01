@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area content-wrapper page-wrapper">
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -51,5 +51,4 @@ get_header();
 	</section>
 
 <?php
-get_sidebar();
 get_footer();

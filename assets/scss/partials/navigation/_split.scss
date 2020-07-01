@@ -15,6 +15,14 @@ header.split .main-navigation {
 		background: #fff;
 	}
 
+	header.split .search-bar {
+		height: 92px;
+	}
+
+	header.split.bar-shown .search-bar {
+		height: 124px;
+	}
+
 	header.split:not(.bar-shown) .user-links.nav-icons a.nav-icon {
 		&:first-of-type {
 			margin-right: $standard-horizontal-spacing;

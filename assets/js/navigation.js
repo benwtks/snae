@@ -12,7 +12,7 @@
 		return;
 	}
 
-	button = container.getElementsByTagName( 'button' )[0];
+	button = container.getElementsByClassName( 'hamburger-menu-button' )[0];
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
@@ -110,3 +110,11 @@
 		}
 	}( container ) );
 }() );
+
+document.getElementById("search-icon").addEventListener("click", function(){
+	document.getElementById("masthead").classList.add("search");
+});
+
+document.getElementById("close-search").addEventListener("click", function(){
+	document.getElementById("masthead").classList.remove("search");
+});

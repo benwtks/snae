@@ -3,13 +3,17 @@
 <?php if ($bar) : ?>
 
 <header id="masthead" class="site-header split bar-shown">
-	<?php if ($bar) { include get_theme_file_path('headers/bar.php'); } ?>
+	<?php
+	include get_theme_file_path('headers/search_bar.php');
+	if ($bar) { include get_theme_file_path('headers/bar.php'); }
+	?>
 
 <?php else : ?>
 
 <header id="masthead" class="site-header split">
+<?php include get_theme_file_path('headers/search_bar.php');
 
-<?php endif; ?>
+endif; ?>
 
 	<div class="site-branding section">
 		<div class="content-wrapper">
@@ -38,7 +42,7 @@
 				<a class="nav-icon" id="search-icon" href="#"><i class="dripicons-search"></i></a>
 			<?php endif; ?>
 
-				<button class="nav-icon dripicons-menu" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+				<button class="nav-icon dripicons-menu hamburger-menu-button" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 			</div>
 
 		</div>

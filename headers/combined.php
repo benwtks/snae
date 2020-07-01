@@ -1,15 +1,20 @@
-<?php $bar = carbon_get_theme_option('crb_show_top_bar'); ?>
+<?php $bar = carbon_get_theme_option('crb_show_top_bar');
 
-<?php if ($bar) : ?>
+if ($bar) { ?>
 
 <header id="masthead" class="site-header combined bar-shown">
-	<?php if ($bar) { include get_theme_file_path('headers/bar.php'); } ?>
+	<?php
+	include get_theme_file_path('headers/search_bar.php');
+	if ($bar) {
+		include get_theme_file_path('headers/bar.php');
+	}
 
-<?php else : ?>
+} else { ?>
 
 <header id="masthead" class="site-header combined">
+	<?php include get_theme_file_path('headers/search_bar.php');
 
-<?php endif; ?>
+} ?>
 
 	<div class="site-branding section">
 		<div class="content-wrapper">
@@ -38,7 +43,7 @@
 					<a class="nav-icon" id="search-icon" href="#"><i class="dripicons-search"></i></a>
 					<?php endif; ?>
 
-					<button class="nav-icon dripicons-menu" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+					<button class="nav-icon dripicons-menu hamburger-menu-button" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 				</div>
 			</div>
 		</div>
