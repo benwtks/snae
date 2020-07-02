@@ -24,6 +24,7 @@
 		display: flex;
 		flex-direction: column;
 		margin-right: $workshop-thumbnail-spacing;
+		min-width: 50px;
 
 		.workshop-thumbnail {
 			cursor: pointer;
@@ -41,6 +42,7 @@
 
 	img#featured {
 		width: $featured-width;
+		min-width: 100px;
 		border-radius: $border-radius;
 	}
 }
@@ -49,6 +51,7 @@
 	margin-left: $workshop-top-detail-spacing;
 	background-color: $workshop-ecommerce;
 	max-width: $ecommerce-max-width;
+	min-width: 240px;
 	border-radius: $border-radius;
 
 	.intro {
@@ -152,4 +155,42 @@
 
 .workshop-panel .workshop-meta {
 	margin-bottom: $content-margin-top;
+}
+
+@media screen and (max-width: 750px) {
+	.workshop-photos {
+		flex-wrap: wrap-reverse;
+
+		.thumbnails {
+			display: grid;
+			gap: 15px;
+			grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.workshop-top {
+		flex-wrap: wrap;
+
+		.ecommerce-details {
+			margin-top: 15px;
+			margin-left: 0;
+			max-width: initial;
+		}
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.workshop-middle .artist .artist-name {
+		.name a {
+			color: $link-colour;
+		}
+
+		a.see-more {
+			display: none;
+		}
+	}
 }

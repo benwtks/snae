@@ -1451,7 +1451,8 @@ h2.comments-title {
   .workshop-photos .thumbnails {
     display: flex;
     flex-direction: column;
-    margin-right: 15px; }
+    margin-right: 15px;
+    min-width: 50px; }
     .workshop-photos .thumbnails .workshop-thumbnail {
       cursor: pointer;
       width: 100px;
@@ -1463,12 +1464,14 @@ h2.comments-title {
       box-sizing: content-box; }
   .workshop-photos img#featured {
     width: 600px;
+    min-width: 100px;
     border-radius: 3px; }
 
 .ecommerce-details {
   margin-left: 15px;
   background-color: #f3f3f3;
   max-width: 300px;
+  min-width: 240px;
   border-radius: 3px; }
   .ecommerce-details .intro {
     padding: 20px; }
@@ -1542,6 +1545,27 @@ h2.comments-title {
 .workshop-panel .workshop-meta {
   margin-bottom: 25px; }
 
+@media screen and (max-width: 750px) {
+  .workshop-photos {
+    flex-wrap: wrap-reverse; }
+    .workshop-photos .thumbnails {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      width: 100%;
+      margin-top: 20px; } }
+@media screen and (max-width: 550px) {
+  .workshop-top {
+    flex-wrap: wrap; }
+    .workshop-top .ecommerce-details {
+      margin-top: 15px;
+      margin-left: 0;
+      max-width: initial; } }
+@media screen and (max-width: 440px) {
+  .workshop-middle .artist .artist-name .name a {
+    color: #2fa684; }
+  .workshop-middle .artist .artist-name a.see-more {
+    display: none; } }
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
