@@ -4,6 +4,7 @@
 
 <header id="masthead" class="site-header split bar-shown">
 	<?php
+	include get_theme_file_path('headers/notification.php');
 	include get_theme_file_path('headers/search_bar.php');
 	if ($bar) { include get_theme_file_path('headers/bar.php'); }
 	?>
@@ -11,7 +12,9 @@
 <?php else : ?>
 
 <header id="masthead" class="site-header split">
-<?php include get_theme_file_path('headers/search_bar.php');
+<?php
+	include get_theme_file_path('headers/notification.php');
+	include get_theme_file_path('headers/search_bar.php');
 
 endif; ?>
 

@@ -1,4 +1,6 @@
-<div class="search-bar">
+<?php $notification = carbon_get_theme_option('crb_notification'); ?>
+
+<div class="search-bar <?php if ($notification) { echo 'notification-shown'; } ?>">
 	<div class="search-wrapper">
 		<form action="/" method="get" role="search">
 			<span class="screen-reader-text">Search for</span>

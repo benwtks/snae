@@ -1,11 +1,23 @@
 header.site-header .search-bar {
-	transform: translateY(-100%);
-	transition: 200ms transform ease-in-out;
+	&.notification-shown {
+		display: none;
+	}
+
+	&:not(.notification-shown) {
+		transform: translateY(-100%);
+		transition: 200ms transform ease-in-out;
+	}
 }
 
 header.site-header.search .search-bar {
-	transform: translateY(0);
-	transition: 200ms transform ease-in-out;
+	&.notification-shown {
+		display: block;
+	}
+
+	&:not(.notification-shown) {
+		transform: translateY(0);
+		transition: 200ms transform ease-in-out;
+	}
 }
 
 header.split .search-bar {

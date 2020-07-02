@@ -1009,6 +1009,9 @@ address {
 .error-404 header.page-header {
   margin-bottom: 40px; }
 
+span.categories a {
+  margin-right: 5px; }
+
 body, button,
 input, select,
 optgroup, textarea {
@@ -1724,11 +1727,15 @@ header.site-header .top-bar {
 header.site-header.split.bar-shown .site-branding .content-wrapper, header.site-header.split.bar-shown .site-branding .news-wrapper {
   justify-content: center; }
 
-header.site-header .search-bar {
+header.site-header .search-bar.notification-shown {
+  display: none; }
+header.site-header .search-bar:not(.notification-shown) {
   transform: translateY(-100%);
   transition: 200ms transform ease-in-out; }
 
-header.site-header.search .search-bar {
+header.site-header.search .search-bar.notification-shown {
+  display: block; }
+header.site-header.search .search-bar:not(.notification-shown) {
   transform: translateY(0);
   transition: 200ms transform ease-in-out; }
 
@@ -1851,6 +1858,19 @@ header.combined button#menu-toggle {
 @media screen and (max-width: 630px) {
   header.combined .logo h1.site-title:not(.no-img) {
     display: none; } }
+header.site-header .notification {
+  padding: 10px;
+  text-align: center;
+  background: #2fa684; }
+  header.site-header .notification span {
+    margin: 0 auto; }
+    header.site-header .notification span a {
+      color: #111;
+      transition: 200ms color ease-in-out; }
+      header.site-header .notification span a:hover {
+        color: #fff;
+        transition: 200ms color ease-in-out; }
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {

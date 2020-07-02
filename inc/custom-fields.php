@@ -16,6 +16,8 @@ function crb_attach_theme_options() {
 					'split' => 'Split navigation without title',
 					'combined' => 'Combined navigation with title',
 				) ),
+			Field::make( 'text', 'crb_notification', 'Notification bar (empty removes bar)' ),
+			Field::make( 'text', 'crb_notification_link', 'Notification learn more link' ),
 			Field::make( 'text', 'crb_facebook', 'Facebook profile' ),
 			Field::make( 'text', 'crb_instagram', 'Instagram profile'),
 			Field::make( 'text', 'crb_linkedin', 'Linkedin profile'),

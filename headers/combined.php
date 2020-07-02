@@ -4,6 +4,7 @@ if ($bar) { ?>
 
 <header id="masthead" class="site-header combined bar-shown">
 	<?php
+	include get_theme_file_path('headers/notification.php');
 	include get_theme_file_path('headers/search_bar.php');
 	if ($bar) {
 		include get_theme_file_path('headers/bar.php');
@@ -12,10 +13,11 @@ if ($bar) { ?>
 } else { ?>
 
 <header id="masthead" class="site-header combined">
-	<?php include get_theme_file_path('headers/search_bar.php');
+	<?php
+	include get_theme_file_path('headers/notification.php');
+	include get_theme_file_path('headers/search_bar.php');
 
 } ?>
-
 	<div class="site-branding section">
 		<div class="content-wrapper">
 			<div class="logo">
