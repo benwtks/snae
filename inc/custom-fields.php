@@ -39,3 +39,71 @@ function crb_attach_theme_options() {
 }
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
+
+function snae_get_post_type_array($type) {
+	$query = new WP_Query( array(
+		'post_type' => $type,
+		'posts_per_page' => -1
+	));
+
+	$array = $query->posts;
+	return wp_list_pluck( $array, 'post_title', 'ID' );
+}
+
+function snae_get_pages_array() {
+	return snae_get_post_type_array('page');
+}
+
+function snae_get_workshops_array() {
+	return snae_get_post_type_array('workshop');
+}
+
+function snae_get_artists_array() {
+	return snae_get_post_type_array('artist');
+}
+
+function crb_attach_custom_home_options() {
+	Container::make( 'post_meta', 'Top section' )
+		->where( 'post_id', '=', get_option( 'page_on_front' ) )
+		->add_fields( array(
+			Field::make( 'image', 'crb_homepage_top_image', 'Top Background Image'),
+			Field::make( 'text', 'crb_homepage_top_title', 'Title'),
+			Field::make( 'textarea', 'crb_homepage_top_body', 'Intro')
+		));
+
+	Container::make( 'post_meta', 'Main Content' )
+		->where( 'post_id', '=', get_option( 'page_on_front' ) )
+		->add_fields( array(
+			Field::make( 'complex', 'crb_homepage_features', 'Featured pages')
+				->add_fields( array(
+					Field::make( 'image', 'crb_homepage_feature_img', 'Page image'),
+					Field::make( 'select', 'crb_homepage_feature', 'Featured page')
+						->add_options( 'snae_get_pages_array' ),
+					Field::make( 'textarea', 'crb_homepage_feature_body', 'Body text')
+				)),
+			Field::make( 'complex', 'crb_homepage_workshops', 'Featured workshops')
+				->add_fields( array(
+					Field::make( 'select', 'crb_homepage_workshop', 'Featured workshop')
+						->add_options( 'snae_get_workshops_array' ),
+				)),
+			Field::make( 'complex', 'crb_homepage_artists', 'Featured artists')
+				->add_fields( array(
+					Field::make( 'select', 'crb_homepage_artist', 'Featured artist')
+						->add_options( 'snae_get_artists_array' ),
+				)),
+		));
+
+	Container::make( 'post_meta', 'Call to action (e.g. to register)')
+		->where( 'post_id', '=', get_option( 'page_on_front' ) )
+		->add_fields( array(
+			Field::make( 'text', 'crb_call_to_action_title', 'Title'),
+			Field::make( 'text', 'crb_call_to_action_body', 'Description'),
+			Field::make( 'complex', 'crb_call_to_action_links', 'Links')
+				->add_fields( array(
+					Field::make( 'text', 'crb_call_to_action_link_name', 'Link name' ),
+					Field::make( 'text', 'crb_call_to_action_link', 'Link URL' )
+				))
+		));
+}
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_custom_home_options' );
