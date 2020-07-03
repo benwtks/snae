@@ -12,6 +12,7 @@ function crb_attach_theme_options() {
 			Field::make( 'text', 'crb_mc_form_url', 'Mailchimp subscribe form - Needed to redirect users resubscribing since Mailchimp requires this to be done through their form'),
 			Field::make( 'text', 'crb_mc_list_id', 'Mailchimp newsletter list id' ),
 			Field::make( 'text', 'crb_mc_api_key', 'Mailchimp API key' ),
+			Field::make( 'text', 'crb_stripe_api_key', 'Stripe API key' ),
 			Field::make( 'select', 'crb_header_style', 'Header style' )
 				->set_options( array(
 					'split' => 'Split navigation without title',
