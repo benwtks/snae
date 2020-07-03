@@ -45,6 +45,9 @@ Text Domain: snae
 .fa-linkedin:before {
   content: "\f08c"; }
 
+.fa-youtube:before {
+  content: "\f167"; }
+
 @font-face {
   font-family: "dripicons-v2";
   src: url("./assets/webfonts/dripicons-v2.eot");
@@ -1413,6 +1416,11 @@ h2.comments-title {
   .artist-header .links .artist-icon.linkedin:hover {
     color: #0a66c2; }
 
+.artist-header .links .website-link {
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 40px; }
+
 .artist-about {
   margin-bottom: 25px; }
   .artist-about .artist-bio, .artist-about .artist-gallery {
@@ -1898,7 +1906,7 @@ header.combined button#menu-toggle {
   header.combined .links nav {
     display: none; } }
 @media screen and (max-width: 670px) {
-  header.combined .links #search-icon {
+  header.combined .links #event-icon {
     display: none; }
 
   header.combined button#menu-toggle {
