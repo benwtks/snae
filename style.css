@@ -1415,6 +1415,8 @@ h2.comments-title {
     color: #eb6d20; }
   .artist-header .links .artist-icon.linkedin:hover {
     color: #0a66c2; }
+  .artist-header .links .artist-icon.youtube:hover {
+    color: #FF0000; }
 
 .artist-header .links .website-link {
   padding: 5px 10px;
