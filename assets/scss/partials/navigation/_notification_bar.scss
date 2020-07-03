@@ -1,0 +1,32 @@
+header.site-header .notification {
+	padding: 10px;
+	text-align: center;
+	background: $snae-green;
+
+	span {
+		margin: 0 auto;
+
+		a {
+			color: #111;
+			transition: 200ms color ease-in-out;
+
+			&:hover {
+				color: #fff;
+				transition: 200ms color ease-in-out;
+			}
+		}
+	}
+
+	&.blue, &.orange {
+		color: #fff;
+		a { color: #e3e3e3; }
+	}
+
+	&.blue {
+		background: $notification-blue;
+	}
+
+	&.orange {
+		background: $notification-orange;
+	}
+}

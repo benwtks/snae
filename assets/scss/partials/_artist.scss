@@ -85,6 +85,42 @@
 	}
 }
 
+.artist-previews {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-auto-rows: 130px;
+	margin-top: $content-margin-top;
+
+	.artist-preview {
+		display: flex;
+		flex-direction: row;
+
+		img.preview-photo {
+			border-radius: $preview-radius 0 0 $preview-radius;
+			width: 130px;
+		}
+
+		.details {
+			border-radius: 0 $preview-radius $preview-radius 0;
+			width: 100%;
+			background: $preview-colour;
+			padding: 15px;
+			color: #fff;
+
+			p {
+				font-size: 0.9rem;
+				color: #ffffffd1;
+			}
+
+			.title a {
+				color: inherit;
+				&:hover { color: #000000b0; }
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 700px) {
 	.artist-details img.artist-photo {
 		width: 100px;
@@ -103,4 +139,3 @@
 		margin-right: 5px;
 	}
 }
-
