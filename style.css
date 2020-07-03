@@ -1532,6 +1532,9 @@ h2.comments-title {
 .workshop-guarantees {
   margin-bottom: 50px;
   padding-top: 10px; }
+  .workshop-guarantees li.refund a {
+    vertical-align: middle;
+    margin-left: 10px; }
 
 .workshop-middle {
   margin-top: 50px;

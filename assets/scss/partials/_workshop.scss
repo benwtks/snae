@@ -84,6 +84,11 @@
 .workshop-guarantees {
 	margin-bottom: $workshop-margin-bottom;
 	padding-top: $workshop-padding / 2;
+
+	li.refund a {
+		vertical-align: middle;
+		margin-left: 10px;
+	}
 }
 
 .workshop-middle {
