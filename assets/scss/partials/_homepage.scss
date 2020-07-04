@@ -1,0 +1,44 @@
+#primary.front-page {
+	margin-top: -$content-margin-top;
+}
+
+.home-top {
+	height: 500px;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	background-color: #000;
+	align-items: center;
+}
+
+.featured-pages {
+	.home-feature {
+		padding: ($content-margin-top * 2) 0;
+		border-bottom: $section-border;
+	}
+	
+	.home-feature-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		* { flex: 1; }
+
+		img { max-width: 480px; }
+	}
+
+	.home-feature:nth-child(odd) .home-feature-wrapper {
+		flex-direction: row-reverse;
+	}
+
+	.home-feature:nth-child(odd) .home-feature-wrapper > *:nth-child(odd),
+	.home-feature:nth-child(even) .home-feature-wrapper > *:nth-child(even) {
+		margin-left: 20px;
+	}
+
+	.home-feature:nth-child(even) .home-feature-wrapper > *:nth-child(odd),
+	.home-feature:nth-child(odd) .home-feature-wrapper > *:nth-child(even) {
+		margin-right: 20px;
+	}
+}

@@ -1938,4 +1938,36 @@ header.combined button#menu-toggle {
   text-align: right;
   width: 50%; }
 
+#primary.front-page {
+  margin-top: -25px; }
+
+.home-top {
+  height: 500px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #000;
+  align-items: center; }
+
+.featured-pages .home-feature {
+  padding: 50px 0;
+  border-bottom: 1px solid #e1e1e1; }
+.featured-pages .home-feature-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .featured-pages .home-feature-wrapper * {
+    flex: 1; }
+  .featured-pages .home-feature-wrapper img {
+    max-width: 480px; }
+.featured-pages .home-feature:nth-child(odd) .home-feature-wrapper {
+  flex-direction: row-reverse; }
+.featured-pages .home-feature:nth-child(odd) .home-feature-wrapper > *:nth-child(odd),
+.featured-pages .home-feature:nth-child(even) .home-feature-wrapper > *:nth-child(even) {
+  margin-left: 20px; }
+.featured-pages .home-feature:nth-child(even) .home-feature-wrapper > *:nth-child(odd),
+.featured-pages .home-feature:nth-child(odd) .home-feature-wrapper > *:nth-child(even) {
+  margin-right: 20px; }
+
 /*# sourceMappingURL=style.css.map */
