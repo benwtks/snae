@@ -12,19 +12,18 @@
 	align-items: center;
 }
 
+.home-feature, .home-artists, .home-workshops {
+	padding: ($content-margin-top * 2) 0;
+	border-bottom: $section-border;
+}
+
 .featured-pages {
-	.home-feature {
-		padding: ($content-margin-top * 2) 0;
-		border-bottom: $section-border;
-	}
-	
 	.home-feature-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
 		* { flex: 1; }
-
 		img { max-width: 480px; }
 	}
 

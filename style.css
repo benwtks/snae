@@ -1950,9 +1950,10 @@ header.combined button#menu-toggle {
   background-color: #000;
   align-items: center; }
 
-.featured-pages .home-feature {
+.home-feature, .home-artists, .home-workshops {
   padding: 50px 0;
   border-bottom: 1px solid #e1e1e1; }
+
 .featured-pages .home-feature-wrapper {
   display: flex;
   align-items: center;

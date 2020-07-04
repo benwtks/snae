@@ -44,7 +44,8 @@ while ( have_posts() ) : the_post(); ?>
 		$workshops = carbon_get_post_meta(get_the_ID(), 'crb_homepage_workshops');
 
 		if ($workshops) {
-			echo '<div class="home-workshops page-wrapper content-wrapper">';
+			echo '<div class="home-workshops">';
+			echo '<div class="home-workshops-wrapper page-wrapper content-wrapper">';
 			echo '<h2>Workshops</h2>';
 			echo '<div class="workshop-previews">';
 			foreach ($workshops as $workshop) {
@@ -56,12 +57,14 @@ while ( have_posts() ) : the_post(); ?>
 			}
 			echo '</div>';
 			echo '</div>';
+			echo '</div>';
 		}
 
 		$artists = carbon_get_post_meta(get_the_ID(), 'crb_homepage_artists');
 
 		if ($artists) {
-			echo '<div class="home-artists page-wrapper content-wrapper">';
+			echo '<div class="home-artists">';
+			echo '<div class="home-artists-wrapper page-wrapper content-wrapper">';
 			echo '<h2>Artists</h2>';
 			echo '<div class="artist-previews">';
 			foreach ($artists as $artist) {
@@ -73,6 +76,7 @@ while ( have_posts() ) : the_post(); ?>
 			}
 			echo '</div>';
 			echo '</div>';
+			echo '</div>';
 		}
 
 		$action_title = carbon_get_post_meta(get_the_ID(), 'crb_call_to_action_title');
@@ -80,7 +84,8 @@ while ( have_posts() ) : the_post(); ?>
 		$action_links = carbon_get_post_meta(get_the_ID(), 'crb_call_to_action_links');
 
 		if ($action_title && $action_body) {
-			echo '<div class="home-call-to-action page-wrapper content-wrapper">';
+			echo '<div class="home-call-to-action">';
+			echo '<div class="home-call-to-action-wrapper page-wrapper content-wrapper">';
 			echo '<h2>' . $action_title . '</h2>';
 			echo '<p>' . $action_body . '</p>';
 
@@ -94,6 +99,7 @@ while ( have_posts() ) : the_post(); ?>
 				}
 				echo '</div>';
 			}
+			echo '</div>';
 			echo '</div>';
 		}
 
