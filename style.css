@@ -1405,7 +1405,9 @@ h2.comments-title {
   vertical-align: middle; }
 .artist-details img.artist-photo {
   border-radius: 50%;
-  margin-right: 15px; }
+  margin-right: 15px;
+  width: 120px;
+  height: 120px; }
 .artist-details .intro .name {
   margin-bottom: 0; }
 
@@ -1544,9 +1546,15 @@ h2.comments-title {
 .workshop-guarantees {
   margin-bottom: 50px;
   padding-top: 10px; }
-  .workshop-guarantees li.refund a {
-    vertical-align: middle;
-    margin-left: 10px; }
+  .workshop-guarantees ul {
+    list-style: none; }
+    .workshop-guarantees ul li:before {
+      content: "\53";
+      font-family: "dripicons-v2" !important;
+      margin-right: 5px; }
+    .workshop-guarantees ul li.refund a {
+      vertical-align: middle;
+      margin-left: 10px; }
 
 .workshop-middle {
   margin-top: 50px;
@@ -1638,7 +1646,8 @@ h2.comments-title {
         border-radius: 6px;
         margin-right: 20px; }
     .snae-orders .order .order-price {
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      color: #2fa684; }
 
 button#checkout-button {
   margin-top: 25px;

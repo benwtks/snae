@@ -85,9 +85,19 @@
 	margin-bottom: $workshop-margin-bottom;
 	padding-top: $workshop-padding / 2;
 
-	li.refund a {
-		vertical-align: middle;
-		margin-left: 10px;
+	ul {
+		list-style: none;
+
+		li:before {
+			content: "\53";
+			font-family: "dripicons-v2" !important;
+			margin-right: 5px;
+		}
+
+		li.refund a {
+			vertical-align: middle;
+			margin-left: 10px;
+		}
 	}
 }
 

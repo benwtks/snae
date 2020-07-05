@@ -253,3 +253,9 @@ function snae_register_footer_nav_menus(){
 }
 
 add_action('after_setup_theme','snae_register_footer_nav_menus', 0);
+
+function snae_home_image_size() {
+	add_image_size( 'home', 480, 340, true);
+}
+
+add_action('init', 'snae_home_image_size');
