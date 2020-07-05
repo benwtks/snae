@@ -37,3 +37,12 @@
 		flex: 1;
 	}
 }
+
+i.dripicons-chevron-right {
+	vertical-align: middle;
+	font-size: 1.4rem;
+
+	&:before {
+		line-height: 3rem;
+	}
+}

@@ -2,6 +2,10 @@
 	margin-top: -$content-margin-top;
 }
 
+body.home footer.site-footer {
+	margin-top: 0;
+}
+
 .home-top {
 	height: 500px;
 	position: relative;
@@ -29,8 +33,11 @@
 	}
 }
 
-.home-feature, .home-artists, .home-workshops {
+.home-content, .home-feature, .home-artists, .home-workshops, .home-call-to-action {
 	padding: ($content-margin-top * 2) 0;
+}
+
+.home-content, .home-feature, .home-artists, .home-workshops {
 	border-bottom: $section-border;
 }
 
@@ -115,5 +122,48 @@
 @media screen and (max-width: 400px) {
 	.featured-pages .home-feature-wrapper img {
 		display: none;
+	}
+}
+
+.home-artists, .home-workshops {
+	.feature-header-wrapper .info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: $content-margin-top;
+
+		h2 {
+			margin: 0;
+		}
+	}
+}
+
+.home-call-to-action {
+	text-align: center;
+
+	p {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.action-links {
+		margin-top: $content-margin-top;
+		display: flex;
+		justify-content: center;
+
+		a {
+			background: $button-bg;
+			border-radius: $border-radius;
+			color: $button-text;
+			padding: 8px 16px;
+
+			&:not(last-of-type) {
+				margin-right: $standard-horizontal-spacing;
+			}
+
+			&:hover {
+				background: $button-hover-bg;
+			}
+		}
 	}
 }

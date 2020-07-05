@@ -22,6 +22,14 @@ $background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_home
 			</div>
 		</div>
 		<?php
+		if (!empty(get_the_content())) {
+			echo '<div class="home-content">';
+			echo '<div class="content-wrapper page-wrapper">';
+			the_content();
+			echo '</div>';
+			echo '</div>';
+		}
+
 		$featured_pages = carbon_get_post_meta(get_the_ID(), 'crb_homepage_features');
 
 		if ($featured_pages) {
@@ -30,6 +38,7 @@ $background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_home
 			foreach ($featured_pages as $page) {
 				$title = get_the_title($page['crb_homepage_feature']);
 				$img_url = wp_get_attachment_image_url($page['crb_homepage_feature_img'], 'home');
+				$page_url = get_page_link($page['crb_homepage_feature']);
 
 				echo '<div class="home-feature">';
 				echo '<div class="home-feature-wrapper content-wrapper page-wrapper">';
@@ -37,6 +46,7 @@ $background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_home
 				echo '<div class="feature-details">';
 				echo '<h2>' . $title . '</h2>';
 				echo '<p>' . $page['crb_homepage_feature_body'] . '</p>';
+				echo '<a href="' . $page_url . '" alt="full page">Learn more<i class="dripicons-chevron-right"></i></a>';
 				echo '</div>';
 				echo '</div>';
 				echo '</div>';
@@ -51,7 +61,13 @@ $background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_home
 		if ($workshops) {
 			echo '<div class="home-workshops">';
 			echo '<div class="home-workshops-wrapper page-wrapper content-wrapper">';
+			echo '<div class="feature-header-wrapper">';
+			echo '<div class="info">';
 			echo '<h2>Workshops</h2>';
+			echo '<a href="' . get_post_type_archive_link('workshop') . '" alt="full page">Learn more<i class="dripicons-chevron-right"></i></a>';
+			echo '</div>';
+			echo '<p>' . carbon_get_post_meta(get_the_ID(), 'crb_homepage_workshops_intro') . '</p>';
+			echo '</div>';
 			echo '<div class="workshop-previews">';
 			foreach ($workshops as $workshop) {
 				$preview = snae_ecommerce_get_workshop_preview($workshop['crb_homepage_workshop']);
@@ -70,7 +86,13 @@ $background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_home
 		if ($artists) {
 			echo '<div class="home-artists">';
 			echo '<div class="home-artists-wrapper page-wrapper content-wrapper">';
+			echo '<div class="feature-header-wrapper">';
+			echo '<div class="info">';
 			echo '<h2>Artists</h2>';
+			echo '<a href="' . get_post_type_archive_link('artist') . '" alt="full page">Learn more<i class="dripicons-chevron-right"></i></a>';
+			echo '</div>';
+			echo '<p>' . carbon_get_post_meta(get_the_ID(), 'crb_homepage_workshops_intro') . '</p>';
+			echo '</div>';
 			echo '<div class="artist-previews">';
 			foreach ($artists as $artist) {
 				$preview = snae_ecommerce_get_artist_preview($artist['crb_homepage_artist']);
@@ -108,7 +130,6 @@ $background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_home
 			echo '</div>';
 		}
 
-		/* get_template_part( 'template-parts/content', 'page' ); */
 		?>
 	</main>
 </div>

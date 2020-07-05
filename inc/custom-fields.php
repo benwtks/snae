@@ -83,11 +83,15 @@ function crb_attach_custom_home_options() {
 					Field::make( 'textarea', 'crb_homepage_feature_body', 'Body text (max 480 characters)')
 						->set_attribute( 'maxLength', 480 ),
 				)),
+			Field::make( 'textarea', 'crb_homepage_workshops_intro', 'Workshop intro (max 200 characters)')
+				->set_attribute( 'maxLength', 200 ),
 			Field::make( 'complex', 'crb_homepage_workshops', 'Featured workshops')
 				->add_fields( array(
 					Field::make( 'select', 'crb_homepage_workshop', 'Featured workshop')
 						->add_options( 'snae_get_workshops_array' ),
 				)),
+			Field::make( 'textarea', 'crb_homepage_artists_intro', 'Artist intro (max 200 characters)')
+				->set_attribute( 'maxLength', 200 ),
 			Field::make( 'complex', 'crb_homepage_artists', 'Featured artists')
 				->add_fields( array(
 					Field::make( 'select', 'crb_homepage_artist', 'Featured artist')
@@ -99,8 +103,8 @@ function crb_attach_custom_home_options() {
 		->where( 'post_id', '=', get_option( 'page_on_front' ) )
 		->add_fields( array(
 			Field::make( 'text', 'crb_call_to_action_title', 'Title'),
-			Field::make( 'text', 'crb_call_to_action_body', 'Description (max 480 characters)')
-				->set_attribute( 'maxLength', 480 ),
+			Field::make( 'textarea', 'crb_call_to_action_body', 'Description (max 200 characters)')
+				->set_attribute( 'maxLength', 200 ),
 			Field::make( 'complex', 'crb_call_to_action_links', 'Links')
 				->add_fields( array(
 					Field::make( 'text', 'crb_call_to_action_link_name', 'Link name' ),

@@ -976,6 +976,12 @@ template {
   #page #content {
     flex: 1; }
 
+i.dripicons-chevron-right {
+  vertical-align: middle;
+  font-size: 1.4rem; }
+  i.dripicons-chevron-right:before {
+    line-height: 3rem; }
+
 #content {
   margin-top: 25px; }
 
@@ -1443,7 +1449,7 @@ h2.comments-title {
 
 .artist-previews {
   display: grid;
-  gap: 10px;
+  gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-auto-rows: 130px;
   margin-top: 25px; }
@@ -1970,6 +1976,9 @@ header.combined button#menu-toggle {
 #primary.front-page {
   margin-top: -25px; }
 
+body.home footer.site-footer {
+  margin-top: 0; }
+
 .home-top {
   height: 500px;
   position: relative;
@@ -1992,8 +2001,10 @@ header.combined button#menu-toggle {
     opacity: 0.6;
     z-index: 1; }
 
-.home-feature, .home-artists, .home-workshops {
-  padding: 50px 0;
+.home-content, .home-feature, .home-artists, .home-workshops, .home-call-to-action {
+  padding: 50px 0; }
+
+.home-content, .home-feature, .home-artists, .home-workshops {
   border-bottom: 1px solid #e1e1e1; }
 
 .featured-pages .home-feature-wrapper {
@@ -2042,5 +2053,31 @@ header.combined button#menu-toggle {
 @media screen and (max-width: 400px) {
   .featured-pages .home-feature-wrapper img {
     display: none; } }
+.home-artists .feature-header-wrapper .info, .home-workshops .feature-header-wrapper .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px; }
+  .home-artists .feature-header-wrapper .info h2, .home-workshops .feature-header-wrapper .info h2 {
+    margin: 0; }
+
+.home-call-to-action {
+  text-align: center; }
+  .home-call-to-action p {
+    max-width: 800px;
+    margin: 0 auto; }
+  .home-call-to-action .action-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center; }
+    .home-call-to-action .action-links a {
+      background: #2fa684;
+      border-radius: 3px;
+      color: #fff;
+      padding: 8px 16px; }
+      .home-call-to-action .action-links a:not(last-of-type) {
+        margin-right: 15px; }
+      .home-call-to-action .action-links a:hover {
+        background: #26866b; }
 
 /*# sourceMappingURL=style.css.map */

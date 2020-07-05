@@ -97,7 +97,7 @@
 
 .artist-previews {
 	display: grid;
-	gap: 10px;
+	gap: 20px;
 	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	grid-auto-rows: 130px;
 	margin-top: $content-margin-top;
