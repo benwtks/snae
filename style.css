@@ -2070,6 +2070,10 @@ body.home footer.site-footer {
   .home-artists .feature-header-wrapper .info h2, .home-workshops .feature-header-wrapper .info h2 {
     margin: 0; }
 
+.home-workshops .workshop-previews,
+.home-artists .artist-previews {
+  margin-top: 35px; }
+
 .home-call-to-action {
   text-align: center; }
   .home-call-to-action p {

@@ -138,6 +138,11 @@ body.home footer.site-footer {
 	}
 }
 
+.home-workshops .workshop-previews,
+.home-artists .artist-previews {
+	margin-top: 1.4 * $content-margin-top;
+}
+
 .home-call-to-action {
 	text-align: center;
 
