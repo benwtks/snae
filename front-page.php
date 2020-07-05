@@ -24,7 +24,7 @@ while ( have_posts() ) : the_post(); ?>
 
 			foreach ($featured_pages as $page) {
 				$title = get_the_title($page['crb_homepage_feature']);
-				$img_url = wp_get_attachment_url($page['crb_homepage_feature_img']);
+				$img_url = wp_get_attachment_image_url($page['crb_homepage_feature_img'], 'home');
 
 				echo '<div class="home-feature">';
 				echo '<div class="home-feature-wrapper content-wrapper page-wrapper">';

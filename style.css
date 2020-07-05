@@ -1232,6 +1232,12 @@ input[type="submit"] {
   input[type="submit"]:hover {
     background: #26866b; }
 
+button:disabled {
+  background: #939393; }
+  button:disabled:hover {
+    background: #7c7c7c;
+    cursor: not-allowed; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1609,6 +1615,29 @@ h2.comments-title {
     color: #2fa684; }
   .workshop-middle .artist .artist-name a.see-more {
     display: none; } }
+.snae-orders {
+  margin-top: 25px; }
+  .snae-orders .order {
+    display: flex;
+    padding: 25px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 25px;
+    justify-content: space-between; }
+    .snae-orders .order .order-details {
+      display: flex;
+      margin-right: 100px; }
+      .snae-orders .order .order-details img {
+        border-radius: 6px;
+        margin-right: 20px; }
+    .snae-orders .order .order-price {
+      font-size: 1.3rem; }
+
+button#checkout-button {
+  margin-top: 25px;
+  padding: 10px 15px; }
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
