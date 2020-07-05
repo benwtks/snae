@@ -68,7 +68,8 @@ function crb_attach_custom_home_options() {
 		->add_fields( array(
 			Field::make( 'image', 'crb_homepage_top_image', 'Top Background Image'),
 			Field::make( 'text', 'crb_homepage_top_title', 'Title'),
-			Field::make( 'textarea', 'crb_homepage_top_body', 'Intro')
+			Field::make( 'textarea', 'crb_homepage_top_body', 'Intro (max 480 characters)')
+				->set_attribute( 'maxLength', 480 ),
 		));
 
 	Container::make( 'post_meta', 'Main Content' )
@@ -79,7 +80,8 @@ function crb_attach_custom_home_options() {
 					Field::make( 'image', 'crb_homepage_feature_img', 'Page image'),
 					Field::make( 'select', 'crb_homepage_feature', 'Featured page')
 						->add_options( 'snae_get_pages_array' ),
-					Field::make( 'textarea', 'crb_homepage_feature_body', 'Body text')
+					Field::make( 'textarea', 'crb_homepage_feature_body', 'Body text (max 480 characters)')
+						->set_attribute( 'maxLength', 480 ),
 				)),
 			Field::make( 'complex', 'crb_homepage_workshops', 'Featured workshops')
 				->add_fields( array(
@@ -97,7 +99,8 @@ function crb_attach_custom_home_options() {
 		->where( 'post_id', '=', get_option( 'page_on_front' ) )
 		->add_fields( array(
 			Field::make( 'text', 'crb_call_to_action_title', 'Title'),
-			Field::make( 'text', 'crb_call_to_action_body', 'Description'),
+			Field::make( 'text', 'crb_call_to_action_body', 'Description (max 480 characters)')
+				->set_attribute( 'maxLength', 480 ),
 			Field::make( 'complex', 'crb_call_to_action_links', 'Links')
 				->add_fields( array(
 					Field::make( 'text', 'crb_call_to_action_link_name', 'Link name' ),
