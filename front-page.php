@@ -7,11 +7,16 @@
 
 get_header();
 
-while ( have_posts() ) : the_post(); ?>
+while ( have_posts() ) : the_post();
+
+$background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_image'));
+
+?>
+
 <div id="primary" class="content-area front-page">
 	<main id="main" class="site-main">
-		<div class="home-top">
-			<div class="top-wrapper content-wrapper page-wrapper">
+		<div class="home-top" style="background-image: url(<?php echo $background ?>)">
+		<div class="top-wrapper content-wrapper page-wrapper">
 				<h1><?php echo carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_title')?></h1>
 				<p><?php echo carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_body')?></p>
 			</div>
