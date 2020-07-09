@@ -56,6 +56,10 @@ header .site-branding .content-wrapper {
 	.nav-icons .nav-icon:not(:last-of-type) {
 		margin-right: $standard-horizontal-spacing;
 	}
+
+	button#menu-toggle {
+		margin-left: $standard-horizontal-spacing;
+	}
 }
 
 header .site-branding .content-wrapper {

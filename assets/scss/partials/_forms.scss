@@ -73,3 +73,9 @@ footer.site-footer .newsletter form {
 		border-radius: 0 $border-radius $border-radius 0;
 	}
 }
+
+input:-internal-autofill-selected {
+	background-color: rgb(232, 240, 254) !important;
+	background-image: none !important;
+	color: -internal-light-dark-color(black, white) !important;
+}

@@ -49,17 +49,17 @@
 
 .ecommerce-details {
 	margin-left: $workshop-top-detail-spacing;
-	background-color: $workshop-ecommerce;
+	background-color: $side-part-colour;
 	max-width: $ecommerce-max-width;
 	min-width: 240px;
 	border-radius: $border-radius;
 
-	.intro {
+	& > * {
 		padding: $workshop-padding;
+	}
 
-		p.description {
-			font-style: italic;
-		}
+	.intro p.description {
+		font-style: italic;
 	}
 
 	.buy {
@@ -69,7 +69,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: $workshop-padding;
 
 		.price {
 			font-size: $workshop-price-size;
@@ -82,11 +81,10 @@
 }
 
 .workshop-guarantees {
-	margin-bottom: $workshop-margin-bottom;
-	padding-top: $workshop-padding / 2;
-
 	ul {
 		list-style: none;
+		padding: 0;
+		margin: 0;
 
 		li:before {
 			content: "\53";

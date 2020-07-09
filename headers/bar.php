@@ -13,7 +13,7 @@
 		?>
 	</div>
 	<div class="user-links nav-icons">
-		<a class="nav-icon" id="cart-icon" href="#"><i class="dripicons-cart"></i></a>
-		<a class="nav-icon" id="event-icon" href="<?php echo carbon_get_theme_option("crb_event_url")?>"><i class="dripicons-calendar"></i></a>
+		<a class="nav-icon" id="cart-icon" href="<?php echo snae_ecommerce_get_cart_url() ?>"><i class="dripicons-cart"></i></a>
+		<a class="nav-icon" id="search-icon" ><i class="dripicons-search"></i></a>
 	</div>
 </div>

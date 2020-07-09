@@ -111,6 +111,7 @@
 		img.preview-photo {
 			border-radius: $preview-radius 0 0 $preview-radius;
 			width: 130px;
+			height: 130px;
 		}
 
 		.details {
@@ -136,18 +137,21 @@
 @media screen and (max-width: 700px) {
 	.artist-details img.artist-photo {
 		width: 100px;
+		height: 100px;
 	}
 }
 
 @media screen and (max-width: 630px) {
 	.artist-details img.artist-photo {
 		width: 80px;
+		height: 80px;
 	}
 }
 
 @media screen and (max-width: 550px) {
 	.artist-details img.artist-photo {
 		width: 60px;
+		height: 60px;
 		margin-right: 5px;
 	}
 }
