@@ -208,3 +208,10 @@
 		}
 	}
 }
+
+@media screen and (max-width: 300px) {
+	.workshop-previews {
+		grid-template-columns: auto;
+		grid-auto-rows: auto;
+	}
+}

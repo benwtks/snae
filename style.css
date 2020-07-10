@@ -1494,6 +1494,18 @@ h2.comments-title {
     width: 60px;
     height: 60px;
     margin-right: 5px; } }
+@media screen and (max-width: 500px) {
+  .artist-previews {
+    grid-template-columns: auto;
+    grid-auto-rows: auto; }
+
+  .artist-previews .artist-preview .details {
+    padding: 8px; } }
+@media screen and (max-width: 400px) {
+  .artist-previews .artist-preview .details {
+    padding: 3px; }
+    .artist-previews .artist-preview .details p {
+      margin-bottom: 0; } }
 .workshop-wrapper {
   max-width: 1100px; }
 
@@ -1636,6 +1648,10 @@ h2.comments-title {
     color: #2fa684; }
   .workshop-middle .artist .artist-name a.see-more {
     display: none; } }
+@media screen and (max-width: 300px) {
+  .workshop-previews {
+    grid-template-columns: auto;
+    grid-auto-rows: auto; } }
 .pay-wrapper {
   display: flex;
   align-items: flex-start;
@@ -2174,7 +2190,11 @@ body.home footer.site-footer {
   .home-feature:nth-child(even) .home-feature-wrapper > *:nth-child(odd),
   .home-feature:nth-child(odd) .home-feature-wrapper > *:nth-child(even) {
     margin-left: 0 !important;
-    margin-right: 0 !important; } }
+    margin-right: 0 !important; }
+
+  .featured-pages .home-feature-wrapper .feature-details {
+    width: 100%;
+    min-width: 100%; } }
 @media screen and (max-width: 400px) {
   .featured-pages .home-feature-wrapper img {
     display: none; } }
@@ -2208,5 +2228,15 @@ body.home footer.site-footer {
         margin-right: 15px; }
       .home-call-to-action .action-links a:hover {
         background: #26866b; }
+
+@media screen and (max-width: 400px) {
+  footer.site-footer .newsletter form input {
+    padding: 10px 7px; } }
+@media screen and (max-width: 350px) {
+  footer.site-footer .newsletter form input {
+    padding: 5px 3px; } }
+@media screen and (max-width: 300px) {
+  footer.site-footer .newsletter {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -155,3 +155,24 @@
 		margin-right: 5px;
 	}
 }
+
+@media screen and (max-width: 500px) {
+	.artist-previews {
+		grid-template-columns: auto;
+		grid-auto-rows: auto;
+	}
+
+	.artist-previews .artist-preview .details {
+		padding: 8px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.artist-previews .artist-preview .details {
+		padding: 3px;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

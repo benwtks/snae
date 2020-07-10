@@ -117,6 +117,11 @@ body.home footer.site-footer {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
+
+	.featured-pages .home-feature-wrapper .feature-details {
+		width: 100%;
+		min-width: 100%;
+	}
 }
 
 @media screen and (max-width: 400px) {
@@ -170,5 +175,23 @@ body.home footer.site-footer {
 				background: $button-hover-bg;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	footer.site-footer .newsletter form input {
+		padding: 10px 7px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	footer.site-footer .newsletter form input {
+		padding: 5px 3px;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	footer.site-footer .newsletter {
+		display: none;
 	}
 }
