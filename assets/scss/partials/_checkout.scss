@@ -1,10 +1,12 @@
 .pay-wrapper {
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 .pay-wrapper .main-section {
-	margin-right: 100px;
+	margin-right: 50px;
+	max-width: 670px;
 	border-top: $section-border;
 	flex: 5;
 }
@@ -78,6 +80,7 @@
 .pay-wrapper #snae-total {
 	background-color: $side-part-colour;
 	border-radius: $border-radius;
+	max-width: 300px;
 	padding: 20px;
 	flex: 2;
 
@@ -174,5 +177,22 @@ button#card-button {
 	fieldset#elements {
 		padding: 10px;
 		height: 41px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.pay-wrapper {
+		flex-direction: column;
+
+		#snae-total, .main-section {
+			flex: 1;
+			width: 100%;
+			max-width: initial;
+		}
+
+		.main-section {
+			margin-bottom: $content-margin-top;
+			margin-right: 0;
+		}
 	}
 }

@@ -1638,10 +1638,12 @@ h2.comments-title {
     display: none; } }
 .pay-wrapper {
   display: flex;
-  align-items: flex-start; }
+  align-items: flex-start;
+  flex-wrap: wrap; }
 
 .pay-wrapper .main-section {
-  margin-right: 100px;
+  margin-right: 50px;
+  max-width: 670px;
   border-top: 1px solid #e1e1e1;
   flex: 5; }
 
@@ -1690,6 +1692,7 @@ h2.comments-title {
 .pay-wrapper #snae-total {
   background-color: #f3f3f3;
   border-radius: 3px;
+  max-width: 300px;
   padding: 20px;
   flex: 2; }
   .pay-wrapper #snae-total h2 {
@@ -1754,6 +1757,16 @@ button#card-button {
     padding: 10px;
     height: 41px; }
 
+@media screen and (max-width: 700px) {
+  .pay-wrapper {
+    flex-direction: column; }
+    .pay-wrapper #snae-total, .pay-wrapper .main-section {
+      flex: 1;
+      width: 100%;
+      max-width: initial; }
+    .pay-wrapper .main-section {
+      margin-bottom: 25px;
+      margin-right: 0; } }
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
