@@ -1441,6 +1441,8 @@ h2.comments-title {
   padding: 5px 10px;
   border: 1px solid;
   border-radius: 40px; }
+  .artist-header .links .website-link.video i {
+    margin-right: 10px; }
 
 .artist-about {
   margin-bottom: 25px; }
