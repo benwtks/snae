@@ -54,6 +54,7 @@ body.home footer.site-footer {
 		img {
 			max-width: 480px;
 			border-radius: 10px;
+			object-fit: cover;
 		}
 
 		h2 {
@@ -133,6 +134,7 @@ body.home footer.site-footer {
 .home-artists, .home-workshops {
 	.feature-header-wrapper .info {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: $content-margin-top;
@@ -159,6 +161,7 @@ body.home footer.site-footer {
 	.action-links {
 		margin-top: $content-margin-top;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 
 		a {
@@ -166,6 +169,7 @@ body.home footer.site-footer {
 			border-radius: $border-radius;
 			color: $button-text;
 			padding: 8px 16px;
+			margin-bottom: 10px;
 
 			&:not(last-of-type) {
 				margin-right: $standard-horizontal-spacing;
@@ -193,5 +197,22 @@ body.home footer.site-footer {
 @media screen and (max-width: 300px) {
 	footer.site-footer .newsletter {
 		display: none;
+	}
+
+	.home-top .top-wrapper p {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 305px) {
+	.artist-previews .artist-preview {
+		img {
+			display: none;
+		}
+
+		.details {
+			padding: 10px;
+			border-radius: $border-radius;
+		}
 	}
 }

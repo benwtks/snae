@@ -1608,19 +1608,18 @@ h2.comments-title {
   grid-auto-rows: 420px;
   margin-top: 25px; }
   .workshop-previews .workshop-preview {
-    position: relative; }
+    display: flex;
+    flex-direction: column; }
   .workshop-previews .workshop-preview img.preview-photo {
     border-radius: 6px 6px 0 0;
-    max-height: 420px;
     min-height: 280px;
-    width: 100%; }
+    width: 100%;
+    object-fit: cover; }
   .workshop-previews .workshop-preview .details {
     border-radius: 0 0 6px 6px;
     width: 100%;
     background: #2fa684;
     height: 140px;
-    position: absolute;
-    bottom: 0;
     padding: 20px;
     color: #fff; }
     .workshop-previews .workshop-preview .details .title a {
@@ -2163,7 +2162,8 @@ body.home footer.site-footer {
     flex: 1; }
   .featured-pages .home-feature-wrapper img {
     max-width: 480px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    object-fit: cover; }
   .featured-pages .home-feature-wrapper h2 {
     margin-bottom: 25px; }
   .featured-pages .home-feature-wrapper p {
@@ -2207,6 +2207,7 @@ body.home footer.site-footer {
     display: none; } }
 .home-artists .feature-header-wrapper .info, .home-workshops .feature-header-wrapper .info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px; }
@@ -2225,12 +2226,14 @@ body.home footer.site-footer {
   .home-call-to-action .action-links {
     margin-top: 25px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; }
     .home-call-to-action .action-links a {
       background: #2fa684;
       border-radius: 3px;
       color: #fff;
-      padding: 8px 16px; }
+      padding: 8px 16px;
+      margin-bottom: 10px; }
       .home-call-to-action .action-links a:not(last-of-type) {
         margin-right: 15px; }
       .home-call-to-action .action-links a:hover {
@@ -2244,6 +2247,15 @@ body.home footer.site-footer {
     padding: 5px 3px; } }
 @media screen and (max-width: 300px) {
   footer.site-footer .newsletter {
+    display: none; }
+
+  .home-top .top-wrapper p {
     display: none; } }
+@media screen and (max-width: 305px) {
+  .artist-previews .artist-preview img {
+    display: none; }
+  .artist-previews .artist-preview .details {
+    padding: 10px;
+    border-radius: 3px; } }
 
 /*# sourceMappingURL=style.css.map */
