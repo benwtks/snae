@@ -947,6 +947,9 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  overflow-x: hidden; }
+
 .sticky {
   display: block; }
 
@@ -1585,6 +1588,8 @@ h2.comments-title {
     padding: 30px; }
   .workshop-middle .title {
     border-bottom: 1px solid #e1e1e1; }
+  .workshop-middle .description {
+    overflow-x: hidden; }
   .workshop-middle .artist {
     border-top: 1px solid #e1e1e1; }
     .workshop-middle .artist .artist-name {

@@ -110,6 +110,10 @@
 
 	.title { border-bottom: $section-border; }
 
+	.description {
+		overflow-x: hidden;
+	}
+
 	.artist {
 		border-top: $section-border;
 
