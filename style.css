@@ -1499,9 +1499,11 @@ h2.comments-title {
       color: #fff; }
       .artist-previews .artist-preview .details p {
         font-size: 0.9rem;
+        word-break: break-all;
         color: #ffffffd1; }
       .artist-previews .artist-preview .details .title a {
-        color: inherit; }
+        color: inherit;
+        word-break: break-all; }
         .artist-previews .artist-preview .details .title a:hover {
           color: #000000b0; }
 
@@ -1642,12 +1644,14 @@ h2.comments-title {
     padding: 20px;
     color: #fff; }
     .workshop-previews .workshop-preview .details .title a {
-      color: inherit; }
+      color: inherit;
+      word-break: break-all; }
       .workshop-previews .workshop-preview .details .title a:hover {
         color: #000000b0; }
     .workshop-previews .workshop-preview .details p {
       font-size: 0.9rem;
-      color: #ffffffd1; }
+      color: #ffffffd1;
+      word-break: break-all; }
 
 .workshop-panel .workshop-meta {
   margin-bottom: 25px; }

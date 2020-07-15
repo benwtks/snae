@@ -125,11 +125,13 @@
 
 			p {
 				font-size: 0.9rem;
+				word-break: break-all;
 				color: #ffffffd1;
 			}
 
 			.title a {
 				color: inherit;
+				word-break: break-all;
 				&:hover { color: #000000b0; }
 			}
 		}
