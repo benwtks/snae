@@ -50,3 +50,26 @@ i.dripicons-chevron-right {
 		line-height: 3rem;
 	}
 }
+
+.archive-nav {
+	margin-top: $content-margin-top;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
+		i {
+			color: $link-colour;
+			font-size: 1.4rem;
+			vertical-align: middle;
+
+			&:hover {
+				color: $link-colour-hover;
+			}
+		}
+	}
+}

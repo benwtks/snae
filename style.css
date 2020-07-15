@@ -985,6 +985,23 @@ i.dripicons-chevron-right {
   i.dripicons-chevron-right:before {
     line-height: 3rem; }
 
+.archive-nav {
+  margin-top: 25px; }
+  .archive-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    .archive-nav ul i {
+      color: #2fa684;
+      font-size: 1.4rem;
+      vertical-align: middle; }
+      .archive-nav ul i:hover {
+        color: #1e6a55; }
+
 #content {
   margin-top: 25px; }
 
