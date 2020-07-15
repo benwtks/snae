@@ -154,12 +154,12 @@ body.home footer.site-footer {
 	text-align: center;
 
 	p {
-		max-width: 800px;
+		max-width: 700px;
 		margin: 0 auto;
 	}
 
 	.action-links {
-		margin-top: $content-margin-top;
+		margin-top: $content-margin-top * 2;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;

@@ -2221,10 +2221,10 @@ body.home footer.site-footer {
 .home-call-to-action {
   text-align: center; }
   .home-call-to-action p {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto; }
   .home-call-to-action .action-links {
-    margin-top: 25px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
