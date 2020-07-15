@@ -16,6 +16,7 @@ footer.site-footer {
 
 footer.site-footer .company-details {
 	.logo {
+		margin-bottom: $content-margin-top * 1.4;
 		.site-title {
 			font-size: $footer-site-title-size;
 
@@ -31,7 +32,7 @@ footer.site-footer .company-details {
 	}
 
 	div {
-		margin-bottom: $footer-details-margin-bottom;
+		margin-bottom: $content-margin-top * 0.8;
 
 		span.detail-value {
 			color: $footer-details-font-colour;
