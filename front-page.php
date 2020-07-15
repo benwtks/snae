@@ -19,7 +19,7 @@ while ( have_posts() ) : the_post();
 		$top_body = carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_body');
 		$background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_image'));
 
-		if ($home_title && $background): ?>
+		if ($home_title): ?>
 		<div class="home-top" style="background-image: url(<?php echo $background ?>)">
 		<div class="top-wrapper content-wrapper page-wrapper">
 				<h1><?php echo carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_title')?></h1>
