@@ -9,19 +9,30 @@ get_header();
 
 while ( have_posts() ) : the_post();
 
-$background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_image'));
 
 ?>
 
 <div id="primary" class="content-area front-page">
 	<main id="main" class="site-main">
+		<?php
+		$home_title = carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_title');
+		$top_body = carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_body');
+		$background = wp_get_attachment_url(carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_image'));
+
+		if ($home_title && $background): ?>
 		<div class="home-top" style="background-image: url(<?php echo $background ?>)">
 		<div class="top-wrapper content-wrapper page-wrapper">
 				<h1><?php echo carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_title')?></h1>
-				<p><?php echo carbon_get_post_meta(get_the_ID(), 'crb_homepage_top_body')?></p>
+				<?php
+				if ($top_body) {
+					echo '<p>' . $top_body . '</p>';
+				}
+				?>
 			</div>
 		</div>
 		<?php
+		endif;
+
 		if (!empty(get_the_content())) {
 			echo '<div class="home-content">';
 			echo '<div class="content-wrapper page-wrapper">';
