@@ -1438,10 +1438,11 @@ h2.comments-title {
 .artist-details .intro .name {
   margin-bottom: 0; }
 
+.artist-header .links a:not(:last-of-type) {
+  margin-right: 15px; }
+
 .artist-header .links .artist-icon {
   color: #454545; }
-  .artist-header .links .artist-icon:not(:last-of-type) {
-    margin-right: 15px; }
   .artist-header .links .artist-icon i {
     font-size: 1.2rem; }
   .artist-header .links .artist-icon:hover {

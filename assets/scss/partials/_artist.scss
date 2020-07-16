@@ -31,12 +31,14 @@
 	}
 }
 
+.artist-header .links a:not(:last-of-type) {
+	margin-right: 15px;
+}
+
 .artist-header .links .artist-icon {
 	color: lighten($standard-text-colour, 10%);
 
-	&:not(:last-of-type) {
-		margin-right: 15px;
-	}
+
 
 	i {
 		font-size: $artist-icon-size;
