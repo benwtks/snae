@@ -118,7 +118,7 @@
 
 		.details {
 			border-radius: 0 $preview-radius $preview-radius 0;
-			width: 100%;
+			flex: 1;
 			background: $preview-colour;
 			padding: 15px;
 			color: #fff;
