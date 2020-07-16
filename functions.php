@@ -12,7 +12,7 @@ require_once( __DIR__ . '/inc/newsletter.php');
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '2.1.0' );
+	define( '_S_VERSION', '2.1.3' );
 }
 
 if ( ! function_exists( 'snae_setup' ) ) :
