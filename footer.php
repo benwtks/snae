@@ -70,6 +70,7 @@
 			if ($mc_api && $list_id) :
 
 			$_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+			$mc_form_url = carbon_get_theme_option('crb_mc_form_url');
 
 			if ($_GET['subbed'] == "success") {
 				echo '<div class="newsletter success">';
@@ -80,7 +81,6 @@
 			} else if ($_GET['subbed'] == "api") {
 				echo '<div class="newsletter api">';
 			} else if ($_GET['subbed'] == "unsubscribed") {
-				$mc_form_url = carbon_get_theme_option('crb_mc_form_url');
 				echo '<div class="newsletter unsubscribed">';
 			} else {
 				echo '<div class="newsletter">';
