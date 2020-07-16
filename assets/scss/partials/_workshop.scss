@@ -160,14 +160,14 @@
 
 		.title a { 
 			color: inherit;
-			word-break: break-all;
+			word-break: break-word;
 			&:hover { color: #000000b0; }
 		}
 
 		p {
 			font-size: 0.9rem;
 			color: #ffffffd1;
-			word-break: break-all;
+			word-break: break-word;
 		}
 	}
 }
